@@ -9,11 +9,19 @@ import { MotionInView, varFade } from '../../components/animate';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  // padding: theme.spacing(5, 0),
-  margin: 'auto',
+  // padding: theme.spacing(5, 0)
+
+  position: 'relative',
+  zIndex: '2',
+  // margin: 'auto',
   [theme.breakpoints.up('md')]: {
     width: '50%',
-    margin: 'auto'
+    marginTop: '-15%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    // margin: 'auto',
+    position: 'relative',
+    zIndex: '2',
   },
 }));
 
@@ -23,7 +31,7 @@ export default function HomeLookingFor() {
   return (
     <RootStyle>
       {/* <Container> */}
-      <Grid container direction="column" alignItems="center" justifyContent="space-between" spacing={{ xs: 1, md: 3 }}>
+      <Grid container direction="column" alignItems="center" justifyContent="center" spacing={{ xs: 1, md: 3 }}>
         <Grid item xs={11} md={4} sx={{ textAlign: { xs: 'center', md: 'center' } }}>
           {/* <MotionInView variants={varFade().inDown}>
             <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>

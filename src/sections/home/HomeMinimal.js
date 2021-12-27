@@ -81,7 +81,7 @@ const TypographyStyle = styled(Typography)(({ theme }) => ({
 const GridStyle = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     position: 'absolute',
-    top: '-30px',
+    top: '5%',
     zIndex: "1",
     width: "100%",
     marginTop: 10,
@@ -124,17 +124,18 @@ export default function HomeMinimal() {
               src="second-slide-hero.jpg"
               variants={varFade().inUp}
             />
+            <img
+              alt="hero"
+              src="line-decoration.svg"
+              sx={{
+                position: 'absolute',
+                top: '0',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                zIndex: '2'
+              }} />
           </>}
-        {/* <img
-          alt="hero"
-          src="line-decoration.svg"
-          sx={{
-            position: 'absolute',
-            top: '0',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            zIndex: '2'
-          }} /> */}
+
 
         {/* <Box sx={{
           position: 'absolute',
@@ -171,8 +172,8 @@ export default function HomeMinimal() {
           Enter the Nekotopia
         </TypographyStyle>
 
-        <GridStyle container spacing={5} direction="row" justifyContent="space-around">
-          <Grid item xs={12} md={4}>
+        <GridStyle container spacing={0} direction="row" justifyContent="space-around">
+          <Grid item xs={12} lg={4} >
             <ContentStyle>
               <MotionInView variants={varFade().inUp}>
                 <Typography variant="h2" sx={{ mb: 3, color: 'common.white' }}>
@@ -189,7 +190,7 @@ export default function HomeMinimal() {
             </ContentStyle>
           </Grid>
 
-          <Grid item xs={12} md={7} sx={{ position: 'relative' }}>
+          <Grid item xs={12} lg={5} sx={{ position: 'relative' }}>
             <MotionInView variants={varFade().inUp}>
               <Carousel />
             </MotionInView>

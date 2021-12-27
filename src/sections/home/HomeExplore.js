@@ -17,7 +17,7 @@ import useResponsive from '../../hooks/useResponsive';
 
 const RootStyle = styled(m.div)(({ theme }) => ({
     position: 'relative',
-    height: '1073px',
+    height: '911px',
     // backgroundColor: theme.palette.grey[400],
     [theme.breakpoints.up('md')]: {
         // overflow: 'hidden',

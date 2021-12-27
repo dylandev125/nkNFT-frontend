@@ -22,7 +22,7 @@ const RootStyle = styled(m.div)(({ theme }) => ({
   // backgroundColor: theme.palette.grey[400],
   [theme.breakpoints.up('md')]: {
     position: 'relative',
-    minHeight: '911px',
+    minHeight: '120vh',
     overflow: 'hidden',
   },
 }));
@@ -38,7 +38,7 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
   justifyContent: 'center',
   textAlign: 'center',
   position: 'absolute',
-  paddingTop: theme.spacing(25),
+  paddingTop: '20%',
   paddingBottom: theme.spacing(15),
   [theme.breakpoints.up('md')]: {
     margin: 'unset',
@@ -129,7 +129,7 @@ export default function HomeHero() {
         </m.div>
 
         <m.div variants={varFade().inRight}>
-          <Typography variant="p" sx={{ color: 'common.white', textShadow: '1px 5px 5px #240e6347' }}>
+          <Typography variant="h5" sx={{ color: 'common.white', textShadow: '1px 5px 5px #240e6347' }}>
             Take a quantum leap into a new, multi-dimensional world. Mint your Neko and start exploring life in the Nekoverse
           </Typography>
         </m.div>

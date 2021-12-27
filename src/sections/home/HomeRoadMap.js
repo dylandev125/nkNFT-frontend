@@ -20,7 +20,7 @@ import RoadmapMobile from './RoadmapMobile'
 const RootStyle = styled(m.div)(({ theme }) => ({
     position: 'relative',
     minHeight: '911px',
-    marginTop: '-200px',
+    marginTop: '8%',
     // overflow: 'hidden',
     zIndex: '5',
     backgroundColor: '#231759'
