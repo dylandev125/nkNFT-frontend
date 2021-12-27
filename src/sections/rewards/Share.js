@@ -81,7 +81,7 @@ export default function AboutHero() {
 
     return (
         <Box sx={{ padding: '15px' }}>
-            <RootStyle>
+            {isDesktop && <RootStyle>
                 {isDesktop && <TreasureStyle src="chest-big.png" alt="treasure" />}
                 {isDesktop && <TextStyle>
                     <HeadingStyle>SHARE YOUR UNIQUE LINK TO EARN</HeadingStyle>
@@ -99,7 +99,7 @@ export default function AboutHero() {
                         </ShareStyle>
                     </Box>
                 </TextStyle>}
-            </RootStyle>
+            </RootStyle>}
         </Box>
     );
 }

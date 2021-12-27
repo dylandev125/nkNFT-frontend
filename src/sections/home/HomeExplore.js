@@ -17,10 +17,10 @@ import useResponsive from '../../hooks/useResponsive';
 
 const RootStyle = styled(m.div)(({ theme }) => ({
     position: 'relative',
-    minHeight: '911px',
+    height: '1073px',
     // backgroundColor: theme.palette.grey[400],
     [theme.breakpoints.up('md')]: {
-        overflow: 'hidden',
+        // overflow: 'hidden',
     },
 }));
 

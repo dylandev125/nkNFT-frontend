@@ -90,14 +90,16 @@ const HeadingStyle = styled(Typography)(({ theme }) => ({
 
 const MileStoneItem = ({ id, price, count }) => {
     return (
-        <Box xs={{ textAlign: 'center', width: '180px', margin: '15px' }}>
+        <Box sx={{
+            textAlign: 'center', width: { xs: '70px' }, margin: '15px'
+        }}>
             <BoxStyle>
                 <TextStyle>{id}</TextStyle>
             </BoxStyle>
             <PriceStyle>{price}</PriceStyle>
             <CountStyle>{count}</CountStyle>
             <RewardStyle> Gem <br />Rewards</RewardStyle>
-        </Box>
+        </Box >
     )
 }
 

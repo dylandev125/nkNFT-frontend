@@ -20,7 +20,10 @@ import RoadmapMobile from './RoadmapMobile'
 const RootStyle = styled(m.div)(({ theme }) => ({
     position: 'relative',
     minHeight: '911px',
-    overflow: 'hidden'
+    marginTop: '-200px',
+    // overflow: 'hidden',
+    zIndex: '5',
+    backgroundColor: '#231759'
     // backgroundColor: theme.palette.grey[400],
     // [theme.breakpoints.up('md')]: {
     //   top: 0,
@@ -153,7 +156,7 @@ const RoadMapItem = ({ img, title, description, sx, imgsx, pinsx, textsx }) => {
                     position: 'absolute',
                     ...imgsx,
                 }}>
-                    <img src={img} alt="" />
+                    <img src={img} alt="" width="150px" />
                 </Box>
             </MotionInView>
             <Box sx={{
@@ -223,7 +226,7 @@ export default function HomeRoadMap() {
                                 top: '259px'
                             }}
                             imgsx={{
-                                top: '-190px',
+                                top: '-116px',
                                 left: '-40px'
                             }}
                             pinsx={{ left: '261px' }}
@@ -243,8 +246,8 @@ export default function HomeRoadMap() {
                                 top: '550px'
                             }}
                             imgsx={{
-                                top: '-42px',
-                                left: '-40px'
+                                top: '6px',
+                                left: '46px'
                             }}
                             pinsx={{ left: '271px' }}
                             textsx={{
@@ -268,8 +271,8 @@ export default function HomeRoadMap() {
                                 top: '514px'
                             }}
                             imgsx={{
-                                top: '-207px',
-                                left: '-40px'
+                                top: '-133px',
+                                left: '-16px'
                             }}
                             pinsx={{ left: '-51px' }}
                             textsx={{
@@ -293,13 +296,13 @@ export default function HomeRoadMap() {
                                 top: '866px'
                             }}
                             imgsx={{
-                                top: '-55px',
-                                left: '-40px'
+                                top: '-14px',
+                                left: '-31px'
                             }}
                             pinsx={{ left: '-51px' }}
                             textsx={{
                                 position: 'absolute',
-                                left: '171px',
+                                left: '109px',
                                 top: '-23px'
                             }}
                         />
@@ -317,13 +320,13 @@ export default function HomeRoadMap() {
                                 top: '1075px'
                             }}
                             imgsx={{
-                                top: '-55px',
+                                top: '-24px',
                                 left: '-40px'
                             }}
                             pinsx={{ left: '-51px' }}
                             textsx={{
                                 position: 'absolute',
-                                left: '171px',
+                                left: '100px',
                                 top: '-23px'
                             }}
                         />
@@ -341,8 +344,8 @@ export default function HomeRoadMap() {
                                 top: '1333px'
                             }}
                             imgsx={{
-                                top: '-55px',
-                                left: '-40px'
+                                top: '-30px',
+                                left: '33px'
                             }}
                             pinsx={{ left: '443px' }}
                             textsx={{
@@ -366,8 +369,8 @@ export default function HomeRoadMap() {
                                 top: '1621px'
                             }}
                             imgsx={{
-                                top: '-124px',
-                                left: '-40px'
+                                top: '-55px',
+                                left: '-7px'
                             }}
                             pinsx={{ left: '-51px' }}
                             textsx={{
