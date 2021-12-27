@@ -105,7 +105,7 @@ export default function HomeHero() {
       {isDesktop ?
         <HeroImgStyle
           alt="hero"
-          src="main-bg.png"
+          src="main-hero.png"
           variants={varFade().inUp}
         /> :
         <HeroImgStyle

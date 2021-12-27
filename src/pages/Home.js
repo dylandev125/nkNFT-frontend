@@ -24,7 +24,8 @@ import {
 const RootStyle = styled('div')(() => ({
     height: '100%',
     width: '100%',
-    overflowX: 'hidden'
+    overflowX: 'hidden',
+    overflowY: 'hidden'
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
