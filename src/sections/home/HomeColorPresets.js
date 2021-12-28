@@ -17,14 +17,14 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 const CaseStyle = styled('div')(({ theme }) => ({
-  width: '675px',
-  minHeight: '300px',
+  width: '550px',
+  minHeight: '233px',
   position: 'absolute',
   bottom: '100%',
   left: '0',
   backgroundColor: 'rgba(27, 24, 71, .72)',
   boxShadow: 'inset 0 0 20px rgb(133 155 193/9%)',
-  padding: '30px 45px 30px 312px',
+  padding: '15px 45px 15px 200px',
   borderRadius: '12px',
   transform: 'translate(-38px, -20px)',
   cursor: 'default',
@@ -71,10 +71,10 @@ const CaseItem = ({ caseClass, title, description }) => {
   return (
     <CaseStyle className={caseClass}>
       <img src="chest.png" alt="" style={{
-        width: '412px',
-        height: '412px',
+        width: '300px',
+        height: '300px',
         position: 'absolute',
-        top: '-147px',
+        top: '-50px',
         left: '-82px',
         zIndex: 5,
         pointerEvents: 'none'

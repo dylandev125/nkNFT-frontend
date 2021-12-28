@@ -17,10 +17,12 @@ import useResponsive from '../../hooks/useResponsive';
 
 const RootStyle = styled(m.div)(({ theme }) => ({
     position: 'relative',
-    height: '911px',
+    height: '1090px',
+    zIndex: 4,
     // backgroundColor: theme.palette.grey[400],
     [theme.breakpoints.up('md')]: {
         // overflow: 'hidden',
+        position: 'relative',
     },
 }));
 
@@ -49,7 +51,7 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
     // left: '50%',
     zIndex: '1',
     width: '100%',
-    height: 'auto'
+    height: '100%'
 }));
 
 // ----------------------------------------------------------------------
@@ -83,7 +85,7 @@ export default function HomeExplore() {
                         <Box sx={{ mt: { xs: 6 } }}>
                             <MotionInView variants={varFade().inDown}>
                                 <m.div animate={{ y: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}>
-                                    <img src="cat.webp" alt="" width={isDesktop ? '80%' : '100%'} />
+                                    <img src="cat.webp" alt="" width={isDesktop ? '70%' : '100%'} />
                                 </m.div>
                             </MotionInView>
                         </Box>

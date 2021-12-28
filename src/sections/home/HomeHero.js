@@ -22,7 +22,7 @@ const RootStyle = styled(m.div)(({ theme }) => ({
   // backgroundColor: theme.palette.grey[400],
   [theme.breakpoints.up('md')]: {
     position: 'relative',
-    minHeight: '120vh',
+    minHeight: '911px',
     overflow: 'hidden',
   },
 }));
