@@ -20,7 +20,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function Rewards() {
     return (
-        <Page title="Contact us">
+        <Page title="Rewards">
             <RootStyle>
                 <RewardHero />
                 <YourRewards />

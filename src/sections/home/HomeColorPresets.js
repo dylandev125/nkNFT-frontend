@@ -12,27 +12,88 @@ import useResponsive from '../../hooks/useResponsive';
 
 // ----------------------------------------------------------------------
 
-const PinItem = () => {
-  return (<MotionInView variants={varFade().inDown}>
-    <m.div animate={{ y: [-5, 10, -5] }} transition={{ duration: 5, repeat: Infinity }}>
-      <Image
-        disabledEffect
-        alt="sidebar"
-        src={`pin.png`}
-      />
-    </m.div>
-  </MotionInView>)
-}
-
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(15),
 }));
+
+const CaseStyle = styled('div')(({ theme }) => ({
+  width: '675px',
+  minHeight: '300px',
+  position: 'absolute',
+  bottom: '100%',
+  left: '0',
+  backgroundColor: 'rgba(27, 24, 71, .72)',
+  boxShadow: 'inset 0 0 20px rgb(133 155 193/9%)',
+  padding: '30px 45px 30px 312px',
+  borderRadius: '12px',
+  transform: 'translate(-38px, -20px)',
+  cursor: 'default',
+  visibility: 'hidden',
+  opacity: '0',
+  transition: 'opacity, .5s',
+  '&:before': {
+    content: '""',
+    borderLeft: '24px solid transparent',
+    borderRight: '24px solid transparent',
+    borderTop: '34px solid rgba(27, 24, 71, .72)',
+    position: 'absolute',
+    left: '55px',
+    top: '100%'
+  },
+  '&:after': {
+    content: '""',
+    width: '100%',
+    height: '310px',
+    position: 'absolute',
+    bottom: '-42px',
+    left: '0',
+    background: 'url(case-arrow.png) 0 0 no- repeat',
+    zIndex: 3
+  }
+}
+));
+
+
+const PinItem = () => {
+  return (<MotionInView variants={varFade().inDown}>
+    {/* <m.div animate={{ y: [-5, 10, -5] }} transition={{ duration: 5, repeat: Infinity }}> */}
+    <Image
+      disabledEffect
+      alt="sidebar"
+      src={`pin.png`}
+    />
+    {/* </m.div> */}
+  </MotionInView>)
+}
+
+
+const CaseItem = ({ caseClass, title, description }) => {
+  return (
+    <CaseStyle className={caseClass}>
+      <img src="chest.png" alt="" style={{
+        width: '412px',
+        height: '412px',
+        position: 'absolute',
+        top: '-147px',
+        left: '-82px',
+        zIndex: 5,
+        pointerEvents: 'none'
+      }} />
+      <Typography variant="h3">{title}</Typography>
+      <Typography variant="p" sx={{ mt: 3, fontSize: '14px' }}>{description}</Typography>
+    </CaseStyle>
+  )
+}
 
 // ----------------------------------------------------------------------
 
 export default function HomeColorPresets() {
   const isDesktop = useResponsive('up', 'lg');
-
+  // const handleMouseOver = () => {
+  //   console.log(document)
+  //   const elements = document.getElementsByClassName('case');
+  //   console.log(elements)
+  // }
   return (
     <RootStyle>
       <Box sx={{ position: 'relative', textAlign: 'center' }}>
@@ -50,77 +111,59 @@ export default function HomeColorPresets() {
               src="island.webp"
             />
 
-            <Box sx={{
-              position: 'absolute',
-              top: '28%',
-              left: '39%'
-            }}>
+            <Box
+              sx={{
+                position: 'absolute',
+                top: '28%',
+                left: '39%',
+                zIndex: '2',
+                cursor: 'pointer',
+                transition: 'opacity,.5s',
+                '&:hover .case1': {
+                  visibility: 'visible',
+                  opacity: '1'
+                }
+              }}
+            >
               <PinItem />
+              <CaseItem caseClass="case1" title="Earn Pcash" description="Crush your opponents to earn PCASH, which you can use to trade within the metaverse!" />
             </Box>
 
             <Box sx={{
               position: 'absolute',
               top: '27%',
-              left: '62%'
+              left: '62%',
+              zIndex: '2',
+              cursor: 'pointer',
+              transition: 'opacity,.5s',
+              '&:hover .case2': {
+                visibility: 'visible',
+                opacity: '1'
+              }
             }}>
               <PinItem />
-              <Box sx={{
-                width: '675px',
-                minHeight: '300px',
-                position: 'absolute',
-                bottom: '100%',
-                left: '0',
-                backgroundColor: 'rgba(27,24,71,.72)',
-                boxShadow: 'inset 0 0 20px rgb(133 155 193/9%)',
-                padding: '30px 45px 30px 312px',
-                borderRadius: '12px',
-                transform: 'translate(-38px, -20px)',
-                cursor: 'default',
-                visibility: 'hidden',
-                opacity: '0',
-                transition: 'opacity,.5s',
-                '&:hover': {
-                  opacity: '1',
-                  visibility: 'visible',
-                },
-                '&:before': {
-                  content: '""',
-                  borderLeft: '24px solid transparent',
-                  borderRight: '24px solid transparent',
-                  borderTop: '34px solid rgba(27,24,71,.72)',
-                  position: 'absolute',
-                  left: '55px',
-                  top: '100%'
-                },
-                '&:after': {
-                  content: '""',
-                  width: '100%',
-                  height: '310px',
-                  position: 'absolute',
-                  bottom: '-42px',
-                  left: '0',
-                  background: 'url(case-arrow.png) 0 0 no-repeat',
-                  zIndex: '3'
-                }
-              }}>
-                <img src="chest.png" alt="chest" />
-                <Typography variant="h2">
-                  Competitive Edge
-                </Typography>
-              </Box>
+              <CaseItem caseClass="case2" title="Competitive Edge" description="Explore competitive edge and live operations, such as e-sports, events and tournaments, boss battles, mystery box and treasure chests, and professional team tie-ups." />
             </Box>
 
             <Box sx={{
               position: 'absolute',
               top: '50%',
-              left: '48%'
+              left: '48%',
+              zIndex: '2',
+              cursor: 'pointer',
+              transition: 'opacity,.5s',
+              '&:hover .case3': {
+                visibility: 'visible',
+                opacity: '1'
+              }
             }}>
               <PinItem />
+              <CaseItem caseClass="case3" title="Gain Psi functions" description="During battle, players defeat contending Nekos or neutral NPCs and gain Psi Functions. Using Psi Functions, players can equip their Neko characters with potential new items & cosmetics that enable powerful new skills & evolutions" />
             </Box>
 
           </Box> :
-          <Box sx={{ position: 'relative', mb: 7 }}>
-            <img src="island-mob.webp" alt="" />
+          <Box sx={{ position: 'relative', pb: 7, width: '100%', margin: 'auto' }}>
+            <img src="island-mob.webp" alt="" width="100%" />
           </Box>}
       </Box>
     </RootStyle >

@@ -18,7 +18,7 @@ import useResponsive from '../../hooks/useResponsive';
 const RootStyle = styled(m.div)(({ theme }) => ({
   position: 'relative',
   backgroundColor: '#240E63',
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('lg')]: {
     top: 0,
     left: 0,
     width: '100%',
@@ -33,7 +33,7 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
   textAlign: 'left',
   marginTop: '10px',
   padding: '15px',
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('lg')]: {
     margin: 'unset',
     textAlign: 'left',
     zIndex: 10,
@@ -66,7 +66,7 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
 }));
 
 const TypographyStyle = styled(Typography)(({ theme }) => ({
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('lg')]: {
     position: 'absolute',
     top: '-30px',
     zIndex: "1",
@@ -79,7 +79,7 @@ const TypographyStyle = styled(Typography)(({ theme }) => ({
 }));
 
 const GridStyle = styled(Grid)(({ theme }) => ({
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('lg')]: {
     position: 'absolute',
     top: '5%',
     zIndex: "1",

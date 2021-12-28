@@ -38,7 +38,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 export default function HomePage() {
     return (
-        <Page title="The starting point for your next project">
+        <Page title="Home">
             <RootStyle>
                 <HomeHero />
                 <HomeMinimal />

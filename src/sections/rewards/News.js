@@ -19,7 +19,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function News() {
     return (
-        <Page title="Components: Carousel">
+        <Page title="Rewards">
             <RootStyle>
                 <Typography variant="h3" sx={{ mb: 10 }}> LOREM IPSUM DOLOR SIT</Typography>
                 <Carousel />

@@ -14,7 +14,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   position: 'relative',
   zIndex: '2',
   // margin: 'auto',
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('lg')]: {
     width: '50%',
     marginTop: '-15%',
     marginLeft: 'auto',
