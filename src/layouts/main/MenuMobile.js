@@ -138,10 +138,10 @@ function MenuMobileItem({ item, isOpen, onOpen }) {
     );
   }
 
-  if (title === 'Documentation') {
+  if (title === 'Documentation' || title === 'Litepaper' || title === 'Pitch deck') {
     return (
       <ListItemStyle href={path} target="_blank" rel="noopener" component={Link}>
-        <ListItemIcon>{icon}</ListItemIcon>
+        {/* <ListItemIcon>{icon}</ListItemIcon> */}
         <ListItemText disableTypography primary={title} />
       </ListItemStyle>
     );
@@ -154,13 +154,14 @@ function MenuMobileItem({ item, isOpen, onOpen }) {
       end={path === '/'}
       sx={{
         '&.active': {
-          color: 'primary.main',
-          fontWeight: 'fontWeightMedium',
-          bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity),
+          color: 'transparent',
+          background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
+          backgroundClip: 'text',
+          WebkitBackgroundClip: 'text',
         },
       }}
     >
-      <ListItemIcon>{icon}</ListItemIcon>
+      {/* <ListItemIcon>{icon}</ListItemIcon> */}
       <ListItemText disableTypography primary={title} />
     </ListItemStyle>
   );

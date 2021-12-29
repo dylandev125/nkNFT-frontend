@@ -45,14 +45,14 @@ export default function HomeLookingFor() {
             </Typography>
           </MotionInView>
 
-          <MotionInView variants={varFade().inDown}>
-            <Typography variant="p" sx={{ mt: 2, mb: 2, width: { xs: '100%', md: '400px' } }}>
+          <MotionInView variants={varFade().inDown} sx={{ mt: 2, mb: 2, width: { xs: '100%', md: '500px' } }}>
+            <Typography variant="p">
               Take your first steps into the Nekoverse by minting your Neko NFT. Your kitty is your access pass to this metaverse and is your playable character in the ecosystem's games.
             </Typography>
           </MotionInView>
 
-          <MotionInView variants={varFade().inDown}>
-            <Typography variant="p" sx={{ mt: 2, mb: 5, width: { xs: '100%', md: '400px' } }}>
+          <MotionInView variants={varFade().inDown} sx={{ pt: 4, mb: 5, width: { xs: '100%', md: '500px' } }}>
+            <Typography variant="p">
               You start out with a random base NFT from the Neko classes. What your Neko becomes is up to you (with a little help from quantum mechanics) in this "play to earn" social world.
             </Typography>
           </MotionInView>
@@ -89,6 +89,6 @@ export default function HomeLookingFor() {
         </Grid>
       </Grid>
       {/* </Container> */}
-    </RootStyle>
+    </RootStyle >
   );
 }

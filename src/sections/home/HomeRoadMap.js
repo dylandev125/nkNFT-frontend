@@ -409,7 +409,7 @@ export default function HomeRoadMap() {
                         />
                     </ContentStyle>
                 </RootStyle > :
-                <Box sx={{ marginTop: '5%', position: "relative" }}>
+                <Box sx={{ mt: 5, mb: 5, position: "relative" }}>
                     <Container sx={{ color: 'common.white', textAlign: 'center' }}>
                         <m.div variants={varFade().inRight} >
                             <Typography variant="h2" component="div">

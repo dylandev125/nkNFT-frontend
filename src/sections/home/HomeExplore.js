@@ -17,11 +17,12 @@ import useResponsive from '../../hooks/useResponsive';
 
 const RootStyle = styled(m.div)(({ theme }) => ({
     position: 'relative',
-    height: '1090px',
     zIndex: 4,
+    height: '911px',
     // backgroundColor: theme.palette.grey[400],
     [theme.breakpoints.up('md')]: {
         // overflow: 'hidden',
+        height: '1090px',
         position: 'relative',
     },
 }));
@@ -77,21 +78,21 @@ export default function HomeExplore() {
                     </m.div>
                 </Container>
 
-                <Grid container spacing={2} sx={{
+                <Grid container spacing={0} sx={{
                     position: 'absolute',
                     zIndex: "2",
                     mt: 10
                 }} direction="row" justifyContent="center" alignItems="center">
-                    <Grid item xs={12} md={7}>
-                        <Box sx={{ mt: { xs: 6 }, transform: { md: 'scale(1.5)' } }}>
+                    <Grid item xs={12} md={4}>
+                        <Box sx={{ mt: { xs: 6 }, }}>
                             <MotionInView variants={varFade().inDown}>
                                 <m.div animate={{ y: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}>
-                                    <img src="3d-cat.png" alt="" width='100%' />
+                                    <img src="3d-cat.png" alt="" width={isDesktop ? '80%' : '90%'} />
                                 </m.div>
                             </MotionInView>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <Box sx={{ padding: '0 15px 0 15px', textAlign: 'left', mt: { xs: 5 } }}>
                             <MotionInView variants={varFade().inDown}>
                                 <Typography variant="p">

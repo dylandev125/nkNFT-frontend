@@ -16,7 +16,7 @@ import useResponsive from '../../hooks/useResponsive';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(m.div)(({ theme }) => ({
-  paddingTop: '216px',
+  // paddingTop: '216px',
   position: 'relative',
   backgroundColor: '#240E63',
   [theme.breakpoints.up('lg')]: {
@@ -27,7 +27,7 @@ const RootStyle = styled(m.div)(({ theme }) => ({
     WebkitMask: 'url(second-slide-mask.svg) center 0 no-repeat',
     overflow: 'hidden',
     marginTop: '-202px',
-    minWidth: '1920px'
+    minWidth: '100%'
   },
 }));
 
@@ -113,6 +113,19 @@ const HeroDividerStyle = styled(m.img)(({ theme }) => ({
 }));
 
 
+const BoxStyle = styled(Box)(({ theme }) => ({
+  [theme.breakpoints.up('lg')]: {
+    zIndex: 3,
+    minHeight: '965px',
+    maxWidth: '100%',
+    width: '1324px',
+    margin: '0 auto',
+    position: 'relative',
+    padding: '0 30px'
+  },
+}));
+
+
 // ----------------------------------------------------------------------
 
 export default function HomeMinimal() {
@@ -155,15 +168,7 @@ export default function HomeMinimal() {
 
         </>}
 
-      <Box style={{
-        zIndex: 3,
-        minHeight: '965px',
-        maxWidth: '100%',
-        width: '80%',
-        margin: '0px auto',
-        position: 'relative',
-        // padding: '0 30px'
-      }}>
+      <BoxStyle >
         <TypographyStyle variant="h2">
           Enter the Nekotopia
         </TypographyStyle>
@@ -172,7 +177,7 @@ export default function HomeMinimal() {
           <Grid item xs={12} lg={4} >
             <ContentStyle>
               <MotionInView variants={varFade().inUp}>
-                <Typography variant="h3" sx={{ mb: 3, color: 'common.white' }}>
+                <Typography variant="h3" sx={{ mb: 2, color: 'common.white' }}>
                   Open-ended social world
                 </Typography>
 
@@ -192,7 +197,7 @@ export default function HomeMinimal() {
             </MotionInView>
           </Grid>
         </GridStyle>
-      </Box>
+      </BoxStyle>
     </RootStyle>
   );
 }

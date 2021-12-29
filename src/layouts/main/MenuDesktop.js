@@ -256,14 +256,15 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
       component={RouterLink}
       end={path === '/'}
       sx={{
-        ...(isHome && { color: 'common.white' }),
-        ...(isOffset && { color: 'common.white' }),
+        ...(isHome && { color: 'common.white', fontWeight: 'bold' }),
+        ...(isOffset && { color: 'common.white', fontWeight: 'bold' }),
         '&.active': {
           // color: 'common.white',
           color: 'transparent',
           background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
           backgroundClip: 'text',
-          WebkitBackgroundClip: 'text'
+          WebkitBackgroundClip: 'text',
+          fontWeight: 'bold'
         },
       }}
     >

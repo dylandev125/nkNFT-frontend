@@ -21,17 +21,22 @@ import {
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled('div')(() => ({
-    height: '100%',
-    width: '100%',
+const RootStyle = styled('div')(({ theme }) => ({
     overflowX: 'hidden',
-    overflowY: 'hidden'
+    [theme.breakpoints.up('lg')]: {
+        height: '100%',
+        width: '100%',
+        overflowX: 'hidden',
+        overflowY: 'hidden'
+    },
+
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
-    overflow: 'hidden',
-    position: 'relative',
-    backgroundColor: '#240E63',
+    padding: '15px',
+    [theme.breakpoints.up('lg')]: {
+
+    },
 }));
 
 // ----------------------------------------------------------------------
@@ -41,13 +46,15 @@ export default function HomePage() {
         <Page title="Home">
             <RootStyle>
                 <HomeHero />
-                <HomeMinimal />
-                <HomeLookingFor />
-                <HomeBattle />
-                <HomeColorPresets />
-                <HomeExplore />
-                <HomeRoadMap />
-                <HomeCoreTeam />
+                <ContentStyle>
+                    <HomeMinimal />
+                    <HomeLookingFor />
+                    <HomeBattle />
+                    <HomeColorPresets />
+                    <HomeExplore />
+                    <HomeRoadMap />
+                    <HomeCoreTeam />
+                </ContentStyle>
             </RootStyle>
         </Page>
     );
