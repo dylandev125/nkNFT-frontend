@@ -21,7 +21,7 @@ export default function ComponentCard({ item }) {
     const { name, icon, description, href } = item;
 
     return (
-        <MotionInView variants={varFade().inRight} sx={{ width: '200px', }}>
+        <MotionInView variants={varFade().in} sx={{ width: '200px', }}>
             <a href={href} target="_blank" underline="none" rel="noreferrer" style={{ textDecoration: 'none' }}>
                 <Paper variant="outlined" sx={{ p: 1, bgcolor: 'transparent', border: '0px solid rgba(145, 158, 171, 0.24)' }}>
                     <CardActionArea

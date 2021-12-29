@@ -56,13 +56,13 @@ const CaseStyle = styled('div')(({ theme }) => ({
 
 const PinItem = () => {
   return (<MotionInView variants={varFade().inDown}>
-    {/* <m.div animate={{ y: [-5, 10, -5] }} transition={{ duration: 5, repeat: Infinity }}> */}
-    <Image
-      disabledEffect
-      alt="sidebar"
-      src={`pin.png`}
-    />
-    {/* </m.div> */}
+    <m.div animate={{ y: [-5, 10, -5] }} transition={{ duration: 5, repeat: Infinity }}>
+      <Image
+        disabledEffect
+        alt="sidebar"
+        src={`pin.png`}
+      />
+    </m.div>
   </MotionInView>)
 }
 
@@ -79,8 +79,8 @@ const CaseItem = ({ caseClass, title, description }) => {
         zIndex: 5,
         pointerEvents: 'none'
       }} />
-      <Typography variant="h3">{title}</Typography>
-      <Typography variant="p" sx={{ mt: 3, fontSize: '14px' }}>{description}</Typography>
+      <Typography variant="h4">{title}</Typography>
+      <Typography variant="p" sx={{ mt: 3, fontSize: '13px' }}>{description}</Typography>
     </CaseStyle>
   )
 }

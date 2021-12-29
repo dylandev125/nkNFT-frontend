@@ -234,7 +234,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
     );
   }
 
-  if (title === 'Documentation') {
+  if (title === 'Documentation' || title === 'Litepaper' || title === 'Pitch deck') {
     return (
       <LinkStyle
         href={path}
@@ -259,7 +259,11 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
         ...(isHome && { color: 'common.white' }),
         ...(isOffset && { color: 'common.white' }),
         '&.active': {
-          color: 'common.white',
+          // color: 'common.white',
+          color: 'transparent',
+          background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
+          backgroundClip: 'text',
+          WebkitBackgroundClip: 'text'
         },
       }}
     >

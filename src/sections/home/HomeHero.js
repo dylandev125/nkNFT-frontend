@@ -22,7 +22,7 @@ const RootStyle = styled(m.div)(({ theme }) => ({
   // backgroundColor: theme.palette.grey[400],
   [theme.breakpoints.up('md')]: {
     position: 'relative',
-    minHeight: '911px',
+    minHeight: '1000px',
     overflow: 'hidden',
   },
 }));
@@ -129,14 +129,19 @@ export default function HomeHero() {
         </m.div>
 
         <m.div variants={varFade().inRight}>
-          <Typography variant="h5" sx={{ color: 'common.white', textShadow: '1px 5px 5px #240e6347' }}>
+          <Typography variant="h6" sx={{ color: 'common.white', textShadow: '1px 5px 5px #240e6347' }}>
             Take a quantum leap into a new, multi-dimensional world. Mint your Neko and start exploring life in the Nekoverse
           </Typography>
         </m.div>
 
         <m.div variants={varFade().inRight}>
           <Button
-            handleClick={() => { }}
+            href="https://docs.nekoverse.io/"
+            target="_blank"
+            component={'a'}
+            handleClick={() => {
+
+            }}
             sx={{
               marginRight: '40px',
               background: '#231447',
@@ -146,12 +151,14 @@ export default function HomeHero() {
               }
             }}
           >
-            White paper
+            Litepaper
           </Button>
           <Button
+            to="/contact"
+            component={RouterLink}
             handleClick={() => { }}
           >
-            Register
+            Contact Us
           </Button>
         </m.div>
 

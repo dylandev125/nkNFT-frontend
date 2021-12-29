@@ -18,22 +18,17 @@ import useResponsive from '../../hooks/useResponsive';
 const RootStyle = styled(m.div)(({ theme }) => ({
   paddingTop: '216px',
   position: 'relative',
-  zIndex: 2,
-  background: '#240e63 linear-gradient(180deg, #160E60 3.19%, rgba(22, 14, 96, 0) 100%)',
-  WebkitMask: 'url(second-slide-mask.svg) center 0 no-repeat',
-  overflow: 'hidden',
-  marginTop: '-202px'
-  // position: 'relative',
-  // backgroundColor: '#240E63',
-  // [theme.breakpoints.up('lg')]: {
-  //   top: 0,
-  //   left: 0,
-  //   width: '100%',
-  //   // height: '100vh',
-  //   display: 'flex',
-  //   // position: 'fixed',
-  //   alignItems: 'center',
-  // },
+  backgroundColor: '#240E63',
+  [theme.breakpoints.up('lg')]: {
+    paddingTop: '216px',
+    position: 'relative',
+    zIndex: 2,
+    background: '#240e63 linear-gradient(180deg, #160E60 3.19%, rgba(22, 14, 96, 0) 100%)',
+    WebkitMask: 'url(second-slide-mask.svg) center 0 no-repeat',
+    overflow: 'hidden',
+    marginTop: '-202px',
+    minWidth: '1920px'
+  },
 }));
 
 const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ theme }) => ({
@@ -80,12 +75,12 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
 
 const TypographyStyle = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
-    position: 'absolute',
-    top: '-30px',
-    zIndex: "1",
-    width: "100%",
-    height: "auto",
-    marginBottom: 20,
+    // position: 'absolute',
+    // top: '-30px',
+    // zIndex: "1",
+    // width: "100%",
+    // height: "auto",
+    // marginBottom: 20,
     textAlign: 'center'
   },
   textAlign: 'center',
@@ -163,11 +158,11 @@ export default function HomeMinimal() {
       <Box style={{
         zIndex: 3,
         minHeight: '965px',
-        maxWidth: '1324px',
-        width: '100%',
-        margin: '0 auto',
+        maxWidth: '100%',
+        width: '80%',
+        margin: '0px auto',
         position: 'relative',
-        padding: '0 30px'
+        // padding: '0 30px'
       }}>
         <TypographyStyle variant="h2">
           Enter the Nekotopia

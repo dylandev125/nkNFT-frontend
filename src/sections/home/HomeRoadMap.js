@@ -84,19 +84,11 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
 // `;
 
 const roadMap = keyframes`
-//      0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-0% {
-    stroke-dashoffset: 3333.92822265625px;
-    stroke-dasharray: 3333.92822265625px;
-  }
-  100% {
+from {
     stroke-dashoffset: 0;
-    stroke-dasharray: 3333.92822265625px;
+  }
+  to {
+    stroke-dashoffset: -32px;
   }
 `;
 
@@ -151,7 +143,7 @@ const RoadMapItem = ({ img, title, description, sx, imgsx, pinsx, textsx }) => {
                 color: '#7c80b9',
                 ...sx
             }}>
-            <MotionInView variants={varFade().inUp} triggerOnce={'true'}>
+            <MotionInView variants={varFade().in}>
                 <Box sx={{
                     position: 'absolute',
                     ...imgsx,
@@ -167,7 +159,7 @@ const RoadMapItem = ({ img, title, description, sx, imgsx, pinsx, textsx }) => {
             }}>
                 <Img src="round-pin.svg" alt="" loading="lazy" />
             </Box>
-            <MotionInView variants={varFade().inUp} triggerOnce={'true'}>
+            <MotionInView variants={varFade().in}>
                 <Box sx={{
                     fontWeight: '300',
                     fontSize: '14px',
@@ -192,17 +184,33 @@ const RoadMapItem = ({ img, title, description, sx, imgsx, pinsx, textsx }) => {
 
 export default function HomeRoadMap() {
     const isDesktop = useResponsive('up', 'lg');
+    const pathVariants = {
+        inital: {
+            // opacity: 0,
+            strokeDataoffset: 0,
+            // pathLength: 0
+        },
+        final: {
+            // opacity: 1,
+            strokeDataoffset: '-32px',
+            // pathLength: 1,
+            transition: {
+                duration: 0.01,
+                ease: "easeInOut"
+            }
+        }
+    };
 
     return (
         <>
             {isDesktop ?
                 <RootStyle>
+
                     <HeroImgStyle
                         alt="hero"
                         src="road-map.png"
                         variants={varFade().inUp}
                     />
-
                     <ContentStyle sx={{ width: '100%' }}>
                         <Container sx={{ color: 'common.white', textAlign: 'center' }}>
                             <m.div variants={varFade().inRight} >
@@ -211,7 +219,27 @@ export default function HomeRoadMap() {
                                 </Typography>
                             </m.div>
                         </Container>
+                        {/* <m.div
+                        // initial={{
+                        //     // opacity: 0,
+                        //     pathLength: 0,
+                        //     strokeDashoffset: 0,
+                        // }}
+                        // animate={{
+                        //     // opacity: 1,
+                        //     pathLength: 1,
+                        //     strokeDashoffset: '-32px',
+                        // }}
+                        // transition={{
+                        //     duration: 2,
+                        //     ease: 'easeInOut',
+                        //     repeatDelay: 1,
+                        //     repeat: Infinity,
+                        // }}
+                        // variants={pathVariants}
+                        > */}
                         <ImageStyle src={"road-map.svg"} alt="" />
+                        {/* </m.div> */}
 
                         <RoadMapItem
                             img="roadMap/road-map1.png"
@@ -390,7 +418,8 @@ export default function HomeRoadMap() {
                         </m.div>
                     </Container>
                     <RoadmapMobile sx={{ mt: 5 }} />
-                </Box>}
+                </Box>
+            }
         </>
     );
 }

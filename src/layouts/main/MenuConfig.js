@@ -23,20 +23,30 @@ const menuConfig = [
     icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
     path: PATH_PAGE.about,
   },
+  // {
+  //   title: 'Rewards',
+  //   icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
+  //   path: PATH_PAGE.rewards,
+  // },
   {
-    title: 'Rewards',
-    icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
-    path: PATH_PAGE.rewards,
+    title: 'Litepaper',
+    icon: <Iconify icon={'eva:book-open-fill'} {...ICON_SIZE} />,
+    path: 'https://docs.nekoverse.io/',
   },
   {
-    title: 'Whitepaper',
-    icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
-    path: PATH_PAGE.components,
+    title: 'Pitch deck',
+    icon: <Iconify icon={'eva:file-fill'} {...ICON_SIZE} />,
+    path: 'pitch-deck.pdf',
   },
+  // {
+  //   title: 'Mint',
+  //   icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
+  //   path: PATH_PAGE.mint,
+  // },
   {
-    title: 'Mint',
+    title: 'Contact us',
     icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
-    path: PATH_PAGE.mint,
+    path: PATH_PAGE.contact,
   },
   // {
   //   title: 'Pages',

@@ -79,13 +79,14 @@ export default function HomeExplore() {
 
                 <Grid container spacing={2} sx={{
                     position: 'absolute',
-                    zIndex: "2"
+                    zIndex: "2",
+                    mt: 10
                 }} direction="row" justifyContent="center" alignItems="center">
                     <Grid item xs={12} md={7}>
-                        <Box sx={{ mt: { xs: 6 } }}>
+                        <Box sx={{ mt: { xs: 6 }, transform: { md: 'scale(1.5)' } }}>
                             <MotionInView variants={varFade().inDown}>
                                 <m.div animate={{ y: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}>
-                                    <img src="cat.webp" alt="" width={isDesktop ? '70%' : '100%'} />
+                                    <img src="3d-cat.png" alt="" width='100%' />
                                 </m.div>
                             </MotionInView>
                         </Box>

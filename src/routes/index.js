@@ -149,7 +149,7 @@ export default function Router() {
         { path: 'about-us', element: <About /> },
         { path: 'rewards', element: <Rewards /> },
         { path: 'mint', element: <Mint /> },
-        { path: 'contact-us', element: <Contact /> },
+        { path: 'contact', element: <Contact /> },
         // { path: 'faqs', element: <Faqs /> },
         // {
         //   path: 'components',
@@ -253,7 +253,7 @@ const HomePage = Loadable(lazy(() => import('../pages/Home')));
 const About = Loadable(lazy(() => import('../pages/About')));
 const Rewards = Loadable(lazy(() => import('../pages/Rewards')));
 const Mint = Loadable(lazy(() => import('../pages/Mint')));
-const Contact = Loadable(lazy(() => import('../pages/Contact')));
+const Contact = Loadable(lazy(() => import('../pages/ContactUs')));
 const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
 const ComingSoon = Loadable(lazy(() => import('../pages/ComingSoon')));
 const Maintenance = Loadable(lazy(() => import('../pages/Maintenance')));

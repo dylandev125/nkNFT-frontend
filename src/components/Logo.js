@@ -14,5 +14,5 @@ Logo.propTypes = {
 };
 
 export default function Logo({ disabledLink = false, sx, width, height }) {
-  return <RouterLink to="/"><img src="logo/NekoLogo.png" alt="Nekotopia Logo" sx={sx} width={"165"} height={"56"} /></RouterLink>;
+  return <RouterLink to="/"><img src="logo/logo-new.png" alt="Nekotopia Logo" sx={sx} width={"165"} height={"56"} /></RouterLink>;
 }
