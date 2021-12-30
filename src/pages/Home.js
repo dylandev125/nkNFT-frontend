@@ -35,7 +35,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 const ContentStyle = styled('div')(({ theme }) => ({
     padding: '15px',
     [theme.breakpoints.up('lg')]: {
-
+        padding: '0px',
     },
 }));
 

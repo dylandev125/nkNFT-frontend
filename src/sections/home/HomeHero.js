@@ -38,7 +38,7 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
   justifyContent: 'center',
   textAlign: 'center',
   position: 'absolute',
-  paddingTop: '20%',
+  paddingTop: '17%',
   paddingBottom: theme.spacing(15),
   [theme.breakpoints.up('md')]: {
     margin: 'unset',
@@ -121,48 +121,63 @@ export default function HomeHero() {
           variants={varFade().inUp}
         /> */}
       {/* <Container> */}
-      {isDesktop && <ContentStyle>
-        <m.div variants={varFade().inRight}>
-          <Typography variant="h2" sx={{ color: 'common.white', textShadow: '10px 5px 5px #240e6347' }}>
-            An endlessly unfolding metaverse of limitless possibilities
-          </Typography>
-        </m.div>
+      {isDesktop &&
+        <ContentStyle>
+          <m.div variants={varFade().inRight}>
+            <Typography sx={{
+              color: 'common.white', textShadow: '10px 5px 5px #240e6347',
+              fontWeight: 'bold',
+              fontSize: '48px',
+              // marginBottom: '15px',
+              lineHeight: 1
+            }}>
+              An endlessly unfolding metaverse of limitless possibilities
+            </Typography>
+          </m.div>
 
-        <m.div variants={varFade().inRight}>
-          <Typography variant="h6" sx={{ color: 'common.white', textShadow: '1px 5px 5px #240e6347' }}>
-            Take a quantum leap into a new, multi-dimensional world. Mint your Neko and start exploring life in the Nekoverse
-          </Typography>
-        </m.div>
+          <m.div variants={varFade().inRight}>
+            <Typography sx={{
+              color: 'common.white', textShadow: '1px 5px 5px #240e6347',
+              width: '700px',
+              margin: 'auto',
+              fontWeight: 400,
+              fontSize: '22px'
+            }}>
+              Take a quantum leap into a new, multi-dimensional world. Mint your Neko and start exploring life in the Nekoverse
+            </Typography>
+          </m.div>
 
-        <m.div variants={varFade().inRight}>
-          <Button
-            href="https://docs.nekoverse.io/"
-            target="_blank"
-            component={'a'}
-            handleClick={() => {
+          <m.div variants={varFade().inRight}>
+            <Button
+              href="https://docs.nekoverse.io/"
+              target="_blank"
+              component={'a'}
+              handleClick={() => {
 
-            }}
-            sx={{
-              marginRight: '40px',
-              background: '#231447',
-              '&:hover': {
-                background: '#332171',
-                boxShadow: '0 2px 19px rgb(103 65 197 / 36%)'
-              }
-            }}
-          >
-            Litepaper
-          </Button>
-          <Button
-            to="/contact"
-            component={RouterLink}
-            handleClick={() => { }}
-          >
-            Contact Us
-          </Button>
-        </m.div>
+              }}
+              sx={{
+                marginRight: '40px',
+                background: '#231447',
+                '&:hover': {
+                  background: '#332171',
+                  boxShadow: '0 2px 19px rgb(103 65 197 / 36%)'
+                }
+              }}
+            >
+              Litepaper
+            </Button>
+            <Button
+              to="/contact"
+              component={RouterLink}
+              handleClick={() => { }}
+            >
+              Contact Us
+            </Button>
+          </m.div>
 
-        {/* <Stack spacing={2.5}>
+
+
+          {/* <Stack spacing={2.5}>
               <m.div variants={varFade().inRight}>
                 <Typography variant="overline" sx={{ color: 'primary.light' }}>
                   Available For
@@ -179,8 +194,39 @@ export default function HomeHero() {
                 ))}
               </Stack>
             </Stack> */}
-      </ContentStyle>}
+        </ContentStyle>}
+
+      {isDesktop &&
+        <>
+          <div
+            style={{
+              display: 'inline-block',
+              position: 'absolute',
+              zIndex: 15,
+              pointerEvents: 'none',
+              right: '-10px',
+              top: '252px'
+            }}>
+            <m.div animate={{ y: [0, 30, 0], x: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}>
+              <img src="white-square.svg" alt="" />
+            </m.div>
+          </div>
+
+          <div
+            style={{
+              display: 'inline-block',
+              position: 'absolute',
+              zIndex: 15,
+              pointerEvents: 'none',
+              right: '-10px',
+              top: '590px'
+            }}>
+            <m.div animate={{ y: [0, 30, 0], x: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}>
+              <img src="green-square.svg" alt="" />
+            </m.div>
+          </div>
+        </>}
       {/* </Container> */}
-    </RootStyle>
+    </RootStyle >
   );
 }

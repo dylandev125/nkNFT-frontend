@@ -57,7 +57,9 @@ export default function MainHeader() {
   const isHome = pathname === '/';
 
   return (
-    <AppBar sx={{ boxShadow: 0, bgcolor: 'transparent' }}>
+    <AppBar sx={{
+      boxShadow: 0, bgcolor: 'transparent'
+    }}>
       <ToolbarStyle
         disableGutters
         sx={{
@@ -69,9 +71,12 @@ export default function MainHeader() {
       >
         <Container
           sx={{
+            maxWidth: { lg: '1400px' },
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
+            fontWeight: 'bold',
+            textTransform: 'uppercase'
           }}
         >
           <Logo />

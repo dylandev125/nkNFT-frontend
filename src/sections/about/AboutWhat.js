@@ -41,9 +41,10 @@ const AccordionStyle = styled('p')(({ theme }) => ({
 
 const AccordionTitleStyle = styled("Typography")(({ theme }) => ({
   color: '#8270b6',
-  '&:hover': {
+  fontSize: '20px',
+  '&:hover, &:active': {
     color: 'transparent',
-    fontSize: '16px',
+    fontSize: '20px',
     background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
     backgroundClip: 'text',
     WebkitBackgroundClip: 'text'
@@ -101,15 +102,15 @@ export default function AboutWhat() {
   };
 
   useEffect(() => {
-    // if (isDesktop) {
-    window.addEventListener("scroll", handleScroll);
+    if (isDesktop) {
+      window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-    // }
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
 
-  }, []);
+  }, [isDesktop]);
 
 
   const NavItem = ({ id, title }) => {
@@ -143,9 +144,9 @@ export default function AboutWhat() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <AccordionTitleStyle>{title}</AccordionTitleStyle>
+          <AccordionTitleStyle sx={{ textAlign: 'left' }}>{title}</AccordionTitleStyle>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{ textAlign: 'left', paddingLeft: '15px' }}>
           {description && description}
         </AccordionDetails>
       </Accordion>
@@ -255,7 +256,7 @@ export default function AboutWhat() {
                     id="panel1"
                     title="What is Nekotopia?"
                     description={
-                      <Typography varaint="p" sx={{ fontSize: '12px', textAlign: 'left' }}>
+                      <Typography varaint="p">
                         Nekotopia is a blockchain enabled 2D social world (metaverse) comprised of interactive Dapps & a primary Massive Online Battle Arena game. The Neko NFTs are the avatars/memberships for access to the metaverse that also double as playable characters within Nekoverse games.
                         <br /><br />
                         The metaverse is visualized as a top down "Stardew Valley" style open ended world. Social avatars interact with NPCs (DApps) to perform DEFI functions (staking, swapping), NFT evolutions and buying in-game assets.
@@ -266,7 +267,7 @@ export default function AboutWhat() {
                     id="panel2"
                     title="What is NEKO?"
                     description={
-                      <Typography varaint="p" sx={{ fontSize: '12px', textAlign: 'left' }}>
+                      <Typography varaint="p" >
                         NEKO is the native token for Nekotopian Metaverse.
                         <br />
                         NEKO is an ERC20/AVAX token on AVAX L1 Chain
@@ -288,7 +289,7 @@ export default function AboutWhat() {
                     id="panel3"
                     title="What are the play-to-earn aspects of the game?"
                     description={
-                      <Typography varaint="p" sx={{ fontSize: '12px', textAlign: 'left' }}>
+                      <Typography varaint="p">
                         When players win the MOBA game, they will be rewarded with $PCash. Player can earn by playing mini games in the metaverse as well.
                       </Typography>
                     } />
@@ -306,7 +307,7 @@ export default function AboutWhat() {
                     id="panel4"
                     title="What is $PCASH?"
                     description={
-                      <Typography variant='p' sx={{ fontSize: '12px', textAlign: 'left' }}>
+                      <Typography variant='p' >
                         <strong>$PCash</strong> is a synthetic token mainly serving as in-game rewards & currency to buy game related items and consumables
                         <br /><br />
                         <strong>$PCash</strong> Usecases<br />
@@ -328,7 +329,7 @@ export default function AboutWhat() {
                     id="panel7"
                     title="Is there a free-to-play aspect of the game?"
                     description={
-                      <Typography variant='p' sx={{ fontSize: '12px', textAlign: 'left' }}>
+                      <Typography variant='p' >
                         You will start out with a random base NFT that you will mint or buy from marketplace. What your Neko becomes is up to you (with a little help from quantum mechanics) in this “play to earn” social world.
                       </Typography>
                     } />
@@ -336,7 +337,7 @@ export default function AboutWhat() {
                     id="panel8"
                     title="Is the game playable on mobile?"
                     description={
-                      <Typography variant='p' sx={{ fontSize: '12px', textAlign: 'left' }}>
+                      <Typography variant='p'>
                         No, the game is primarily going to be launched on PC.
                       </Typography>
                     } />

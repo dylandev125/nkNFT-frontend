@@ -191,7 +191,7 @@ export default function HomeMinimal() {
             </ContentStyle>
           </Grid>
 
-          <Grid item xs={12} lg={5} sx={{ position: 'relative' }}>
+          <Grid item xs={12} lg={6} sx={{ position: 'relative', pt: 4 }}>
             <MotionInView variants={varFade().inUp}>
               <Carousel />
             </MotionInView>
