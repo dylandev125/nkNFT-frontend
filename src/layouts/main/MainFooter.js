@@ -75,7 +75,6 @@ const AnchorImageStyle = styled('a')(({ theme }) => ({
 
 export default function MainFooter() {
   return (
-
     <RootStyle>
       <img src="footer-line.svg" alt="" style={{
         position: 'absolute',
@@ -120,18 +119,18 @@ export default function MainFooter() {
               fontSize: 16,
             }}
           >
-            <AnchorStyle href="https://twitter.com/nekotopiaworld" target="_blank">#WEARENEKOVERSE</AnchorStyle>
+            <AnchorStyle href="https://twitter.com/nekotopiaworld" target="_blank">#WEARENEKOTOPIA</AnchorStyle>
           </Typography>
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
-          <AnchorImageStyle href="https://www.instagram.com/accounts/login/" target="_blank">
+          <AnchorImageStyle href="https://www.instagram.com/nekotopiaworld/">
             <img src="insta.svg" alt="insta-share" />
           </AnchorImageStyle>
-          <AnchorImageStyle href="https://twitter.com/nekotopiaworld" target="_blank">
+          <AnchorImageStyle href="https://twitter.com/nekotopiaworld">
             <img src="twitter.svg" alt="twitter-share" />
           </AnchorImageStyle>
-          <AnchorImageStyle href="https://discord.com/invite/a3DypjssRZ" target="_blank">
+          <AnchorImageStyle href="https://discord.com/invite/a3DypjssRZ">
             <img src="discord.svg" alt="discord-share" />
           </AnchorImageStyle>
         </div>
@@ -148,12 +147,12 @@ export default function MainFooter() {
               fontWeight: 'normal'
             }}
           >
-            <AnchorStyle href="https://discord.com/invite/a3DypjssRZ" target="_blank">
+            <AnchorStyle href="#" target="_blank">
               TERMS & CONDITIONS
             </AnchorStyle> /
-            <AnchorStyle href="https://discord.com/invite/a3DypjssRZ" target="_blank">
+            <AnchorStyle href="#" target="_blank">
               PRIVACY POLICY </AnchorStyle>/
-            <AnchorStyle href="https://discord.com/invite/a3DypjssRZ" target="_blank">
+            <AnchorStyle href="#" target="_blank">
               DISCLAIMER
             </AnchorStyle>
           </Typography>

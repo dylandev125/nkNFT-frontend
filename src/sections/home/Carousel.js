@@ -22,13 +22,18 @@ const RootStyle = styled(Box)(({ theme }) => ({
 const _carouselsExample = [
     {
         id: 1,
-        image: 'slide1.jpg',
+        image: 'screenshot-1.png',
         title: 'slide1'
     },
     {
         id: 2,
-        image: 'slide2.jpg',
+        image: 'screenshot-1.png',
         title: 'slide2'
+    },
+    {
+        id: 3,
+        image: 'screenshot-3.png',
+        title: 'slide3'
     }
 ]
 
