@@ -1,4 +1,5 @@
 import { m } from 'framer-motion';
+import { useEffect } from 'react'
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled, keyframes } from '@mui/material/styles';
@@ -218,6 +219,46 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
 
 export default function HomeExplore() {
     const isDesktop = useResponsive('up', 'lg');
+
+    function getPosition(e) {
+        let x = 0;
+        let y = 0;
+        if (!e) {
+            const e = window.event;
+        }
+        if (e.pageX || e.pageY) {
+            x = e.pageX;
+            y = e.pageY;
+        } else if (e.clientX || e.clientY) {
+            x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+            y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+        }
+        return { x, y }
+    }
+
+    const handleMouseMove = (e) => {
+        const coord = getPosition(e);
+        const css = document.getElementsByClassName('3dcat')[0]
+        // const offset = css.offset();
+        const x = (coord.x - css.offsetLeft) / 1920 * 100;
+        const y = (coord.y - css.offsetTop) / 800 * 100;
+        // console.log(x + y)
+        css.style.top = `${y / 10}%`
+        css.style.left = `${x / 10}%`
+        css.style.transform = `rotate(${(x + y) / 10 - 60}deg)`
+    };
+
+    useEffect(() => {
+        if (isDesktop) {
+            window.addEventListener("mousemove", handleMouseMove);
+
+            return () => {
+                window.removeEventListener("mousemove", handleMouseMove);
+            };
+        }
+
+    }, [isDesktop]);
+
     return (
         // <MotionContainer>
         <RootStyle>
@@ -242,13 +283,13 @@ export default function HomeExplore() {
                     zIndex: "2",
                     mt: 10
                 }} direction="row" justifyContent="center" alignItems="center">
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={5}>
                         <Box sx={{ mt: { xs: 6 }, }}>
                             {/* <MotionInView variants={varFade().inDown}> */}
                             {/* <m.div animate={{ y: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}> */}
                             {/* <FigureStyle> */}
                             <AnimateStyle>
-                                <img src="3d-cat.png" alt="" width={isDesktop ? '80%' : '90%'} />
+                                <img src="3d-cat.png" alt="" width={isDesktop ? '70%' : '90%'} className='3dcat' />
                             </AnimateStyle>
                             {/* </FigureStyle> */}
                             {/* </m.div> */}

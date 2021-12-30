@@ -51,6 +51,25 @@ const RootStyle = styled('div')(({ theme }) => ({
   // alignSelf: 'center'
 }));
 
+const AnchorStyle = styled('a')(({ theme }) => ({
+  textDecoration: 'none',
+  color: '#8270b6',
+  '&:hover': {
+    // color: 'common.white',
+    color: 'transparent',
+    background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
+    backgroundClip: 'text',
+    WebkitBackgroundClip: 'text'
+  }
+}));
+
+const AnchorImageStyle = styled('a')(({ theme }) => ({
+  textDecoration: 'none',
+  color: 'white',
+  '&:hover': {
+    color: 'common.white'
+  }
+}));
 
 // ----------------------------------------------------------------------
 
@@ -96,20 +115,25 @@ export default function MainFooter() {
           <Typography
             component="p"
             variant="body2"
-            color={'#8270b6'}
             sx={{
               pb: 5,
               fontSize: 16,
             }}
           >
-            #WEARENEKOVERSE
+            <AnchorStyle href="https://twitter.com/nekotopiaworld" target="_blank">#WEARENEKOVERSE</AnchorStyle>
           </Typography>
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
-          <img src="instagram 1.png" alt="insta-share" />
-          <img src="twitter 1.png" alt="twitter-share" />
-          <img src="discord 1.png" alt="discord-share" />
+          <AnchorImageStyle href="https://www.instagram.com/accounts/login/" target="_blank">
+            <img src="insta.svg" alt="insta-share" />
+          </AnchorImageStyle>
+          <AnchorImageStyle href="https://twitter.com/nekotopiaworld" target="_blank">
+            <img src="twitter.svg" alt="twitter-share" />
+          </AnchorImageStyle>
+          <AnchorImageStyle href="https://discord.com/invite/a3DypjssRZ" target="_blank">
+            <img src="discord.svg" alt="discord-share" />
+          </AnchorImageStyle>
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
@@ -124,7 +148,14 @@ export default function MainFooter() {
               fontWeight: 'normal'
             }}
           >
-            TERMS & CONDITIONS / PRIVACY POLICY / DISCLAIMER
+            <AnchorStyle href="https://discord.com/invite/a3DypjssRZ" target="_blank">
+              TERMS & CONDITIONS
+            </AnchorStyle> /
+            <AnchorStyle href="https://discord.com/invite/a3DypjssRZ" target="_blank">
+              PRIVACY POLICY </AnchorStyle>/
+            <AnchorStyle href="https://discord.com/invite/a3DypjssRZ" target="_blank">
+              DISCLAIMER
+            </AnchorStyle>
           </Typography>
         </div>
 
