@@ -15,6 +15,7 @@ import Iconify from '../../components/Iconify';
 import { MotionInView, varFade } from '../../components/animate';
 import Button from '../../components/Button'
 import useOffSetTop from '../../hooks/useOffSetTop'
+import AboutTeams from './AboutTeams'
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -156,8 +157,8 @@ export default function AboutWhat() {
   return (
     <>
       <RootStyle>
-        <Container>
-          <Grid container spacing={3} alignItems={'stretch'} sx={{ overflowY: 'hidden', overflowX: 'hidden' }}>
+        <Container sx={{ maxWidth: { lg: '1500px' } }}>
+          <Grid container spacing={2} alignItems={'stretch'} sx={{ overflowY: 'hidden', overflowX: 'hidden' }}>
             {isDesktop && (
               <Grid item xs={12} md={3} lg={4} sx={{ pr: { md: 7 }, position: 'relative', marginTop: '70px' }}>
                 <Grid item xs={12}>
@@ -215,6 +216,16 @@ export default function AboutWhat() {
                   </Typography>
                 </MotionInView>
               </Box>
+
+              <Box id="team">
+                <MotionInView variants={varFade().inRight} sx={{
+                  color: 'common.white',
+                  paddingTop: '70px'
+                }} >
+                  <AboutTeams />
+                </MotionInView>
+              </Box>
+
 
               <Box id="lifeAtNeko">
                 <MotionInView variants={varFade().inRight} sx={{ paddingTop: '50px' }}>

@@ -130,7 +130,23 @@ const BoxStyle = styled(Box)(({ theme }) => ({
 
 export default function HomeMinimal() {
   const isDesktop = useResponsive('up', 'lg');
-
+  const _carouselsExample = [
+    {
+      id: 1,
+      image: 'screenshot-1.png',
+      title: 'slide1'
+    },
+    {
+      id: 2,
+      image: 'screenshot-1.png',
+      title: 'slide2'
+    },
+    {
+      id: 3,
+      image: 'screenshot-3.png',
+      title: 'slide3'
+    }
+  ]
   return (
     <RootStyle>
       {isDesktop &&
@@ -193,7 +209,7 @@ export default function HomeMinimal() {
 
           <Grid item xs={12} lg={6} sx={{ position: 'relative', pt: 4 }}>
             <MotionInView variants={varFade().inUp}>
-              <Carousel />
+              <Carousel carouselsExample={_carouselsExample} />
             </MotionInView>
           </Grid>
         </GridStyle>
