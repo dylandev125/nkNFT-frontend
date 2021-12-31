@@ -158,9 +158,9 @@ export default function AboutWhat() {
     <>
       <RootStyle>
         <Container sx={{ maxWidth: { lg: '1500px' } }}>
-          <Grid container spacing={2} alignItems={'stretch'} sx={{ overflowY: 'hidden', overflowX: 'hidden' }}>
+          <Grid container spacing={1} alignItems={'stretch'} sx={{ overflowY: 'hidden', overflowX: 'hidden' }}>
             {isDesktop && (
-              <Grid item xs={12} md={3} lg={4} sx={{ pr: { md: 7 }, position: 'relative', marginTop: '70px' }}>
+              <Grid item xs={12} md={3} lg={4} sx={{ pr: { md: 3 }, position: 'relative', marginTop: '70px' }}>
                 <Grid item xs={12}>
                   <Box sx={{ position: 'absolute', top: `${scrollPosition > 400 ? scrollPosition - 400 : 0}px`, transition: 'top, .75s' }}>
                     <Card sx={{ width: '320px', padding: '10px' }}>
@@ -168,6 +168,7 @@ export default function AboutWhat() {
                       <Divider sx={{ paddingTop: 3 }} />
                       <CardContent sx={{ padding: '15px' }}>
                         <NavItem id="about" title="About" />
+                        <NavItem id="team" title="Our Team" />
                         <NavItem id="lifeAtNeko" title="Start your life in the Nekotopia" />
                         <NavItem id="FAQ" title="Frequently asked questions" />
 
@@ -193,7 +194,7 @@ export default function AboutWhat() {
             <Grid item xs={12} md={9} lg={8}>
 
               <Box id="about">
-                <MotionInView variants={varFade().inRight} sx={{ paddingTop: '70px' }}>
+                <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
                   <Typography
                     variant="h2"
                     sx={{ mb: 3, color: 'common.white' }} >
@@ -202,7 +203,7 @@ export default function AboutWhat() {
                 </MotionInView>
 
 
-                <MotionInView variants={varFade().inRight} sx={{
+                <MotionInView variants={varFade().in} sx={{
                   color: 'common.white',
                 }}>
                   <Typography sx={{ mt: 2 }}>
@@ -218,7 +219,7 @@ export default function AboutWhat() {
               </Box>
 
               <Box id="team">
-                <MotionInView variants={varFade().inRight} sx={{
+                <MotionInView variants={varFade().in} sx={{
                   color: 'common.white',
                   paddingTop: '70px'
                 }} >
@@ -228,7 +229,7 @@ export default function AboutWhat() {
 
 
               <Box id="lifeAtNeko">
-                <MotionInView variants={varFade().inRight} sx={{ paddingTop: '50px' }}>
+                <MotionInView variants={varFade().in} sx={{ paddingTop: '50px' }}>
                   <Typography
                     variant="h2"
                     sx={{ mb: 3, mt: 10, color: 'common.white' }} >
@@ -236,7 +237,7 @@ export default function AboutWhat() {
                   </Typography>
                 </MotionInView>
 
-                <MotionInView variants={varFade().inRight} sx={{
+                <MotionInView variants={varFade().in} sx={{
                   color: 'common.white',
                 }}>
                   <Typography sx={{ mt: 2 }}>
@@ -247,7 +248,7 @@ export default function AboutWhat() {
               </Box>
 
               <Box id="FAQ">
-                <MotionInView variants={varFade().inRight} sx={{ paddingTop: '30px' }}>
+                <MotionInView variants={varFade().in} sx={{ paddingTop: '30px' }}>
                   <Typography
                     variant="h2"
                     sx={{ mb: 3, mt: 10, color: 'common.white' }} >
@@ -257,7 +258,7 @@ export default function AboutWhat() {
               </Box>
 
               <Box id="GeneralInformation">
-                <MotionInView variants={varFade().inRight} sx={{ paddingTop: '70px' }}>
+                <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
                   <AccordionStyle
                     variant="p"
                   >
@@ -308,7 +309,7 @@ export default function AboutWhat() {
               </Box>
 
               <Box id="PresaleInfo">
-                <MotionInView variants={varFade().inRight} sx={{ paddingTop: '70px' }}>
+                <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
                   <AccordionStyle
                     variant="p"
                   >
@@ -330,7 +331,7 @@ export default function AboutWhat() {
               </Box>
 
               <Box id="Support">
-                <MotionInView variants={varFade().inRight} sx={{ paddingTop: '70px' }}>
+                <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
                   <AccordionStyle
                     variant="p"
                   >
