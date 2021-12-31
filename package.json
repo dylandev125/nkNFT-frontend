@@ -9,7 +9,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx ./src",
-    "lint:fix": "eslint --fix --ext .js,.jsx ./src"
+    "lint:fix": "eslint --fix --ext .js,.jsx ./src",
+    "deploy-production": "react-scripts build && scp -r ./build/* user-prod@128.199.168.124:/var/www/nekotopia.co/html"
   },
   "eslintConfig": {
     "extends": [
