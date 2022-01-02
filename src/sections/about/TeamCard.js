@@ -1,11 +1,8 @@
 import PropTypes from 'prop-types';
-import { m } from 'framer-motion';
-import { Link as RouterLink } from 'react-router-dom';
 // @mui
-import { Link, Paper, Typography, CardActionArea, Box, Avatar, Stack, Grid, Card } from '@mui/material';
+import { Typography, Box, Avatar, Card } from '@mui/material';
 // components
-import Image from '../../components/Image';
-import { MotionInView, varFade, varHover, varTranHover } from '../../components/animate';
+import { MotionInView, varFade } from '../../components/animate';
 import SocialsButton from '../../components/SocialsButton';
 
 // ----------------------------------------------------------------------
@@ -15,19 +12,19 @@ TeamCard.propTypes = {
         href: PropTypes.string,
         icon: PropTypes.string,
         name: PropTypes.string,
+        description: PropTypes.string,
+        credibility: PropTypes.string,
     }),
 };
 
 export default function TeamCard({ item }) {
     const { name, icon, description, href, credibility } = item;
-    const getHeight = () => {
-        return credibility === '' ? '330px' : '425px'
-    }
+    const getHeight = () => credibility === '' ? '330px' : '425px'
 
     return (
         <MotionInView variants={varFade().in}>
             <Card key={name} sx={{
-                padding: '15px', width: '290px', height: getHeight(), bgcolor: '#240E63', backdropFilter: 'blur(10px)', boxShadow: '0 0 2px 0 rgb(145 158 171 / 20%), 0 12px 24px -4px rgb(145 158 171 / 12%)', textAlign: 'center'
+                padding: '15px', width: '290px', height: getHeight(), bgcolor: '#0000002e', boxShadow: '0 0 2px 0 rgb(145 158 171 / 20%), 0 12px 24px -4px rgb(145 158 171 / 12%)', textAlign: 'center'
             }}>
                 <Box sx={{
                     display: 'flex',
@@ -43,10 +40,10 @@ export default function TeamCard({ item }) {
                 <Typography variant="h5" sx={{ mt: 2, mb: 0.5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     {name} <SocialsButton sx={{ color: '#8270b6' }} links={{ 'linkedin': href }} />
                 </Typography>
-                <Typography variant="subtitle2" sx={{ mb: 2, color: 'text.secondary' }}>
+                <Typography variant="subtitle2" sx={{ mb: 2, color: 'text.secondary', fontWeight: 'normal' }}>
                     {description}
                 </Typography>
-                <Typography variant="body2" sx={{ mb: 2, fontSize: '13px', color: 'text.secondary' }}>
+                <Typography variant="body2" sx={{ mb: 2, fontSize: '13px', color: '#b3abab' }}>
                     {credibility}
                 </Typography>
                 {/* <Stack alignItems="center" sx={{ mt: 2, mb: 1 }}>

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
-import { useTheme, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import { Button as MUIButton } from '@mui/material';
 
 // ----------------------------------------------------------------------
@@ -23,21 +23,18 @@ const MUIButtonStyle = styled(MUIButton)({
     }
 });
 
-const Button = forwardRef(({ children, sx, handleClick, ...other }, ref) => {
-
-    return (
-        <MUIButtonStyle
-            ref={ref}
-            onClick={handleClick}
-            sx={{
-                ...sx,
-            }}
-            {...other}
-        >
-            {children}
-        </MUIButtonStyle>
-    );
-});
+const Button = forwardRef(({ children, sx, handleClick, ...other }, ref) =>
+    <MUIButtonStyle
+        ref={ref}
+        onClick={handleClick}
+        sx={{
+            ...sx,
+        }}
+        {...other}
+    >
+        {children}
+    </MUIButtonStyle>
+);
 
 Button.propTypes = {
     children: PropTypes.node,

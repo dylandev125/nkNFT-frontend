@@ -1,17 +1,10 @@
 import { m } from 'framer-motion';
 import { useEffect } from 'react'
-import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled, keyframes } from '@mui/material/styles';
-import { Box, Link, Container, Typography, Stack, Grid } from '@mui/material';
-// routes
-import { PATH_DASHBOARD } from '../../routes/paths';
+import { Box, Container, Typography, Grid } from '@mui/material';
 // components
-import Image from '../../components/Image';
-import Iconify from '../../components/Iconify';
-import TextIconLabel from '../../components/TextIconLabel';
-import { MotionContainer, varFade, MotionInView } from '../../components/animate';
-import Button from '../../components/Button'
+import { varFade, MotionInView } from '../../components/animate';
 import useResponsive from '../../hooks/useResponsive';
 
 // ----------------------------------------------------------------------
@@ -181,12 +174,12 @@ const square = keyframes`
 }
 `;
 
-const AnimateStyle = styled('div')(({ theme }) => ({
+const AnimateStyle = styled('div')(() => ({
     animation: `${square} 50s linear infinite alternate`
 }));
 
 
-const ContentStyle = styled('div')(({ theme }) => ({
+const ContentStyle = styled('div')(() => ({
     zIndex: 10,
     textAlign: 'center',
     position: 'absolute',
@@ -197,15 +190,15 @@ const ContentStyle = styled('div')(({ theme }) => ({
     // },
 }));
 
-const HeroOverlayStyle = styled(m.img)({
-    zIndex: 9,
-    width: '100%',
-    height: '100%',
-    // objectFit: 'cover',
-    position: 'absolute',
-});
+// const HeroOverlayStyle = styled(m.img)({
+//     zIndex: 9,
+//     width: '100%',
+//     height: '100%',
+//     // objectFit: 'cover',
+//     position: 'absolute',
+// });
 
-const HeroImgStyle = styled(m.img)(({ theme }) => ({
+const HeroImgStyle = styled(m.img)(() => ({
     position: 'absolute',
     top: '0',
     // left: '50%',
@@ -224,7 +217,7 @@ export default function HomeExplore() {
         let x = 0;
         let y = 0;
         if (!e) {
-            const e = window.event;
+            // const e = window.event;
         }
         if (e.pageX || e.pageY) {
             x = e.pageX;
@@ -251,12 +244,8 @@ export default function HomeExplore() {
     useEffect(() => {
         if (isDesktop) {
             window.addEventListener("mousemove", handleMouseMove);
-
-            return () => {
-                window.removeEventListener("mousemove", handleMouseMove);
-            };
+            return () => window.removeEventListener("mousemove", handleMouseMove);
         }
-
     }, [isDesktop]);
 
     return (

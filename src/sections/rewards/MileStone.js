@@ -1,14 +1,14 @@
 // @mui
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 // components
 // import Image from '../../components/Image';
 import { styled } from '@mui/material/styles';
-import { MotionInView, varFade } from '../../components/animate';
-import Button from '../../components/Button'
+// import { MotionInView, varFade } from '../../components/animate';
+// import Button from '../../components/Button'
 
 // ----------------------------------------------------------------------
 
-const BoxStyle = styled(Box)(({ theme }) => ({
+const BoxStyle = styled(Box)(() => ({
     width: '66.44px',
     height: '66.44px',
     background: '#231447',
@@ -35,7 +35,7 @@ const BoxStyle = styled(Box)(({ theme }) => ({
     }
 }));
 
-const TextStyle = styled(Typography)(({ theme }) => ({
+const TextStyle = styled(Typography)(() => ({
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -46,7 +46,7 @@ const TextStyle = styled(Typography)(({ theme }) => ({
     lineHeight: '140%'
 }));
 
-const PriceStyle = styled(Typography)(({ theme }) => ({
+const PriceStyle = styled(Typography)(() => ({
     color: '#fff',
     fontWeight: 'bold',
     fontSize: '24px',
@@ -60,7 +60,7 @@ const PriceStyle = styled(Typography)(({ theme }) => ({
     }
 }));
 
-const CountStyle = styled(Typography)(({ theme }) => ({
+const CountStyle = styled(Typography)(() => ({
     fontWeight: 'normal',
     fontSize: '14px',
     lineHeight: '140%',
@@ -69,7 +69,7 @@ const CountStyle = styled(Typography)(({ theme }) => ({
     marginBottom: '10px'
 }));
 
-const RewardStyle = styled(Typography)(({ theme }) => ({
+const RewardStyle = styled(Typography)(() => ({
     textAlign: 'center',
     fontSize: '14px',
     lineHeight: '140%',
@@ -77,7 +77,7 @@ const RewardStyle = styled(Typography)(({ theme }) => ({
     padding: '0 7px'
 }));
 
-const HeadingStyle = styled(Typography)(({ theme }) => ({
+const HeadingStyle = styled(Typography)(() => ({
     fontWeight: 'bold',
     fontSize: '30px',
     lineHeight: '140%',
@@ -88,7 +88,8 @@ const HeadingStyle = styled(Typography)(({ theme }) => ({
 }));
 
 
-const MileStoneItem = ({ id, price, count }) => {
+const MileStoneItem = (item) => {
+    const { id, price, count } = item
     return (
         <Box sx={{
             textAlign: 'center', width: { xs: '70px' }, margin: '15px'
@@ -152,31 +153,8 @@ export default function YourRewards() {
         <Box sx={{ marginTop: '-89px', marginBottom: '200px' }}>
             <HeadingStyle>Milestone Rewards</HeadingStyle>
             <Box sx={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
-                {mileStones.map((item, idx) => {
-                    return <MileStoneItem id={item.id} price={item.price} count={item.count} />
-                })}
+                {mileStones.map((item, idx) => <MileStoneItem item={item} key={idx} />)}
             </Box>
-
-
-            {/* <Grid container justifyContent="space-between" alignItems="center" sx={{ mt: 2 }} spacing={1} gap={2}>
-                <Grid item xs={12} sm={4} spacing={3}>
-                    <MotionInView variants={varFade().inUp}>
-                        <MileStoneItem />
-                    </MotionInView>
-                </Grid>
-
-                <Grid item xs={12} sm={3} spacing={3}>
-                    <MotionInView variants={varFade().inUp}>
-                        <MileStoneItem />
-                    </MotionInView>
-                </Grid>
-
-                <Grid item xs={12} sm={4} spacing={3}>
-                    <MotionInView variants={varFade().inUp}>
-                        <MileStoneItem />
-                    </MotionInView>
-                </Grid>
-            </Grid> */}
         </Box>
     );
 }

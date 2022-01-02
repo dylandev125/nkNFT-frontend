@@ -1,23 +1,22 @@
-import { m } from 'framer-motion';
 // @mui
-import { styled } from '@mui/material/styles';
-import { Box, Container, Typography, Grid, List, ListItem, ListItemAvatar, Avatar, ListItemText, Stack, Card, CardHeader, } from '@mui/material';
+// import { styled } from '@mui/material/styles';
+import { Box, Typography, Grid } from '@mui/material';
 // components
 import useResponsive from '../../hooks/useResponsive';
 import TeamCard from './TeamCard';
 
 // ----------------------------------------------------------------------
 
-const BoxStyle = styled('div')(({ theme }) => ({
-    maxWidth: '85%',
-    width: '1518px',
-    height: 'auto',
-    margin: '0 auto 200px',
-    borderRadius: '46px',
-    position: 'relative',
-    padding: '1px',
-    zIndex: '5'
-}));
+// const BoxStyle = styled('div')(({ theme }) => ({
+//     maxWidth: '85%',
+//     width: '1518px',
+//     height: 'auto',
+//     margin: '0 auto 200px',
+//     borderRadius: '46px',
+//     position: 'relative',
+//     padding: '1px',
+//     zIndex: '5'
+// }));
 
 // ----------------------------------------------------------------------
 
@@ -92,13 +91,13 @@ const FOUNDATION_LIST = [
         href: 'https://www.linkedin.com/in/revanth-reddy-2229351b7/',
         credibility: ''
     },
-    {
-        name: 'Idir Belaid',
-        description: 'Gameplay Programmer',
-        icon: `team/Idir_Belaid.jpg`,
-        href: 'https://www.linkedin.com/home',
-        credibility: ''
-    },
+    // {
+    //     name: 'Idir Belaid',
+    //     description: 'Gameplay Programmer',
+    //     icon: `team/Idir_Belaid.jpg`,
+    //     href: 'https://www.linkedin.com/home',
+    //     credibility: ''
+    // },
     {
         name: 'Ashish Polaki',
         description: 'Gameplay Programmer',
@@ -204,15 +203,15 @@ const FOUNDATION_LIST = [
         href: 'https://www.linkedin.com/home',
         credibility: ''
     },
-    {
-        name: 'Sai Rakesh',
-        description: 'Game Producer',
-        icon: `Space Neko.png`,
-        href: 'https://www.linkedin.com/in/sairakeshakaremsetti/',
-        credibility: ''
-    }
+    // {
+    //     name: 'Sai Rakesh',
+    //     description: 'Game Producer',
+    //     icon: `Space Neko.png`,
+    //     href: 'https://www.linkedin.com/in/sairakeshakaremsetti/',
+    //     credibility: ''
+    // }
 ]
-export default function AboutTeams({ item }) {
+export default function AboutTeams() {
     const isDesktop = useResponsive('up', 'lg');
 
     return (

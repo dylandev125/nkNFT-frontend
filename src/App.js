@@ -4,7 +4,7 @@ import Router from './routes';
 import ThemeProvider from './theme';
 import GlobalStyles from './theme/globalStyles';
 // components
-import Settings from './components/settings';
+// import Settings from './components/settings';
 import RtlLayout from './components/RtlLayout';
 import { ChartStyle } from './components/chart';
 import ScrollToTop from './components/ScrollToTop';

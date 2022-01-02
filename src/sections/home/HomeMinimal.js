@@ -1,15 +1,9 @@
 import { m } from 'framer-motion';
-import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Button, Box, Link, Container, Typography, Stack, Grid } from '@mui/material';
-// routes
-import { PATH_DASHBOARD } from '../../routes/paths';
+import { Box, Typography, Stack, Grid } from '@mui/material';
 // components
-import Image from '../../components/Image';
-import Iconify from '../../components/Iconify';
-import TextIconLabel from '../../components/TextIconLabel';
-import { MotionContainer, varFade, MotionInView } from '../../components/animate';
+import { varFade, MotionInView } from '../../components/animate';
 import Carousel from './Carousel';
 import useResponsive from '../../hooks/useResponsive';
 
@@ -48,30 +42,30 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
   },
 }));
 
-const HeroOverlayStyle = styled(m.img)({
-  zIndex: 9,
-  width: '100%',
-  height: '100%',
-  // objectFit: 'cover',
-  position: 'absolute',
-});
+// const HeroOverlayStyle = styled(m.img)({
+//   zIndex: 9,
+//   width: '100%',
+//   height: '100%',
+//   // objectFit: 'cover',
+//   position: 'absolute',
+// });
 
-const HeroImgStyle = styled(m.img)(({ theme }) => ({
-  // position: 'absolute',
-  // top: '-200px',
-  // left: '50%',
-  // zIndex: '1',
-  // transform: 'translateX(-50%)',
-  // width: '100%',
-  // // minWidth: '1920px',
-  // height: '100%'
-  paddingTop: '216px',
-  position: 'relative',
-  zIndex: 2,
-  background: '#240e63 linear-gradient(180deg, #160E60 3.19%, rgba(22, 14, 96, 0) 100%)',
-  WebkitMask: 'url(second-slide-mask.svg) center 0 no-repeat',
-  overflow: 'hidden'
-}));
+// const HeroImgStyle = styled(m.img)(({ theme }) => ({
+//   // position: 'absolute',
+//   // top: '-200px',
+//   // left: '50%',
+//   // zIndex: '1',
+//   // transform: 'translateX(-50%)',
+//   // width: '100%',
+//   // // minWidth: '1920px',
+//   // height: '100%'
+//   paddingTop: '216px',
+//   position: 'relative',
+//   zIndex: 2,
+//   background: '#240e63 linear-gradient(180deg, #160E60 3.19%, rgba(22, 14, 96, 0) 100%)',
+//   WebkitMask: 'url(second-slide-mask.svg) center 0 no-repeat',
+//   overflow: 'hidden'
+// }));
 
 const TypographyStyle = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
@@ -102,15 +96,15 @@ const GridStyle = styled(Grid)(({ theme }) => ({
 
 }));
 
-const HeroDividerStyle = styled(m.img)(({ theme }) => ({
-  position: 'absolute',
-  top: '700px',
-  left: '0',
-  zIndex: '1',
-  width: '100 %',
-  // minWidth: '1920px',
-  height: 'auto'
-}));
+// const HeroDividerStyle = styled(m.img)(({ theme }) => ({
+//   position: 'absolute',
+//   top: '700px',
+//   left: '0',
+//   zIndex: '1',
+//   width: '100 %',
+//   // minWidth: '1920px',
+//   height: 'auto'
+// }));
 
 
 const BoxStyle = styled(Box)(({ theme }) => ({

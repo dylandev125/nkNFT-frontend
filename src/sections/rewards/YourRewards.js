@@ -1,5 +1,5 @@
 // @mui
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Container, Typography, Grid } from '@mui/material';
 // components
 // import Image from '../../components/Image';
 import { styled } from '@mui/material/styles';
@@ -8,7 +8,7 @@ import Button from '../../components/Button'
 
 // ----------------------------------------------------------------------
 
-const BoxStyle = styled('Box')(({ theme }) => ({
+const BoxStyle = styled('Box')(() => ({
     height: '400px',
     display: 'flex',
     flexDirection: 'column',
@@ -65,7 +65,7 @@ export default function YourRewards() {
                         <Typography variant="h5" >
                             YOUR TOTAL <br />REWARDS ARE:
                         </Typography>
-                        <Button handleClick={(e) => { }} sx={{ mt: 1 }}>CONNECT WALLET</Button>
+                        <Button handleClick={() => { }} sx={{ mt: 1 }}>CONNECT WALLET</Button>
                     </MotionInView>
                 </Grid>
 

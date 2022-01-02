@@ -2,7 +2,7 @@ import { Suspense, lazy } from 'react';
 import { Navigate, useRoutes, useLocation } from 'react-router-dom';
 // layouts
 import MainLayout from '../layouts/main';
-import DashboardLayout from '../layouts/dashboard';
+// import DashboardLayout from '../layouts/dashboard';
 import LogoOnlyLayout from '../layouts/LogoOnlyLayout';
 // guards
 // import GuestGuard from '../guards/GuestGuard';
@@ -254,11 +254,11 @@ const About = Loadable(lazy(() => import('../pages/About')));
 const Rewards = Loadable(lazy(() => import('../pages/Rewards')));
 const Mint = Loadable(lazy(() => import('../pages/Mint')));
 const Contact = Loadable(lazy(() => import('../pages/ContactUs')));
-const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
+// const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
 const ComingSoon = Loadable(lazy(() => import('../pages/ComingSoon')));
 const Maintenance = Loadable(lazy(() => import('../pages/Maintenance')));
 const Pricing = Loadable(lazy(() => import('../pages/Pricing')));
-const Payment = Loadable(lazy(() => import('../pages/Payment')));
+// const Payment = Loadable(lazy(() => import('../pages/Payment')));
 const Page500 = Loadable(lazy(() => import('../pages/Page500')));
 const NotFound = Loadable(lazy(() => import('../pages/Page404')));
 // // Components

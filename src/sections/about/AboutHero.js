@@ -1,13 +1,12 @@
-import { m } from 'framer-motion';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Container, Typography } from '@mui/material';
+import { Container } from '@mui/material';
 // components
-import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
+import { MotionContainer } from '../../components/animate';
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled('div')(({ theme }) => ({
+const RootStyle = styled('div')(() => ({
   backgroundSize: 'cover',
   width: '100%',
   backgroundPosition: 'center',

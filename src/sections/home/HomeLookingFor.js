@@ -1,9 +1,8 @@
 // @mui
 import { styled } from '@mui/material/styles';
-import { Button, Container, Typography, Grid } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 // components
 import Image from '../../components/Image';
-import Iconify from '../../components/Iconify';
 import { MotionInView, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------

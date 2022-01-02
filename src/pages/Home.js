@@ -6,16 +6,11 @@ import Page from '../components/Page';
 import {
     HomeHero,
     HomeMinimal,
-    HomeDarkMode,
     HomeLookingFor,
     HomeColorPresets,
     HomeExplore,
     HomeRoadMap,
     HomeCoreTeam,
-    HomePricingPlans,
-    HomeAdvertisement,
-    HomeCleanInterfaces,
-    HomeHugePackElements,
     HomeBattle,
 } from '../sections/home';
 
