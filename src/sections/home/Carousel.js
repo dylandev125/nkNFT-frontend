@@ -19,25 +19,8 @@ const RootStyle = styled(Box)(({ theme }) => ({
 }));
 // ----------------------------------------------------------------------
 
-const _carouselsExample = [
-    {
-        id: 1,
-        image: 'screenshot-1.png',
-        title: 'slide1'
-    },
-    {
-        id: 2,
-        image: 'screenshot-1.png',
-        title: 'slide2'
-    },
-    {
-        id: 3,
-        image: 'screenshot-3.png',
-        title: 'slide3'
-    }
-]
-
-export default function Carousel() {
+export default function Carousel({ carouselsExample, ratio }) {
+    console.log(carouselsExample)
     const theme = useTheme();
     const carouselRef = useRef(null);
     const settings = {
@@ -60,23 +43,24 @@ export default function Carousel() {
     };
     return (
         <RootStyle>
-            <CarouselArrows
-                filled
-                onNext={handleNext}
-                onPrevious={handlePrevious}
-                sx={{
-                    '& .arrow': {
-                        '&.left': { left: 16 },
-                        '&.right': { right: 16 },
-                    },
-                }}
-            >
-                <Slider ref={carouselRef} {...settings}>
-                    {_carouselsExample.map((item) => (
-                        <CarouselItem key={item.id} item={item} />
-                    ))}
-                </Slider>
-            </CarouselArrows>
+            {carouselsExample.length > 0 &&
+                <CarouselArrows
+                    filled
+                    onNext={handleNext}
+                    onPrevious={handlePrevious}
+                    sx={{
+                        '& .arrow': {
+                            '&.left': { left: 16 },
+                            '&.right': { right: 16 },
+                        },
+                    }}
+                >
+                    <Slider ref={carouselRef} {...settings}>
+                        {carouselsExample.map((item) => (
+                            <CarouselItem key={item.id} item={item} ratio={ratio} />
+                        ))}
+                    </Slider>
+                </CarouselArrows>}
         </RootStyle>
     );
 }
@@ -85,9 +69,10 @@ CarouselItem.propTypes = {
     item: PropTypes.shape({
         image: PropTypes.string,
         title: PropTypes.string,
+        ratio: PropTypes.string
     }),
 };
-function CarouselItem({ item }) {
+function CarouselItem({ item, ratio }) {
     const { image, title } = item;
-    return <Image alt={title} src={image} ratio="21/9" />;
+    return <Image alt={title} src={image} ratio={ratio || '21/9'} />;
 }

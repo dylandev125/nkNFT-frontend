@@ -1,13 +1,13 @@
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Grid, Link, Divider, Container, Typography, Stack } from '@mui/material';
+import { Grid, Link, Divider, Container, Typography, Stack, TextField, Box } from '@mui/material';
 // routes
 import { PATH_PAGE } from '../../routes/paths';
 // components
 import Logo from '../../components/Logo';
 import SocialsButton from '../../components/SocialsButton';
-
+import Button from '../../components/Button'
 // ----------------------------------------------------------------------
 
 const LINKS = [
@@ -99,7 +99,7 @@ export default function MainFooter() {
         <div style={{ marginTop: '40px', textAlign: 'center', }}>
           <Typography
             component="subtitle1"
-            variant="subtitle1"
+            variant="subtitle2"
             color="common.white"
             sx={{
               mt: 50,
@@ -108,19 +108,21 @@ export default function MainFooter() {
               fontWeight: 'bold'
             }}
           >
-            JOIN THE MOVEMENT!
+            Are you ready to start your journey?
           </Typography>
 
-          <Typography
-            component="p"
-            variant="body2"
+          <Box
             sx={{
-              pb: 5,
-              fontSize: 16,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              mt: 2,
+              mb: 4
             }}
           >
-            <AnchorStyle href="https://twitter.com/nekotopiaworld" target="_blank">#WEARENEKOTOPIA</AnchorStyle>
-          </Typography>
+            <TextField type="email" size="small" placeholder='Email Address' />
+            <Button handleClick={() => { }} sx={{ ml: 1, height: '40px', borderRadius: '8px' }}> Register</Button>
+          </Box>
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
