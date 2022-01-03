@@ -73,7 +73,7 @@ const FOUNDATION_LIST = [
     },
     {
         id: 6,
-        name: 'JP',
+        name: 'JP Reddy',
         description: 'Community Head',
         icon: `team/JPReddy.jpeg`,
         href: 'https://www.linkedin.com/in/jp-reddy-bornmonkie/',
@@ -83,15 +83,15 @@ const FOUNDATION_LIST = [
 
 const advisors = [
     {
-        name: 'Eric',
-        description: 'Founder Ex- Network',
+        name: 'Eric Su',
+        description: 'Founder @ Ex- Network',
         icon: `eric.png`,
         href: '',
         credibility: ''
     },
     {
         name: 'Anuj Kodagam',
-        description: 'Founder Wall.app',
+        description: 'Founder @ Wall.app',
         icon: `30K5Azeq_400x400.png`,
         href: '',
         credibility: ''

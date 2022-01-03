@@ -51,10 +51,10 @@ export default function ComponentCard({ item }) {
                     <Typography variant="subtitle1" sx={{ mt: 1, p: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         {name}{href !== '' && <SocialsButton sx={{ color: '#8270b6' }} links={{ 'linkedin': href }} />}
                     </Typography>
-                    <Typography variant="p" sx={{ mt: 1, p: 1, fontSize: '14px', color: '#b3abab' }}>
+                    <Typography variant="p" sx={{ mt: 1, p: 1, fontSize: '14px', color: '#fff' }}>
                         {description}
                     </Typography>
-                    <Typography variant="body2" sx={{ mt: 2, fontSize: '13px', color: '#7c80b9' }}>
+                    <Typography variant="body2" sx={{ mt: 2, fontSize: '13px', color: '#b3abab' }}>
                         {credibility}
                     </Typography>
                 </Box>
