@@ -85,7 +85,7 @@ const FOUNDATION_LIST = [
         credibility: 'MERN Stack Blockchain Developer. 4+ years of experience in web and blockchain development'
     },
     {
-        name: 'Chan',
+        name: 'Chen',
         description: 'Blockchain Developer',
         icon: `team/Chen.png`,
         href: '',
