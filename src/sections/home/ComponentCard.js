@@ -29,37 +29,37 @@ export default function ComponentCard({ item }) {
         <MotionInView variants={varFade().in} sx={{ width: '280px', }} style={{
             gridColumnEnd: isDesktop && id && id === 5 ? -3 : 0
         }}>
-            <a href={href} target="_blank" underline="none" rel="noreferrer" style={{ textDecoration: 'none' }}>
-                <Paper variant="outlined" sx={{ p: 1, bgcolor: 'transparent', border: '0px solid rgba(145, 158, 171, 0.24)' }}>
-                    <CardActionArea
-                        component={m.div}
-                        whileHover="hover"
-                        sx={{
-                            p: 3,
-                            borderRadius: 1,
-                            color: 'primary.main',
-                            display: 'flex',
-                            justifyContent: 'center'
-                            // backgroundImage: 'url(core-bg.png)'
-                        }}
-                    >
-                        <m.div variants={varHover(1.2)} transition={varTranHover()}>
-                            <Image src={icon} alt={name} effect="black-and-white" sx={{ borderRadius: '100%', width: '130px', height: '130px' }} />
-                        </m.div>
-                    </CardActionArea>
-                    <Box sx={{ textAlign: 'center' }}>
-                        <Typography variant="subtitle1" sx={{ mt: 1, p: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            {name}{href !== '' && <SocialsButton sx={{ color: '#8270b6' }} links={{ 'linkedin': href }} />}
-                        </Typography>
-                        <Typography variant="p" sx={{ mt: 1, p: 1, fontSize: '14px', color: '#b3abab' }}>
-                            {description}
-                        </Typography>
-                        <Typography variant="body2" sx={{ mt: 2, fontSize: '13px', color: '#7c80b9' }}>
-                            {credibility}
-                        </Typography>
-                    </Box>
-                </Paper>
-            </a>
+            {/* <a href={href} target="_blank" underline="none" rel="noreferrer" style={{ textDecoration: 'none' }}> */}
+            <Paper variant="outlined" sx={{ p: 1, bgcolor: 'transparent', border: '0px solid rgba(145, 158, 171, 0.24)' }}>
+                <CardActionArea
+                    component={m.div}
+                    whileHover="hover"
+                    sx={{
+                        p: 3,
+                        borderRadius: 1,
+                        color: 'primary.main',
+                        display: 'flex',
+                        justifyContent: 'center'
+                        // backgroundImage: 'url(core-bg.png)'
+                    }}
+                >
+                    <m.div variants={varHover(1.2)} transition={varTranHover()}>
+                        <Image src={icon} alt={name} effect="black-and-white" sx={{ borderRadius: '100%', width: '130px', height: '130px' }} />
+                    </m.div>
+                </CardActionArea>
+                <Box sx={{ textAlign: 'center' }}>
+                    <Typography variant="subtitle1" sx={{ mt: 1, p: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        {name}{href !== '' && <SocialsButton sx={{ color: '#8270b6' }} links={{ 'linkedin': href }} />}
+                    </Typography>
+                    <Typography variant="p" sx={{ mt: 1, p: 1, fontSize: '14px', color: '#b3abab' }}>
+                        {description}
+                    </Typography>
+                    <Typography variant="body2" sx={{ mt: 2, fontSize: '13px', color: '#7c80b9' }}>
+                        {credibility}
+                    </Typography>
+                </Box>
+            </Paper>
+            {/* </a> */}
         </MotionInView >
     );
 }
