@@ -1,65 +1,64 @@
-import { m } from 'framer-motion';
 // @mui
-import { styled } from '@mui/material/styles';
-import { Box, Container, Typography, Grid, List, ListItem, ListItemAvatar, Avatar, ListItemText, Stack, Card, CardHeader, } from '@mui/material';
+// import { styled } from '@mui/material/styles';
+import { Box, Typography, Grid } from '@mui/material';
 // components
 import useResponsive from '../../hooks/useResponsive';
 import TeamCard from './TeamCard';
 
 // ----------------------------------------------------------------------
 
-const BoxStyle = styled('div')(({ theme }) => ({
-    maxWidth: '85%',
-    width: '1518px',
-    height: 'auto',
-    margin: '0 auto 200px',
-    borderRadius: '46px',
-    position: 'relative',
-    padding: '1px',
-    zIndex: '5'
-}));
+// const BoxStyle = styled('div')(({ theme }) => ({
+//     maxWidth: '85%',
+//     width: '1518px',
+//     height: 'auto',
+//     margin: '0 auto 200px',
+//     borderRadius: '46px',
+//     position: 'relative',
+//     padding: '1px',
+//     zIndex: '5'
+// }));
 
 // ----------------------------------------------------------------------
 
 const FOUNDATION_LIST = [
     {
         name: 'VK Samhith',
-        description: 'Founder, Chief Executive Officer & Blockchain Lead',
+        description: 'CEO',
         icon: `team/SamhithBW.png`,
         href: 'https://www.linkedin.com/in/vksamhith/',
         credibility: 'Game Developer, 25+ RMG Games, 3Million users.  Ex - MPL, Jio, Paytm Games. Running an Indie Game Studio in India'
     },
     {
+        name: 'Tetsuo420',
+        description: 'Co-Founder',
+        icon: `MechaLight_walk.png`,
+        href: '',
+        credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
+    },
+    {
+        name: 'Buzzkill77',
+        description: 'Co-Founder',
+        icon: `SpaceDark_walk.png`,
+        href: '',
+        credibility: 'Crypto champion & investor since 2016'
+    },
+    {
         name: 'Omrum Cetin',
-        description: 'Chief Technical Officer & Game Lead',
-        icon: `RadioactiveDark_walk.png`,
+        description: 'CTO',
+        icon: `team/OmrumCetin.jpg`,
         href: 'https://www.linkedin.com/in/omrumcetin/',
         credibility: 'Software Developer in multicultural environment, multiple languages, developing algorithms which are being used worldwide'
     },
     {
-        name: 'Tetsuo420',
-        description: 'Co-Founder & Cheif Business Officer',
-        icon: `QuantumDark_walk.png`,
-        href: 'https://www.linkedin.com/home',
-        credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
-    },
-    {
         name: 'Ssaulgoodmann',
         description: 'Cheif - Product & Design',
-        icon: `MechaLight_walk.png`,
-        href: 'https://www.linkedin.com/home',
+        icon: `team/Bharath_Chaganty.png`,
+        href: '',
         credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
     },
     {
-        name: 'Buzzkill77',
-        description: 'Co-Founder & Strategy',
-        icon: `SpaceDark_walk.png`,
-        href: 'https://www.linkedin.com/home',
-        credibility: 'Crypto champion & investor since 2016'
-    },
-    {
-        name: 'JP',
-        description: 'Co-Founder & Strategy',
+        name: 'JP Reddy',
+        description: 'Community Head',
         icon: `team/JPReddy.jpeg`,
         href: 'https://www.linkedin.com/in/jp-reddy-bornmonkie/',
         credibility: 'Growth Hacker & Gamer, Public & Publisher Relations, Digital marketing for the company.'
@@ -80,10 +79,17 @@ const FOUNDATION_LIST = [
     },
     {
         name: 'Raviteja Bandreddy',
+        description: 'Blockchain Lead',
+        icon: `team/ravi.jpg`,
+        href: 'https://www.linkedin.com/in/ravitejabandreddy/',
+        credibility: 'MERN Stack Blockchain Developer. 4+ years of experience in web and blockchain development'
+    },
+    {
+        name: 'Chan',
         description: 'Blockchain Developer',
-        icon: `team/Ravi_Bandreddy.jpg`,
-        href: 'https://www.linkedin.com/home',
-        credibility: 'MERN Stack Blockchain Developer. 4+ years of experience in web and blockchain development in building financial products.'
+        icon: `team/Chen.png`,
+        href: '',
+        credibility: ''
     },
     {
         name: 'Revanth Sama',
@@ -92,13 +98,13 @@ const FOUNDATION_LIST = [
         href: 'https://www.linkedin.com/in/revanth-reddy-2229351b7/',
         credibility: ''
     },
-    {
-        name: 'Idir Belaid',
-        description: 'Gameplay Programmer',
-        icon: `team/Idir_Belaid.jpg`,
-        href: 'https://www.linkedin.com/home',
-        credibility: ''
-    },
+    // {
+    //     name: 'Idir Belaid',
+    //     description: 'Gameplay Programmer',
+    //     icon: `team/Idir_Belaid.jpg`,
+    //     href: 'https://www.linkedin.com/home',
+    //     credibility: ''
+    // },
     {
         name: 'Ashish Polaki',
         description: 'Gameplay Programmer',
@@ -127,13 +133,13 @@ const FOUNDATION_LIST = [
         href: 'https://www.linkedin.com/in/madhav-gojiya-977a8a181',
         credibility: ''
     },
-    {
-        name: 'Sriharan S',
-        description: 'Junior Gameplay Programmer',
-        icon: `Space Neko.png`,
-        href: 'https://www.linkedin.com/in/sri-haran-s/',
-        credibility: ''
-    },
+    // {
+    //     name: 'Sriharan S',
+    //     description: 'Junior Gameplay Programmer',
+    //     icon: `Space Neko.png`,
+    //     href: 'https://www.linkedin.com/in/sri-haran-s/',
+    //     credibility: ''
+    // },
     {
         name: 'Jatin Pandey',
         description: 'Junior Gameplay Programmer',
@@ -186,38 +192,52 @@ const FOUNDATION_LIST = [
     {
         name: 'Akhil Pulla',
         description: '3D Animator',
-        icon: `Space Neko.png`,
-        href: 'https://www.linkedin.com/home',
+        icon: `team/akhil.jpg`,
+        href: 'https://www.linkedin.com/in/akhil-akhi-29a3bb104',
         credibility: ''
     },
-    {
-        name: 'Spandana Taruvu',
-        description: 'Junior 2D Artist',
-        icon: `team/Spandana_Taruvu.jpeg`,
-        href: 'https://www.linkedin.com/home',
-        credibility: ''
-    },
+    // {
+    //     name: 'Spandana Taruvu',
+    //     description: 'Junior 2D Artist',
+    //     icon: `team/Spandana_Taruvu.jpeg`,
+    //     href: 'https://www.linkedin.com/home',
+    //     credibility: ''
+    // },
     {
         name: 'Anonymous Pixel Artist',
         description: '2D Pixel Artist',
-        icon: `Space Neko.png`,
-        href: 'https://www.linkedin.com/home',
+        icon: `team/DigitalDark_walk 1.png`,
+        href: '',
         credibility: ''
     },
     {
-        name: 'Sai Rakesh',
-        description: 'Game Producer',
+        name: 'Anonymous Developer',
+        description: 'Full Stack Developer',
         icon: `Space Neko.png`,
-        href: 'https://www.linkedin.com/in/sairakeshakaremsetti/',
+        href: '',
         credibility: ''
-    }
+    },
+    // {
+    //     name: 'Anonymous Full Stack',
+    //     description: 'Full Stack Developer',
+    //     icon: `Space Neko.png`,
+    //     href: '',
+    //     credibility: ''
+    // },
+    // {
+    //     name: 'Sai Rakesh',
+    //     description: 'Game Producer',
+    //     icon: `Space Neko.png`,
+    //     href: 'https://www.linkedin.com/in/sairakeshakaremsetti/',
+    //     credibility: ''
+    // }
 ]
-export default function AboutTeams({ item }) {
+export default function AboutTeams() {
     const isDesktop = useResponsive('up', 'lg');
 
     return (
         <>
-            <Typography variant="h3" sx={{ textAlign: 'left', mt: 3, pb: 5 }}>
+            <Typography variant="h3" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5 }}>
                 Team
             </Typography>
             <Grid item xs={12} sm={12} alignItems={'center'} justifyItems={'center'}>
@@ -225,7 +245,7 @@ export default function AboutTeams({ item }) {
                     sx={{
                         display: 'grid',
                         gap: 1,
-                        gridTemplateColumns: isDesktop ? 'repeat(3, 1fr)' : 'repeat(2, 1fr)',
+                        gridTemplateColumns: isDesktop ? 'repeat(3, 1fr)' : 'repeat(1, 1fr)',
                         alignItems: 'center',
                         justifyContent: 'center',
                         justifyItems: 'center'

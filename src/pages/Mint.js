@@ -1,10 +1,10 @@
 // @mui
 import { styled } from '@mui/material/styles';
-import { Grid, Container } from '@mui/material';
+// import { Grid, Container } from '@mui/material';
 // components
 import Page from '../components/Page';
 import { Hero, LearnAboutWallet } from '../sections/mint';
-import Button from '../components/Button'
+// import Button from '../components/Button'
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({

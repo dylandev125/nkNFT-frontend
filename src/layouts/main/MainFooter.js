@@ -1,41 +1,12 @@
-import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Grid, Link, Divider, Container, Typography, Stack, TextField, Box } from '@mui/material';
+import { Container, Typography, TextField, Box } from '@mui/material';
 // routes
-import { PATH_PAGE } from '../../routes/paths';
 // components
-import Logo from '../../components/Logo';
-import SocialsButton from '../../components/SocialsButton';
 import Button from '../../components/Button'
 // ----------------------------------------------------------------------
 
-const LINKS = [
-  {
-    headline: 'Minimal',
-    children: [
-      { name: 'About us', href: PATH_PAGE.about },
-      { name: 'Contact us', href: PATH_PAGE.contact },
-      { name: 'FAQs', href: PATH_PAGE.faqs },
-    ],
-  },
-  {
-    headline: 'Legal',
-    children: [
-      { name: 'Terms and Condition', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
-    ],
-  },
-  {
-    headline: 'Contact',
-    children: [
-      { name: 'support@minimals.cc', href: '#' },
-      { name: 'Los Angeles, 359  Hidden Valley Road', href: '#' },
-    ],
-  },
-];
-
-const RootStyle = styled('div')(({ theme }) => ({
+const RootStyle = styled('div')(() => ({
   position: 'relative',
   width: '100%',
   // padding: '30px 0 15px 0',
@@ -51,7 +22,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   // alignSelf: 'center'
 }));
 
-const AnchorStyle = styled('a')(({ theme }) => ({
+const AnchorStyle = styled('a')(() => ({
   textDecoration: 'none',
   color: '#8270b6',
   '&:hover': {
@@ -63,7 +34,7 @@ const AnchorStyle = styled('a')(({ theme }) => ({
   }
 }));
 
-const AnchorImageStyle = styled('a')(({ theme }) => ({
+const AnchorImageStyle = styled('a')(() => ({
   textDecoration: 'none',
   color: 'white',
   '&:hover': {

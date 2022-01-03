@@ -16,7 +16,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(15),
 }));
 
-const CaseStyle = styled('div')(({ theme }) => ({
+const CaseStyle = styled('div')(() => ({
   width: '550px',
   minHeight: '233px',
   position: 'absolute',
@@ -54,20 +54,19 @@ const CaseStyle = styled('div')(({ theme }) => ({
 ));
 
 
-const PinItem = () => {
-  return (<MotionInView variants={varFade().inDown}>
-    <m.div animate={{ y: [-5, 10, -5] }} transition={{ duration: 5, repeat: Infinity }}>
-      <Image
-        disabledEffect
-        alt="sidebar"
-        src={`pin.png`}
-      />
-    </m.div>
-  </MotionInView>)
-}
+const PinItem = () => <MotionInView variants={varFade().inDown}>
+  <m.div animate={{ y: [-5, 10, -5] }} transition={{ duration: 5, repeat: Infinity }}>
+    <Image
+      disabledEffect
+      alt="sidebar"
+      src={`pin.png`}
+    />
+  </m.div>
+</MotionInView>
 
 
-const CaseItem = ({ caseClass, title, description }) => {
+const CaseItem = (item) => {
+  const { caseClass, title, description } = item
   return (
     <CaseStyle className={caseClass}>
       <img src="chest.png" alt="" style={{
@@ -163,7 +162,7 @@ export default function HomeColorPresets() {
 
           </Box> :
           <Box sx={{ position: 'relative', pb: 7, width: '100%', margin: 'auto' }}>
-            <img src="island-mob.webp" alt="" width="100%" />
+            <img src="island.webp" alt="" width="100%" />
           </Box>}
       </Box>
     </RootStyle >

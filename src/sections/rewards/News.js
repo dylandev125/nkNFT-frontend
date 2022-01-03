@@ -1,7 +1,7 @@
 // @mui
 import { styled } from '@mui/material/styles';
 import { Typography } from '@mui/material';
-import { Masonry } from '@mui/lab';
+// import { Masonry } from '@mui/lab';
 // routes
 // import { PATH_PAGE } from '../../../../routes/paths';
 // components

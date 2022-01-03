@@ -32,7 +32,7 @@ export default function SocialsButton({ initialColor = false, simple = true, lin
       name: 'Linkedin',
       icon: 'eva:linkedin-fill',
       socialColor: '#007EBB',
-      path: links.linkedin || '#linkedin-link',
+      path: links.linkedin || '#',
     },
     // {
     //   name: 'Twitter',
@@ -47,7 +47,7 @@ export default function SocialsButton({ initialColor = false, simple = true, lin
       {SOCIALS.map((social) => {
         const { name, icon, path, socialColor } = social;
         return simple ? (
-          <Link key={name} href={path}>
+          <Link key={name} href={path} target="_blank">
             <Tooltip title={name} placement="top">
               <IconButton
                 color="inherit"
@@ -70,6 +70,7 @@ export default function SocialsButton({ initialColor = false, simple = true, lin
           <Button
             key={name}
             href={path}
+            target="_blank"
             color="inherit"
             variant="outlined"
             size="small"

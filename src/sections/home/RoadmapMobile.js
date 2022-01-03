@@ -104,12 +104,14 @@ CarouselItem.propTypes = {
     item: PropTypes.shape({
         image: PropTypes.string,
         title: PropTypes.string,
+        id: PropTypes.number,
+        description: PropTypes.string,
     }),
 };
 function CarouselItem({ item }) {
     const { id, title, description } = item;
     return (
-        <Grid container spacing={2} alignItems={'center'} justifyContent={'center'}>
+        <Grid container spacing={2} alignItems={'center'} justifyContent={'center'} key={id}>
             <Grid item xs={6}>
                 <Image alt={title} src={`roadMap/road-map${id}.png`} />
             </Grid>

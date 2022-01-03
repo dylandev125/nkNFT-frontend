@@ -19,8 +19,8 @@ const RootStyle = styled(Box)(({ theme }) => ({
 }));
 // ----------------------------------------------------------------------
 
-export default function Carousel({ carouselsExample, ratio }) {
-    console.log(carouselsExample)
+export default function Carousel(item) {
+    const { carouselsExample, ratio } = item
     const theme = useTheme();
     const carouselRef = useRef(null);
     const settings = {
@@ -72,7 +72,7 @@ CarouselItem.propTypes = {
         ratio: PropTypes.string
     }),
 };
-function CarouselItem({ item, ratio }) {
-    const { image, title } = item;
+function CarouselItem({ item }) {
+    const { image, title, ratio } = item;
     return <Image alt={title} src={image} ratio={ratio || '21/9'} />;
 }

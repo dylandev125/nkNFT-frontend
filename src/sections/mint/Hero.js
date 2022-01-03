@@ -1,13 +1,13 @@
-import { m } from 'framer-motion';
+// import { m } from 'framer-motion';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Container, Typography } from '@mui/material';
+// import { Box, Container, Typography } from '@mui/material';
 // components
-import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
+// import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled('div')(({ theme }) => ({
+const RootStyle = styled('div')(() => ({
     backgroundSize: 'cover',
     width: '100%',
     backgroundPosition: 'center',
@@ -33,18 +33,18 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 
-const ContentStyle = styled('div')(({ theme }) => ({
-    textAlign: 'center',
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-        textAlign: 'center',
-        position: 'absolute',
-    },
-    '&:after': {
-        background: `linear-gradient(90deg, rgba(246, 197, 32, 0) 0%, #F6C520 47.85%, rgba(246, 197, 32, 0) 99.4%)`,
-        height: '5px',
-    },
-}));
+// const ContentStyle = styled('div')(({ theme }) => ({
+//     textAlign: 'center',
+//     width: '100%',
+//     [theme.breakpoints.up('md')]: {
+//         textAlign: 'center',
+//         position: 'absolute',
+//     },
+//     '&:after': {
+//         background: `linear-gradient(90deg, rgba(246, 197, 32, 0) 0%, #F6C520 47.85%, rgba(246, 197, 32, 0) 99.4%)`,
+//         height: '5px',
+//     },
+// }));
 
 // ----------------------------------------------------------------------
 

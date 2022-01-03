@@ -1,20 +1,19 @@
-import { m } from 'framer-motion';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 // components
-import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
-import Button from '../../components/Button'
+// import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
+// import Button from '../../components/Button'
 // ----------------------------------------------------------------------
 
-const RootStyle = styled('div')(({ theme }) => ({
+const RootStyle = styled('div')(() => ({
     paddingTop: '60px',
     paddingBottom: '60px',
     width: '100%',
     textAlign: 'center'
 }));
 
-const BoxStyle = styled(Box)(({ theme }) => ({
+const BoxStyle = styled(Box)(() => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

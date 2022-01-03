@@ -1,16 +1,10 @@
 import { m } from 'framer-motion';
-import { Link as RouterLink } from 'react-router-dom';
+// import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled, keyframes } from '@mui/material/styles';
-import { Box, Link, Container, Typography, Stack, Grid } from '@mui/material';
-// routes
-import { PATH_DASHBOARD } from '../../routes/paths';
-// components
-import Image from '../../components/Image';
-import Iconify from '../../components/Iconify';
-import TextIconLabel from '../../components/TextIconLabel';
-import { MotionContainer, varFade, MotionInView } from '../../components/animate';
-import Button from '../../components/Button'
+import { Box, Container, Typography } from '@mui/material';
+import { varFade, MotionInView } from '../../components/animate';
+// import Button from '../../components/Button'
 import useResponsive from '../../hooks/useResponsive';
 import RoadmapMobile from './RoadmapMobile'
 import RoadMapSVG from './RoadMapSVG'
@@ -18,7 +12,7 @@ import RoadMapSVG from './RoadMapSVG'
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled(m.div)(({ theme }) => ({
+const RootStyle = styled(m.div)(() => ({
     position: 'relative',
     minHeight: '911px',
     marginTop: '-125px',
@@ -37,7 +31,7 @@ const RootStyle = styled(m.div)(({ theme }) => ({
     // },
 }));
 
-const ContentStyle = styled('div')(({ theme }) => ({
+const ContentStyle = styled('div')(() => ({
     width: '100%',
     margin: '0 auto',
     maxWidth: '1578px',
@@ -46,23 +40,23 @@ const ContentStyle = styled('div')(({ theme }) => ({
     height: '1750px'
 }));
 
-const BoxStyle = styled(Box)({
-    width: '210px',
-    position: 'absolute',
-    left: '50%',
-    // top: '10%',
-    zIndex: '2',
-    fontWeight: '300',
-    fontSize: '16px',
-    lineHeight: '2',
-    color: '#7c80b9',
-    transform: 'translateX(-645px)',
-    opacity: '0',
-    transition: 'opacity .5s',
-    transitionDelay: '.5s'
-});
+// const BoxStyle = styled(Box)({
+//     width: '210px',
+//     position: 'absolute',
+//     left: '50%',
+//     // top: '10%',
+//     zIndex: '2',
+//     fontWeight: '300',
+//     fontSize: '16px',
+//     lineHeight: '2',
+//     color: '#7c80b9',
+//     transform: 'translateX(-645px)',
+//     opacity: '0',
+//     transition: 'opacity .5s',
+//     transitionDelay: '.5s'
+// });
 
-const HeroImgStyle = styled(m.img)(({ theme }) => ({
+const HeroImgStyle = styled(m.img)(() => ({
     width: '100%',
     position: 'absolute',
     top: '0',
@@ -104,27 +98,15 @@ const pin = keyframes`
 
 
 
-const ImageStyle = styled('div')(({ theme }) => ({
-    // '@keyframes road-map': {
-    //     '0%': { strokeDashoffset: '0' },
-    //     '100%': { strokeDashoffset: '-32px' }
-    // },
-    // '>svg': {
-    //     animation: `${roadMap} 1s linear infinite`,
-    // },
+const ImageStyle = styled('div')(() => ({
     animation: `${roadMap} 1s linear infinite`,
     position: 'absolute',
     top: '60px',
     left: '50%',
-    transform: 'translateX(-50%)',
-    // left: '50%'
-    // transform: translateX(-50 %);
-    // strokeDasharray: '2566',
-    // strokeDataoffset: '2566',
-
+    transform: 'translateX(-50%)'
 }));
 
-const Img = styled('img')(({ theme }) => ({
+const Img = styled('img')(() => ({
     animation: `${pin} 1s linear infinite`,
 
 }));
@@ -132,8 +114,8 @@ const Img = styled('img')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const RoadMapItem = ({ img, title, description, sx, imgsx, pinsx, textsx }) => {
-
+const RoadMapItem = (item) => {
+    const { img, title, description, sx, imgsx, pinsx, textsx } = item
     return (
         <Box
             sx={{
@@ -188,22 +170,6 @@ const RoadMapItem = ({ img, title, description, sx, imgsx, pinsx, textsx }) => {
 
 export default function HomeRoadMap() {
     const isDesktop = useResponsive('up', 'lg');
-    const pathVariants = {
-        inital: {
-            // opacity: 0,
-            strokeDataoffset: 0,
-            // pathLength: 0
-        },
-        final: {
-            // opacity: 1,
-            strokeDataoffset: '-32px',
-            // pathLength: 1,
-            transition: {
-                duration: 0.01,
-                ease: "easeInOut"
-            }
-        }
-    };
 
     return (
         <>
@@ -374,14 +340,14 @@ export default function HomeRoadMap() {
                                 position: 'absolute',
                                 left: '50%',
                                 zIndex: '2',
-                                transform: 'translateX(-310px)',
+                                transform: 'translateX(165px)',
                                 top: '1333px'
                             }}
                             imgsx={{
                                 top: '-30px',
                                 left: '33px'
                             }}
-                            pinsx={{ left: '443px' }}
+                            pinsx={{ left: '-30px' }}
                             textsx={{
                                 position: 'absolute',
                                 left: '171px',

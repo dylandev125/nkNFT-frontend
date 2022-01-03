@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import { useRef } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+// import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { alpha, useTheme, styled } from '@mui/material/styles';
-import { Box, Paper, Link, CardContent, Typography } from '@mui/material';
+import { Box, Paper, CardContent, Typography } from '@mui/material';
 // components
 import Image from '../../components/Image';
-import Iconify from '../../components/Iconify';
 import TextMaxLine from '../../components/TextMaxLine';
 import { CarouselArrows } from '../../components/carousel';
 import Button from '../../components/Button';
@@ -137,7 +136,7 @@ export default function Carousel() {
                 </CarouselArrows>
             </RootStyle>
             <Box sx={{ margin: 'auto' }}>
-                <Button handleClick={e => { }} sx={{ mt: 3 }}>See all news</Button>
+                <Button handleClick={() => { }} sx={{ mt: 3 }}>See all news</Button>
             </Box>
         </>
     );

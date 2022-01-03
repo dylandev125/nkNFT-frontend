@@ -2,14 +2,9 @@ import { m } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Link, Container, Typography, Stack } from '@mui/material';
-// routes
-import { PATH_DASHBOARD } from '../../routes/paths';
+import { Typography, Stack } from '@mui/material';
 // components
-import Image from '../../components/Image';
-import Iconify from '../../components/Iconify';
-import TextIconLabel from '../../components/TextIconLabel';
-import { MotionContainer, varFade } from '../../components/animate';
+import { varFade } from '../../components/animate';
 import Button from '../../components/Button'
 import useResponsive from '../../hooks/useResponsive';
 // ----------------------------------------------------------------------
@@ -46,15 +41,15 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
   },
 }));
 
-const HeroOverlayStyle = styled(m.img)({
-  zIndex: 9,
-  width: '100%',
-  height: '100%',
-  // objectFit: 'cover',
-  position: 'absolute',
-});
+// const HeroOverlayStyle = styled(m.img)({
+//   zIndex: 9,
+//   width: '100%',
+//   height: '100%',
+//   // objectFit: 'cover',
+//   position: 'absolute',
+// });
 
-const HeroImgStyle = styled(m.img)(({ theme }) => ({
+const HeroImgStyle = styled(m.img)(() => ({
   position: 'absolute',
   top: '0',
   // left: '50%',

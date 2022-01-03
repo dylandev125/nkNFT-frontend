@@ -1,21 +1,16 @@
-import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react'
+import { Link as RouterLink } from 'react-router-dom';
 // @mui
-import { alpha, useTheme, styled } from '@mui/material/styles';
-import { Box, Grid, Divider, Card, CardHeader, CardContent, Container, Typography, LinearProgress, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { Box, Grid, Divider, Card, CardHeader, CardContent, Container, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
-// utils
-import { fPercent } from '../../utils/formatNumber';
-// _mock_
-import { _skills } from '../../_mock';
 // components
-import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
 import { MotionInView, varFade } from '../../components/animate';
 import Button from '../../components/Button'
-import useOffSetTop from '../../hooks/useOffSetTop'
 import AboutTeams from './AboutTeams'
+
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -27,7 +22,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   },
 }));
 
-const AccordionStyle = styled('p')(({ theme }) => ({
+const AccordionStyle = styled('p')(() => ({
   fontWeight: '500',
   fontSize: '30px',
   lineHeight: '140%',
@@ -40,7 +35,7 @@ const AccordionStyle = styled('p')(({ theme }) => ({
   WebkitBackgroundClip: 'text'
 }))
 
-const AccordionTitleStyle = styled("Typography")(({ theme }) => ({
+const AccordionTitleStyle = styled("Typography")(() => ({
   color: '#8270b6',
   fontSize: '20px',
   '&:hover, &:active': {
@@ -52,11 +47,11 @@ const AccordionTitleStyle = styled("Typography")(({ theme }) => ({
   }
 }))
 
-const CardStyle = styled("Card")(() => ({
-  background: 'rgba(35, 20, 71, .57)',
-  borderRadius: '12px',
-  padding: '33px 48px 28px'
-}))
+// const CardStyle = styled("Card")(() => ({
+//   background: 'rgba(35, 20, 71, .57)',
+//   borderRadius: '12px',
+//   padding: '33px 48px 28px'
+// }))
 
 const AnchorStyle = styled("a")(() => ({
   textDecoration: 'none',
@@ -84,7 +79,7 @@ const TypographyNavStyle = styled(Typography)(() => ({
 // ----------------------------------------------------------------------
 
 export default function AboutWhat() {
-  const theme = useTheme();
+  // const theme = useTheme();
   const isDesktop = useResponsive('up', 'lg');
   const [expanded, setExpanded] = React.useState(false);
 
@@ -93,10 +88,11 @@ export default function AboutWhat() {
   };
 
 
-  const isLight = theme.palette.mode === 'light';
-  const shadow = `-40px 40px 80px ${alpha(isLight ? theme.palette.grey[500] : theme.palette.common.black, 0.48)}`;
+  // const isLight = theme.palette.mode === 'light';
+  // const shadow = `-40px 40px 80px ${alpha(isLight ? theme.palette.grey[500] : theme.palette.common.black, 0.48)}`;
 
   const [scrollPosition, setScrollPosition] = useState(0);
+
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -105,16 +101,13 @@ export default function AboutWhat() {
   useEffect(() => {
     if (isDesktop) {
       window.addEventListener("scroll", handleScroll);
-
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
+      return () => window.removeEventListener("scroll", handleScroll);
     }
-
   }, [isDesktop]);
 
 
-  const NavItem = ({ id, title }) => {
+  const NavItem = (item) => {
+    const { id, title } = item
     return (
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', padding: 1 }}>
         <img src="arrow.svg" alt="" />
@@ -125,7 +118,8 @@ export default function AboutWhat() {
     )
   }
 
-  const NavSubItem = ({ id, title }) => {
+  const NavSubItem = (item) => {
+    const { id, title } = item
     return (
       <li>
         <AnchorStyle href={`#${id}`}>
@@ -137,7 +131,8 @@ export default function AboutWhat() {
     )
   }
 
-  const AccordionItem = ({ id, title, description }) => {
+  const AccordionItem = (item) => {
+    const { id, title, description } = item
     return (
       <Accordion expanded={expanded === id} onChange={handleChange(id)}>
         <AccordionSummary
@@ -158,9 +153,9 @@ export default function AboutWhat() {
     <>
       <RootStyle>
         <Container sx={{ maxWidth: { lg: '1500px' } }}>
-          <Grid container spacing={1} alignItems={'stretch'} sx={{ overflowY: 'hidden', overflowX: 'hidden' }}>
+          <Grid container spacing={1} alignItems={'stretch'} justifyContent="space-evenly" sx={{ overflowY: 'hidden', overflowX: 'hidden' }}>
             {isDesktop && (
-              <Grid item xs={12} md={3} lg={4} sx={{ pr: { md: 3 }, position: 'relative', marginTop: '70px' }}>
+              <Grid item xs={12} md={3} lg={3} sx={{ pr: { md: 3 }, position: 'relative', marginTop: '70px' }}>
                 <Grid item xs={12}>
                   <Box sx={{ position: 'absolute', top: `${scrollPosition > 400 ? scrollPosition - 400 : 0}px`, transition: 'top, .75s' }}>
                     <Card sx={{ width: '320px', padding: '10px' }}>
@@ -182,7 +177,12 @@ export default function AboutWhat() {
                           </Box>
                         </Box>
 
-                        <Button handleClick={() => { }} sx={{ width: '100%', marginTop: '5px' }}>Contact Us</Button>
+                        <Button to="/contact"
+                          component={RouterLink}
+                          handleClick={() => { }}
+                          sx={{ width: '100%', marginTop: '5px' }}>
+                          Contact Us
+                        </Button>
 
                       </CardContent>
                     </Card>

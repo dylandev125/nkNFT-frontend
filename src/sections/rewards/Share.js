@@ -1,15 +1,15 @@
-import { m } from 'framer-motion';
+// import { m } from 'framer-motion';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Box } from '@mui/material';
 // components
-import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
+// import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
 import Button from '../../components/Button'
 import useResponsive from '../../hooks/useResponsive';
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled('div')(({ theme }) => ({
+const RootStyle = styled('div')(() => ({
     backgroundSize: 'cover',
     width: '100%',
     padding: '30px',
@@ -25,7 +25,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 
-const TreasureStyle = styled('img')(({ theme }) => ({
+const TreasureStyle = styled('img')(() => ({
     width: '46.6vw',
     height: '46.6vw',
     position: 'absolute',
@@ -36,14 +36,14 @@ const TreasureStyle = styled('img')(({ theme }) => ({
     marginTop: '-100px'
 }));
 
-const TextStyle = styled('div')(({ theme }) => ({
+const TextStyle = styled('div')(() => ({
     width: '923px',
     margin: '144px 0 0 123px',
     position: 'relative',
     zIndex: '2'
 }));
 
-const HeadingStyle = styled('div')(({ theme }) => ({
+const HeadingStyle = styled('div')(() => ({
     fontWeight: 'bold',
     fontSize: '45px',
     lineHeight: '140%',
@@ -52,14 +52,14 @@ const HeadingStyle = styled('div')(({ theme }) => ({
     textShadow: '0 0 5px #000'
 }));
 
-const SecondaryStyle = styled('div')(({ theme }) => ({
+const SecondaryStyle = styled('div')(() => ({
     fontSize: '16px',
     // lineHeight: '160%',
     color: '#8270b6',
     marginBottom: '40px'
 }));
 
-const ShareStyle = styled('div')(({ theme }) => ({
+const ShareStyle = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
@@ -91,11 +91,11 @@ export default function AboutHero() {
                     }}>
                         <ShareStyle>
                             Share link:
-                            <Button sx={{ width: '330px' }} handleClick={e => { }}>Copy Link</Button>
+                            <Button sx={{ width: '330px' }} handleClick={() => { }}>Copy Link</Button>
                         </ShareStyle>
                         <ShareStyle>
                             Share on:
-                            <Button sx={{ width: '330px' }} handleClick={e => { }}>Social</Button>
+                            <Button sx={{ width: '330px' }} handleClick={() => { }}>Social</Button>
                         </ShareStyle>
                     </Box>
                 </TextStyle>}
