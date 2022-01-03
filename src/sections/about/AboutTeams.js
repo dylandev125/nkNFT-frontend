@@ -185,7 +185,7 @@ const FOUNDATION_LIST = [
     {
         name: 'Akhil Pulla',
         description: '3D Animator',
-        icon: `Space Neko.png`,
+        icon: `team/akhil.jpg`,
         href: 'https://www.linkedin.com/in/akhil-akhi-29a3bb104',
         credibility: ''
     },

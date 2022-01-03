@@ -162,7 +162,7 @@ export default function HomeColorPresets() {
 
           </Box> :
           <Box sx={{ position: 'relative', pb: 7, width: '100%', margin: 'auto' }}>
-            <img src="island-mob.webp" alt="" width="100%" />
+            <img src="island.webp" alt="" width="100%" />
           </Box>}
       </Box>
     </RootStyle >
