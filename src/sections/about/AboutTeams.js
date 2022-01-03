@@ -23,21 +23,21 @@ import TeamCard from './TeamCard';
 const FOUNDATION_LIST = [
     {
         name: 'VK Samhith',
-        description: 'Founder, Chief Executive Officer & Blockchain Lead',
+        description: 'CEO',
         icon: `team/SamhithBW.png`,
         href: 'https://www.linkedin.com/in/vksamhith/',
         credibility: 'Game Developer, 25+ RMG Games, 3Million users.  Ex - MPL, Jio, Paytm Games. Running an Indie Game Studio in India'
     },
     {
         name: 'Omrum Cetin',
-        description: 'Chief Technical Officer & Game Lead',
-        icon: `RadioactiveDark_walk.png`,
+        description: 'CTO',
+        icon: `team/OmrumCetin.jpg`,
         href: 'https://www.linkedin.com/in/omrumcetin/',
         credibility: 'Software Developer in multicultural environment, multiple languages, developing algorithms which are being used worldwide'
     },
     {
         name: 'Tetsuo420',
-        description: 'Co-Founder & Cheif Business Officer',
+        description: 'Co-Founder',
         icon: `QuantumDark_walk.png`,
         href: 'https://www.linkedin.com/home',
         credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
@@ -51,14 +51,14 @@ const FOUNDATION_LIST = [
     },
     {
         name: 'Buzzkill77',
-        description: 'Co-Founder & Strategy',
+        description: 'Co-Founder',
         icon: `SpaceDark_walk.png`,
         href: 'https://www.linkedin.com/home',
         credibility: 'Crypto champion & investor since 2016'
     },
     {
         name: 'JP',
-        description: 'Co-Founder & Strategy',
+        description: 'Community Head',
         icon: `team/JPReddy.jpeg`,
         href: 'https://www.linkedin.com/in/jp-reddy-bornmonkie/',
         credibility: 'Growth Hacker & Gamer, Public & Publisher Relations, Digital marketing for the company.'
@@ -79,7 +79,7 @@ const FOUNDATION_LIST = [
     },
     {
         name: 'Raviteja Bandreddy',
-        description: 'Blockchain Developer',
+        description: 'Blockchain Lead',
         icon: `team/Ravi_Bandreddy.jpg`,
         href: 'https://www.linkedin.com/home',
         credibility: 'MERN Stack Blockchain Developer. 4+ years of experience in web and blockchain development in building financial products.'
@@ -216,7 +216,7 @@ export default function AboutTeams() {
 
     return (
         <>
-            <Typography variant="h3" sx={{ textAlign: 'left', mt: 3, pb: 5 }}>
+            <Typography variant="h3" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5 }}>
                 Team
             </Typography>
             <Grid item xs={12} sm={12} alignItems={'center'} justifyItems={'center'}>
@@ -224,7 +224,7 @@ export default function AboutTeams() {
                     sx={{
                         display: 'grid',
                         gap: 1,
-                        gridTemplateColumns: isDesktop ? 'repeat(3, 1fr)' : 'repeat(2, 1fr)',
+                        gridTemplateColumns: isDesktop ? 'repeat(3, 1fr)' : 'repeat(1, 1fr)',
                         alignItems: 'center',
                         justifyContent: 'center',
                         justifyItems: 'center'

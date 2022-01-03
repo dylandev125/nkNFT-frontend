@@ -32,27 +32,31 @@ const BoxStyle = styled('div')(() => ({
 
 const FOUNDATION_LIST = [
     {
+        id: '1',
         name: 'VK Samhith',
-        description: 'Founder, Chief Executive Officer & Blockchain Lead',
+        description: 'CEO',
         icon: `team/SamhithBW.png`,
         href: 'https://www.linkedin.com/in/vksamhith/',
         credibility: 'Game Developer, 25+ RMG Games, 3Million users.  Ex - MPL, Jio, Paytm Games. Running an Indie Game Studio in India'
     },
     {
+        id: 2,
         name: 'Omrum Cetin',
-        description: 'Chief Technical Officer & Game Lead',
-        icon: `RadioactiveDark_walk.png`,
+        description: 'CTO',
+        icon: `team/OmrumCetin.jpg`,
         href: 'https://www.linkedin.com/in/omrumcetin/',
         credibility: 'Software Developer in multicultural environment, multiple languages, developing algorithms which are being used worldwide'
     },
     {
+        id: 3,
         name: 'Tetsuo420',
-        description: 'Co-Founder & Cheif Business Officer',
+        description: 'Co-Founder',
         icon: `QuantumDark_walk.png`,
         href: 'https://www.linkedin.com/home',
         credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
     },
     {
+        id: 4,
         name: 'Ssaulgoodmann',
         description: 'Cheif - Product & Design',
         icon: `MechaLight_walk.png`,
@@ -60,19 +64,21 @@ const FOUNDATION_LIST = [
         credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
     },
     {
+        id: 5,
         name: 'Buzzkill77',
-        description: 'Co-Founder & Strategy',
+        description: 'Co-Founder',
         icon: `SpaceDark_walk.png`,
         href: 'https://www.linkedin.com/home',
         credibility: 'Crypto champion & investor since 2016'
     },
     {
+        id: 6,
         name: 'JP',
-        description: 'Co-Founder & Strategy',
+        description: 'Community Head',
         icon: `team/JPReddy.jpeg`,
         href: 'https://www.linkedin.com/in/jp-reddy-bornmonkie/',
         credibility: 'Growth Hacker & Gamer, Public & Publisher Relations, Digital marketing for the company.'
-    }
+    },
 ]
 
 const advisors = [
@@ -106,14 +112,14 @@ export default function HomeCoreTeam() {
                         sx={{
                             display: 'grid',
                             gap: 1,
-                            gridTemplateColumns: isDesktop ? 'repeat(4, 1fr)' : 'repeat(2, 1fr)',
-                            alignItems: 'center',
+                            gridTemplateColumns: isDesktop ? 'repeat(4, 1fr)' : 'repeat(1, 1fr)',
+                            alignItems: 'flex-start',
                             justifyContent: 'center',
                             justifyItems: 'center'
                         }}
                     >
                         {FOUNDATION_LIST.map((item) => (
-                            <ComponentCard key={item.name} item={item} />
+                            <ComponentCard item={item} key={item.name} />
                         ))}
 
                     </Box>
@@ -159,7 +165,7 @@ export default function HomeCoreTeam() {
                         sx={{
                             display: 'grid',
                             gap: 1,
-                            gridTemplateColumns: isDesktop ? 'repeat(2, 1fr)' : 'repeat(2, 1fr)',
+                            gridTemplateColumns: isDesktop ? 'repeat(2, 1fr)' : 'repeat(1, 1fr)',
                             alignItems: 'center',
                             justifyContent: 'space-around',
                             justifyItems: 'center'

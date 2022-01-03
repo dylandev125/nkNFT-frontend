@@ -44,7 +44,7 @@ export default function HomeBattle() {
     return (
         <RootStyle>
             {/* <Container> */}
-            <Grid container direction="column" alignItems="center" justifyContent="space-between" spacing={{ xs: 8, md: 3 }}>
+            <Grid container direction="column" alignItems="center" justifyContent="space-between" alignContent="center" spacing={{ xs: 4, md: 3 }}>
                 <Grid item xs={12} md={4} sx={{ textAlign: { xs: 'center', md: 'center' } }}>
                     <MotionInView variants={varFade().inDown}>
                         <Typography variant="h2" sx={{ mt: 2, mb: 5 }}>
@@ -52,7 +52,7 @@ export default function HomeBattle() {
                         </Typography>
                     </MotionInView>
 
-                    <MotionInView variants={varFade().inDown} sx={{ mt: 2, mb: 2, width: '800px', margin: 'auto' }}>
+                    <MotionInView variants={varFade().inDown} sx={{ mt: 2, mb: 2, width: { xs: '95%', md: '800px' }, margin: 'auto' }}>
                         <Typography variant="p" >
                             The center of the Nekotopia is a mind-bending MOBA- a multiplayer online battle arena. Here is where your evolved Neko NFT will morph from their 2D pixelated form to a 3D version of themselves to do battle. either against your opponents in kitty-versus-kitty action, or in single-player, Neko-versus-the-world mode.
                         </Typography>
@@ -65,7 +65,7 @@ export default function HomeBattle() {
                         {/* <Card sx={{ width: '900px', height: '600px', bgColor: 'transparent' }}>
                             <CardHeader title="" />
                             <CardContent> */}
-                        <Box sx={{ width: { xs: '300px', md: '700px' }, height: { xs: '100px', md: '400px' }, bgColor: 'transparent' }}>
+                        <Box sx={{ width: { xs: '330px', md: '700px' }, height: { xs: '200px', md: '400px' }, bgColor: 'transparent', margin: 'auto' }}>
                             <CarouselBasic _carouselsExample={_carouselsExample} />
                         </Box>
                         {/* </CardContent>

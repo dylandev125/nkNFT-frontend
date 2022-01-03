@@ -5,6 +5,7 @@ import { Paper, Typography, CardActionArea, Box } from '@mui/material';
 // components
 import Image from '../../components/Image';
 import { MotionInView, varFade, varHover, varTranHover } from '../../components/animate';
+import useResponsive from '../../hooks/useResponsive';
 
 // ----------------------------------------------------------------------
 
@@ -15,13 +16,18 @@ ComponentCard.propTypes = {
         name: PropTypes.string,
         description: PropTypes.string,
         credibility: PropTypes.string,
+        id: PropTypes.number,
     }),
 };
 
 export default function ComponentCard({ item }) {
-    const { name, icon, description, href, credibility } = item;
+    const isDesktop = useResponsive('up', 'lg');
+
+    const { name, icon, description, href, credibility, id } = item;
     return (
-        <MotionInView variants={varFade().in} sx={{ width: '280px', }}>
+        <MotionInView variants={varFade().in} sx={{ width: '280px', }} style={{
+            gridColumnEnd: isDesktop && id && id === 5 ? -3 : 0
+        }}>
             <a href={href} target="_blank" underline="none" rel="noreferrer" style={{ textDecoration: 'none' }}>
                 <Paper variant="outlined" sx={{ p: 1, bgcolor: 'transparent', border: '0px solid rgba(145, 158, 171, 0.24)' }}>
                     <CardActionArea
@@ -44,10 +50,10 @@ export default function ComponentCard({ item }) {
                         <Typography variant="subtitle1" sx={{ mt: 1, p: 1 }}>
                             {name}
                         </Typography>
-                        <Typography variant="p" sx={{ mt: 1, p: 1, fontSize: '14px', color: '#7c80b9' }}>
+                        <Typography variant="p" sx={{ mt: 1, p: 1, fontSize: '14px', color: '#b3abab' }}>
                             {description}
                         </Typography>
-                        <Typography variant="body2" sx={{ mt: 2, fontSize: '13px', color: '#b3abab' }}>
+                        <Typography variant="body2" sx={{ mt: 2, fontSize: '13px', color: '#7c80b9' }}>
                             {credibility}
                         </Typography>
                     </Box>
