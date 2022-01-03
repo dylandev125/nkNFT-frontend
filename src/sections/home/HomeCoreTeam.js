@@ -2,11 +2,13 @@
 import { styled } from '@mui/material/styles';
 import { Box, Typography, Grid, } from '@mui/material';
 // components
+import { Link as RouterLink } from 'react-router-dom';
 import Button from '../../components/Button'
 import useResponsive from '../../hooks/useResponsive';
 import ComponentCard from './ComponentCard'
 import Iconify from '../../components/Iconify';
 // import { FOUNDATION_LIST } from '../overview/PathConfig';
+
 // ----------------------------------------------------------------------
 
 // const ImageStyle = styled('img')(({ theme }) => ({
@@ -138,9 +140,9 @@ export default function HomeCoreTeam() {
                         variant="outlined"
                         color="inherit"
                         size="large"
-                        href={`/about-us#team`}
-                        // component={RouterLink}
-                        // to="/about-us#team"
+                        // href={`/about-us#team`}
+                        component={RouterLink}
+                        to="/about-us#team"
                         handleClick={() => { }}
                         endIcon={<Iconify icon={'ic:round-arrow-right-alt'} width={24} height={24} />}
                         sx={{ mx: 'auto', mt: 3 }}
