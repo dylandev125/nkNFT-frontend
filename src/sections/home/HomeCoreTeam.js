@@ -79,6 +79,14 @@ const FOUNDATION_LIST = [
         href: 'https://www.linkedin.com/in/jp-reddy-bornmonkie/',
         credibility: 'Growth Hacker & Gamer, Public & Publisher Relations, Digital marketing for the company.'
     },
+    {
+        id: 7,
+        name: 'Raviteja Bandreddy',
+        description: 'Blockchain Lead',
+        icon: `team/ravi.jpg`,
+        href: 'https://www.linkedin.com/in/ravitejabandreddy/',
+        credibility: 'MERN Stack Blockchain Development Lead. 4+ years of experience in web and blockchain development in building financial products.'
+    },
 ]
 
 const advisors = [
@@ -86,14 +94,14 @@ const advisors = [
         name: 'Eric Su',
         description: 'Founder @ Ex- Network',
         icon: `eric.png`,
-        href: '',
+        href: 'https://www.linkedin.com/in/ericsu',
         credibility: ''
     },
     {
         name: 'Anuj Kodagam',
         description: 'Founder @ Wall.app',
         icon: `30K5Azeq_400x400.png`,
-        href: '',
+        href: 'https://www.linkedin.com/in/anuj-kumar-kodam-07ba83102',
         credibility: ''
     }
 ]

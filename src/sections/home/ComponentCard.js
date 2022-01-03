@@ -5,7 +5,7 @@ import { Paper, Typography, CardActionArea, Box } from '@mui/material';
 // components
 import Image from '../../components/Image';
 import { MotionInView, varFade, varHover, varTranHover } from '../../components/animate';
-import useResponsive from '../../hooks/useResponsive';
+// import useResponsive from '../../hooks/useResponsive';
 import SocialsButton from '../../components/SocialsButton';
 
 // ----------------------------------------------------------------------
@@ -22,13 +22,15 @@ ComponentCard.propTypes = {
 };
 
 export default function ComponentCard({ item }) {
-    const isDesktop = useResponsive('up', 'lg');
+    // const isDesktop = useResponsive('up', 'lg');
 
-    const { name, icon, description, href, credibility, id } = item;
+    const { name, icon, description, href, credibility } = item;
     return (
-        <MotionInView variants={varFade().in} sx={{ width: '280px', }} style={{
-            gridColumnEnd: isDesktop && id && id === 5 ? -3 : 0
-        }}>
+        <MotionInView variants={varFade().in} sx={{ width: '280px', }}
+        // style={{
+        //     gridColumnEnd: isDesktop && id && id === 5 ? -3 : 0
+        // }}
+        >
             {/* <a href={href} target="_blank" underline="none" rel="noreferrer" style={{ textDecoration: 'none' }}> */}
             <Paper variant="outlined" sx={{ p: 1, bgcolor: 'transparent', border: '0px solid rgba(145, 158, 171, 0.24)' }}>
                 <CardActionArea

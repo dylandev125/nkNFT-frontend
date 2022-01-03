@@ -57,7 +57,7 @@ const FOUNDATION_LIST = [
         credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
     },
     {
-        name: 'JP',
+        name: 'JP Reddy',
         description: 'Community Head',
         icon: `team/JPReddy.jpeg`,
         href: 'https://www.linkedin.com/in/jp-reddy-bornmonkie/',
@@ -83,6 +83,13 @@ const FOUNDATION_LIST = [
         icon: `team/ravi.jpg`,
         href: 'https://www.linkedin.com/in/ravitejabandreddy/',
         credibility: 'MERN Stack Blockchain Developer. 4+ years of experience in web and blockchain development in building financial products.'
+    },
+    {
+        name: 'Chan',
+        description: 'Blockchain Developer',
+        icon: `LightRadio2_sitting 1.png`,
+        href: '',
+        credibility: ''
     },
     {
         name: 'Revanth Sama',
@@ -199,10 +206,24 @@ const FOUNDATION_LIST = [
     {
         name: 'Anonymous Pixel Artist',
         description: '2D Pixel Artist',
+        icon: `team/DigitalDark_walk 1.png`,
+        href: '',
+        credibility: ''
+    },
+    {
+        name: 'Anonymous Developer',
+        description: 'Full Stack Developer',
         icon: `Space Neko.png`,
         href: '',
         credibility: ''
     },
+    // {
+    //     name: 'Anonymous Full Stack',
+    //     description: 'Full Stack Developer',
+    //     icon: `Space Neko.png`,
+    //     href: '',
+    //     credibility: ''
+    // },
     // {
     //     name: 'Sai Rakesh',
     //     description: 'Game Producer',

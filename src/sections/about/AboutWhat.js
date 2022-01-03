@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
 import { Box, Grid, Divider, Card, CardHeader, CardContent, Container, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
@@ -9,6 +10,7 @@ import Iconify from '../../components/Iconify';
 import { MotionInView, varFade } from '../../components/animate';
 import Button from '../../components/Button'
 import AboutTeams from './AboutTeams'
+
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -175,7 +177,12 @@ export default function AboutWhat() {
                           </Box>
                         </Box>
 
-                        <Button handleClick={() => { }} sx={{ width: '100%', marginTop: '5px' }}>Contact Us</Button>
+                        <Button to="/contact"
+                          component={RouterLink}
+                          handleClick={() => { }}
+                          sx={{ width: '100%', marginTop: '5px' }}>
+                          Contact Us
+                        </Button>
 
                       </CardContent>
                     </Card>
