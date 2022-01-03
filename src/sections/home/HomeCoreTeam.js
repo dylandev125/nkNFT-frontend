@@ -131,25 +131,24 @@ export default function HomeCoreTeam() {
                         {FOUNDATION_LIST.map((item) => (
                             <ComponentCard item={item} key={item.name} />
                         ))}
-
+                        <Box sx={{ margin: 'auto' }}>
+                            <Button
+                                variant="outlined"
+                                color="inherit"
+                                size="large"
+                                href={`/about-us#team`}
+                                // component={RouterLink}
+                                // to="/about-us#team"
+                                handleClick={() => { }}
+                                endIcon={<Iconify icon={'ic:round-arrow-right-alt'} width={24} height={24} />}
+                                sx={{ mx: 'auto', mt: 3 }}
+                            >
+                                View all team members
+                            </Button>
+                        </Box>
                     </Box>
                 </Grid>
 
-                <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
-                    <Button
-                        variant="outlined"
-                        color="inherit"
-                        size="large"
-                        // href={`/about-us#team`}
-                        component={RouterLink}
-                        to="/about-us#team"
-                        handleClick={() => { }}
-                        endIcon={<Iconify icon={'ic:round-arrow-right-alt'} width={24} height={24} />}
-                        sx={{ mx: 'auto', mt: 3 }}
-                    >
-                        View all team members
-                    </Button>
-                </Box>
                 {/* 
                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                     <Button

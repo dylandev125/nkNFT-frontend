@@ -20,11 +20,11 @@ const RootStyle = styled('div')(() => ({
 export default function HomeBattle() {
 
     const _carouselsExample = [
-        {
-            id: 11,
-            image: '3.png',
-            title: 'slide1'
-        },
+        // {
+        //     id: 11,
+        //     image: '3.png',
+        //     title: 'slide1'
+        // },
         {
             id: 12,
             image: 'render2.png',
@@ -32,7 +32,7 @@ export default function HomeBattle() {
         },
         {
             id: 13,
-            image: 'render2.png',
+            image: 'render-1.png',
             title: 'slide3'
         },
         {

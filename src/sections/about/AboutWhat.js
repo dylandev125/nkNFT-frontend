@@ -163,7 +163,7 @@ export default function AboutWhat() {
                       <Divider sx={{ paddingTop: 3 }} />
                       <CardContent sx={{ padding: '15px' }}>
                         <NavItem id="about" title="About" />
-                        <NavItem id="team" title="Our Team" />
+                        <NavItem id="team" title="Team" />
                         <NavItem id="lifeAtNeko" title="Start your life in the Nekotopia" />
                         <NavItem id="FAQ" title="Frequently asked questions" />
 

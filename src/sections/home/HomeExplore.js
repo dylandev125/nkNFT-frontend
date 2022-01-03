@@ -238,11 +238,13 @@ export default function HomeExplore() {
         // console.log(x + y)
         css.style.top = `${y / 10}%`
         css.style.left = `${x / 10}%`
-        css.style.transform = `rotate(${(x + y) / 10 - 60}deg)`
+        css.style.transform = `rotate(${(x + y) / 10 - 80}deg)`
     };
 
     useEffect(() => {
         if (isDesktop) {
+            const css = document.getElementsByClassName('3dcat')[0]
+            css.style.transform = `rotate(0deg)`
             window.addEventListener("mousemove", handleMouseMove);
             return () => window.removeEventListener("mousemove", handleMouseMove);
         }
