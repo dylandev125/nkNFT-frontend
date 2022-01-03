@@ -39,21 +39,21 @@ const FOUNDATION_LIST = [
         name: 'Tetsuo420',
         description: 'Co-Founder',
         icon: `QuantumDark_walk.png`,
-        href: 'https://www.linkedin.com/home',
+        href: '',
         credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
     },
     {
         name: 'Ssaulgoodmann',
         description: 'Cheif - Product & Design',
-        icon: `MechaLight_walk.png`,
-        href: 'https://www.linkedin.com/home',
+        icon: `team/Bharath_Chaganty.png`,
+        href: '',
         credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
     },
     {
         name: 'Buzzkill77',
         description: 'Co-Founder',
         icon: `SpaceDark_walk.png`,
-        href: 'https://www.linkedin.com/home',
+        href: '',
         credibility: 'Crypto champion & investor since 2016'
     },
     {
@@ -80,8 +80,8 @@ const FOUNDATION_LIST = [
     {
         name: 'Raviteja Bandreddy',
         description: 'Blockchain Lead',
-        icon: `team/Ravi_Bandreddy.jpg`,
-        href: 'https://www.linkedin.com/home',
+        icon: `team/ravi.jpg`,
+        href: 'https://www.linkedin.com/in/ravitejabandreddy/',
         credibility: 'MERN Stack Blockchain Developer. 4+ years of experience in web and blockchain development in building financial products.'
     },
     {
@@ -186,21 +186,21 @@ const FOUNDATION_LIST = [
         name: 'Akhil Pulla',
         description: '3D Animator',
         icon: `Space Neko.png`,
-        href: 'https://www.linkedin.com/home',
+        href: 'https://www.linkedin.com/in/akhil-akhi-29a3bb104',
         credibility: ''
     },
-    {
-        name: 'Spandana Taruvu',
-        description: 'Junior 2D Artist',
-        icon: `team/Spandana_Taruvu.jpeg`,
-        href: 'https://www.linkedin.com/home',
-        credibility: ''
-    },
+    // {
+    //     name: 'Spandana Taruvu',
+    //     description: 'Junior 2D Artist',
+    //     icon: `team/Spandana_Taruvu.jpeg`,
+    //     href: 'https://www.linkedin.com/home',
+    //     credibility: ''
+    // },
     {
         name: 'Anonymous Pixel Artist',
         description: '2D Pixel Artist',
         icon: `Space Neko.png`,
-        href: 'https://www.linkedin.com/home',
+        href: '',
         credibility: ''
     },
     // {

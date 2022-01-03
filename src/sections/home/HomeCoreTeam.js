@@ -41,6 +41,22 @@ const FOUNDATION_LIST = [
     },
     {
         id: 2,
+        name: 'Tetsuo420',
+        description: 'Co-Founder',
+        icon: `QuantumDark_walk.png`,
+        href: '',
+        credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
+    },
+    {
+        id: 3,
+        name: 'Buzzkill77',
+        description: 'Co-Founder',
+        icon: `SpaceDark_walk.png`,
+        href: '',
+        credibility: 'Crypto champion & investor since 2016'
+    },
+    {
+        id: 4,
         name: 'Omrum Cetin',
         description: 'CTO',
         icon: `team/OmrumCetin.jpg`,
@@ -48,28 +64,12 @@ const FOUNDATION_LIST = [
         credibility: 'Software Developer in multicultural environment, multiple languages, developing algorithms which are being used worldwide'
     },
     {
-        id: 3,
-        name: 'Tetsuo420',
-        description: 'Co-Founder',
-        icon: `QuantumDark_walk.png`,
-        href: 'https://www.linkedin.com/home',
-        credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
-    },
-    {
-        id: 4,
+        id: 5,
         name: 'Ssaulgoodmann',
         description: 'Cheif - Product & Design',
-        icon: `MechaLight_walk.png`,
-        href: 'https://www.linkedin.com/home',
+        icon: `team/Bharath_Chaganty.png`,
+        href: '',
         credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
-    },
-    {
-        id: 5,
-        name: 'Buzzkill77',
-        description: 'Co-Founder',
-        icon: `SpaceDark_walk.png`,
-        href: 'https://www.linkedin.com/home',
-        credibility: 'Crypto champion & investor since 2016'
     },
     {
         id: 6,
@@ -86,14 +86,14 @@ const advisors = [
         name: 'Eric',
         description: 'Founder Ex- Network',
         icon: `eric.png`,
-        href: 'https://www.linkedin.com/home',
+        href: '',
         credibility: ''
     },
     {
         name: 'Anuj Kodagam',
         description: 'Founder Wall.app',
         icon: `30K5Azeq_400x400.png`,
-        href: 'https://www.linkedin.com/in/jp-reddy-bornmonkie/',
+        href: '',
         credibility: ''
     }
 ]
@@ -125,7 +125,7 @@ export default function HomeCoreTeam() {
                     </Box>
                 </Grid>
 
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
                     <Button
                         variant="outlined"
                         color="inherit"
@@ -157,7 +157,7 @@ export default function HomeCoreTeam() {
                     </Button>
                 </Box> */}
 
-                <Typography variant="h3" sx={{ textAlign: 'center', mt: 3, pb: 5 }}>
+                <Typography variant="h3" sx={{ textAlign: 'center', pt: 5, pb: 5 }}>
                     Advisors
                 </Typography>
                 <Grid item xs={12} sm={6} alignItems={'center'} justifyItems={'center'} sx={{ margin: 'auto' }}>

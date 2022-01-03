@@ -38,7 +38,7 @@ export default function TeamCard({ item }) {
                 </Box>
 
                 <Typography variant="h5" sx={{ mt: 2, mb: 0.5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    {name} <SocialsButton sx={{ color: '#8270b6' }} links={{ 'linkedin': href }} />
+                    {name} {href !== '' && <SocialsButton sx={{ color: '#8270b6' }} links={{ 'linkedin': href }} />}
                 </Typography>
                 <Typography variant="subtitle2" sx={{ mb: 2, color: 'text.secondary', fontWeight: 'normal' }}>
                     {description}

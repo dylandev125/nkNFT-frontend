@@ -340,14 +340,14 @@ export default function HomeRoadMap() {
                                 position: 'absolute',
                                 left: '50%',
                                 zIndex: '2',
-                                transform: 'translateX(-310px)',
+                                transform: 'translateX(165px)',
                                 top: '1333px'
                             }}
                             imgsx={{
                                 top: '-30px',
                                 left: '33px'
                             }}
-                            pinsx={{ left: '443px' }}
+                            pinsx={{ left: '-30px' }}
                             textsx={{
                                 position: 'absolute',
                                 left: '171px',
