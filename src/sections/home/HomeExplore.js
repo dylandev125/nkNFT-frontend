@@ -286,7 +286,7 @@ export default function HomeExplore() {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={3}>
-                        <Box sx={{ padding: '0 15px 0 15px', textAlign: 'left', mt: { xs: 5 } }}>
+                        <Box sx={{ padding: '0 15px 0 15px', textAlign: { xs: 'center', md: 'left' }, mt: { xs: 5 } }}>
                             <MotionInView variants={varFade().inDown}>
                                 <Typography variant="p">
                                     Take your Neko on an existential journey through space and time, exploring multiple aesthetic environments and styles of gameplay. Duke it out in the futuristic physics of the 3D MOBA. Travel back in time to the 32-bit era of video games for a spin on a Mario Kart-inspired racetrack. Test your agility and endurance with an infinite runner-style game.

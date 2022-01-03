@@ -187,14 +187,14 @@ export default function HomeMinimal() {
           <Grid item xs={12} lg={4} >
             <ContentStyle>
               <MotionInView variants={varFade().inUp}>
-                <Typography variant="h3" sx={{ mb: 2, color: 'common.white' }}>
+                <Typography variant="h3" sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' }, color: 'common.white' }}>
                   Open-ended social world
                 </Typography>
 
               </MotionInView>
 
               <MotionInView variants={varFade().inUp}>
-                <Typography>
+                <Typography sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' } }}>
                   This top-down, open-ended social world is built on blockchain and maximizes the interactive and creative potential of the metaverse.
                 </Typography>
               </MotionInView>

@@ -82,12 +82,12 @@ const FOUNDATION_LIST = [
         description: 'Blockchain Lead',
         icon: `team/ravi.jpg`,
         href: 'https://www.linkedin.com/in/ravitejabandreddy/',
-        credibility: 'MERN Stack Blockchain Developer. 4+ years of experience in web and blockchain development in building financial products.'
+        credibility: 'MERN Stack Blockchain Developer. 4+ years of experience in web and blockchain development'
     },
     {
         name: 'Chan',
         description: 'Blockchain Developer',
-        icon: `LightRadio2_sitting 1.png`,
+        icon: `team/Chen.png`,
         href: '',
         credibility: ''
     },
