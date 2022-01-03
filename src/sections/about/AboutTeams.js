@@ -29,25 +29,11 @@ const FOUNDATION_LIST = [
         credibility: 'Game Developer, 25+ RMG Games, 3Million users.  Ex - MPL, Jio, Paytm Games. Running an Indie Game Studio in India'
     },
     {
-        name: 'Omrum Cetin',
-        description: 'CTO',
-        icon: `team/OmrumCetin.jpg`,
-        href: 'https://www.linkedin.com/in/omrumcetin/',
-        credibility: 'Software Developer in multicultural environment, multiple languages, developing algorithms which are being used worldwide'
-    },
-    {
         name: 'Tetsuo420',
         description: 'Co-Founder',
-        icon: `QuantumDark_walk.png`,
+        icon: `MechaLight_walk.png`,
         href: '',
         credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
-    },
-    {
-        name: 'Ssaulgoodmann',
-        description: 'Cheif - Product & Design',
-        icon: `team/Bharath_Chaganty.png`,
-        href: '',
-        credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
     },
     {
         name: 'Buzzkill77',
@@ -55,6 +41,20 @@ const FOUNDATION_LIST = [
         icon: `SpaceDark_walk.png`,
         href: '',
         credibility: 'Crypto champion & investor since 2016'
+    },
+    {
+        name: 'Omrum Cetin',
+        description: 'CTO',
+        icon: `team/OmrumCetin.jpg`,
+        href: 'https://www.linkedin.com/in/omrumcetin/',
+        credibility: 'Software Developer in multicultural environment, multiple languages, developing algorithms which are being used worldwide'
+    },
+    {
+        name: 'Ssaulgoodmann',
+        description: 'Cheif - Product & Design',
+        icon: `team/Bharath_Chaganty.png`,
+        href: '',
+        credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
     },
     {
         name: 'JP',

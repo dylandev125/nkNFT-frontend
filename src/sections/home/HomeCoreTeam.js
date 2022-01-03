@@ -43,7 +43,7 @@ const FOUNDATION_LIST = [
         id: 2,
         name: 'Tetsuo420',
         description: 'Co-Founder',
-        icon: `QuantumDark_walk.png`,
+        icon: `MechaLight_walk.png`,
         href: '',
         credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
     },
