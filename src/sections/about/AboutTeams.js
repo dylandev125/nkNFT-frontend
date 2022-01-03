@@ -126,13 +126,13 @@ const FOUNDATION_LIST = [
         href: 'https://www.linkedin.com/in/madhav-gojiya-977a8a181',
         credibility: ''
     },
-    {
-        name: 'Sriharan S',
-        description: 'Junior Gameplay Programmer',
-        icon: `Space Neko.png`,
-        href: 'https://www.linkedin.com/in/sri-haran-s/',
-        credibility: ''
-    },
+    // {
+    //     name: 'Sriharan S',
+    //     description: 'Junior Gameplay Programmer',
+    //     icon: `Space Neko.png`,
+    //     href: 'https://www.linkedin.com/in/sri-haran-s/',
+    //     credibility: ''
+    // },
     {
         name: 'Jatin Pandey',
         description: 'Junior Gameplay Programmer',
