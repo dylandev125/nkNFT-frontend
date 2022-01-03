@@ -85,7 +85,14 @@ const FOUNDATION_LIST = [
         credibility: 'MERN Stack Blockchain Developer. 4+ years of experience in web and blockchain development'
     },
     {
-        name: 'Chan',
+        name: 'Aryama I',
+        description: 'Blockchain Architect',
+        icon: `team/aryama.jfif`,
+        href: 'https://www.linkedin.com/in/aryama-i-40364117a/',
+        credibility: ''
+    },
+    {
+        name: 'Chen',
         description: 'Blockchain Developer',
         icon: `team/Chen.png`,
         href: '',

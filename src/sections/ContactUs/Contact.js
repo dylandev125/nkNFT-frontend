@@ -1,6 +1,7 @@
 // @mui
-import { styled } from '@mui/material/styles';
+import { styled, keyframes } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
+import DecorationSVG from './DecorationSVG'
 // components
 // import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
 // import Button from '../../components/Button'
@@ -22,6 +23,20 @@ const BoxStyle = styled(Box)(() => ({
 
 
 
+const animate = keyframes`
+from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -32px;
+  }
+`;
+
+const ImageStyle = styled('div')(() => ({
+    animation: `${animate} 1s linear infinite`
+}));
+
+
 // ----------------------------------------------------------------------
 
 export default function Contact() {
@@ -35,7 +50,9 @@ export default function Contact() {
             <RootStyle>
                 <Typography variant="h3" sx={{ marginBottom: '72px' }}>SCHEDULE A MEETING WITH US</Typography>
                 <BoxStyle>
-                    <img src="arrow-line.svg" alt="" />
+                    <ImageStyle>
+                        <DecorationSVG />
+                    </ImageStyle>
                 </BoxStyle>
                 <BoxStyle>
                     <div className="calendly-inline-widget"
