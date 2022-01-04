@@ -93,7 +93,7 @@ const FOUNDATION_LIST = [
         description: 'Blockchain Developer',
         icon: `team/Chen.png`,
         href: 'https://www.linkedin.com/in/chen-jiao-49aa76223',
-        credibility: 'Software professional with 4+ years of experience in Block chain technologies like corda, Multichain, Hyperledger, Ethereum, Blocktrail, Blockcypher, Bitcoin, BigchainDB and RethinkDB Node.Js'
+        credibility: '4+ years of experience in Blockchain technologies like corda, Multichain, Hyperledger, Ethereum and Blocktrail.'
     },
     {
         name: 'Aryama I',
@@ -215,14 +215,14 @@ const FOUNDATION_LIST = [
     //     credibility: ''
     // },
     {
-        name: 'Anonymous Pixel Artist',
+        name: 'Canvassio',
         description: '2D Pixel Artist',
         icon: `team/DigitalDark_walk 1.png`,
         href: '',
         credibility: ''
     },
     {
-        name: 'Anonymous Developer',
+        name: 'Godzoid',
         description: 'Full Stack Developer',
         icon: `Space Neko.png`,
         href: '',
