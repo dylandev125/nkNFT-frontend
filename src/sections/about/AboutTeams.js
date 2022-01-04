@@ -101,7 +101,7 @@ const FOUNDATION_LIST = [
     {
         name: 'Revanth Sama',
         description: 'Game Producer',
-        icon: `team/Revanth_Sama.jpg`,
+        icon: `team/Revanth_Sama.JPG`,
         href: 'https://www.linkedin.com/in/revanth-reddy-2229351b7/',
         credibility: ''
     },
