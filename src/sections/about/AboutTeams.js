@@ -29,20 +29,23 @@ const FOUNDATION_LIST = [
         credibility: 'Game Developer, 25+ RMG Games, 3Million users.  Ex - MPL, Jio, Paytm Games. Running an Indie Game Studio in India'
     },
     {
+        id: 2,
         name: 'Tetsuo420',
-        description: 'Co-Founder',
+        description: 'Ecosystem and Strategy',
         icon: `MechaLight_walk.png`,
         href: '',
         credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
     },
+    // {
+    //     id: 3,
+    //     name: 'Buzzkill77',
+    //     description: 'Co-Founder',
+    //     icon: `SpaceDark_walk.png`,
+    //     href: '',
+    //     credibility: 'Crypto champion & investor since 2016'
+    // },
     {
-        name: 'Buzzkill77',
-        description: 'Co-Founder',
-        icon: `SpaceDark_walk.png`,
-        href: '',
-        credibility: 'Crypto champion & investor since 2016'
-    },
-    {
+        id: 4,
         name: 'Omrum Cetin',
         description: 'CTO',
         icon: `team/OmrumCetin.jpg`,
@@ -50,8 +53,9 @@ const FOUNDATION_LIST = [
         credibility: 'Software Developer in multicultural environment, multiple languages, developing algorithms which are being used worldwide'
     },
     {
+        id: 5,
         name: 'Ssaulgoodmann',
-        description: 'Cheif - Product & Design',
+        description: 'Design and Lore',
         icon: `team/Bharath_Chaganty.png`,
         href: '',
         credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
@@ -78,24 +82,24 @@ const FOUNDATION_LIST = [
         credibility: '3D Generalist - Ex- DRDO Projects, Byjus, Famous Indian TV Series, Animated Russian Movies and E-Learning apps'
     },
     {
-        name: 'Raviteja Bandreddy',
+        name: 'Ravi Teja',
         description: 'Blockchain Lead',
         icon: `team/ravi.jpg`,
         href: 'https://www.linkedin.com/in/ravitejabandreddy/',
         credibility: 'MERN Stack Blockchain Developer. 4+ years of experience in web and blockchain development'
     },
     {
+        name: 'Chen Jiao',
+        description: 'Blockchain Developer',
+        icon: `team/Chen.png`,
+        href: 'https://www.linkedin.com/in/chen-jiao-49aa76223',
+        credibility: 'Software professional with 4+ years of experience in Block chain technologies like corda, Multichain, Hyperledger, Ethereum, Blocktrail, Blockcypher, Bitcoin, BigchainDB and RethinkDB Node.Js'
+    },
+    {
         name: 'Aryama I',
         description: 'Blockchain Architect',
         icon: `team/aryama.jfif`,
         href: 'https://www.linkedin.com/in/aryama-i-40364117a/',
-        credibility: ''
-    },
-    {
-        name: 'Chen',
-        description: 'Blockchain Developer',
-        icon: `team/Chen.png`,
-        href: '',
         credibility: ''
     },
     {

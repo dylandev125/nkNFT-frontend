@@ -50,7 +50,7 @@ export default function ComponentCard({ item }) {
                     </m.div>
                 </CardActionArea>
                 <Box sx={{ textAlign: 'center' }}>
-                    <Typography variant="subtitle1" sx={{ mt: 1, p: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <Typography variant="h5" sx={{ mt: 1, p: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         {name}{href !== '' && <SocialsButton sx={{ color: '#8270b6' }} links={{ 'linkedin': href }} />}
                     </Typography>
                     <Typography variant="p" sx={{ mt: 1, p: 1, fontSize: '14px', color: '#fff' }}>

@@ -44,19 +44,19 @@ const FOUNDATION_LIST = [
     {
         id: 2,
         name: 'Tetsuo420',
-        description: 'Co-Founder',
+        description: 'Ecosystem and Strategy',
         icon: `MechaLight_walk.png`,
         href: '',
         credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
     },
-    {
-        id: 3,
-        name: 'Buzzkill77',
-        description: 'Co-Founder',
-        icon: `SpaceDark_walk.png`,
-        href: '',
-        credibility: 'Crypto champion & investor since 2016'
-    },
+    // {
+    //     id: 3,
+    //     name: 'Buzzkill77',
+    //     description: 'Co-Founder',
+    //     icon: `SpaceDark_walk.png`,
+    //     href: '',
+    //     credibility: 'Crypto champion & investor since 2016'
+    // },
     {
         id: 4,
         name: 'Omrum Cetin',
@@ -68,7 +68,7 @@ const FOUNDATION_LIST = [
     {
         id: 5,
         name: 'Ssaulgoodmann',
-        description: 'Cheif - Product & Design',
+        description: 'Design and Lore',
         icon: `team/Bharath_Chaganty.png`,
         href: '',
         credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
@@ -83,11 +83,19 @@ const FOUNDATION_LIST = [
     },
     {
         id: 7,
-        name: 'Raviteja Bandreddy',
+        name: 'Ravi Teja',
         description: 'Blockchain Lead',
         icon: `team/ravi.jpg`,
         href: 'https://www.linkedin.com/in/ravitejabandreddy/',
         credibility: 'MERN Stack Blockchain Development Lead. 4+ years of experience in web and blockchain development.'
+    },
+    {
+        id: 8,
+        name: 'Chen Jiao',
+        description: 'Blockchain Developer',
+        icon: `team/Chen.png`,
+        href: 'https://www.linkedin.com/in/chen-jiao-49aa76223',
+        credibility: 'Software professional with 4+ years of experience in Block chain technologies like corda, Multichain, Hyperledger, Ethereum, Blocktrail, Blockcypher, Bitcoin, BigchainDB and RethinkDB Node.Js'
     },
 ]
 
