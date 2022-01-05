@@ -95,7 +95,7 @@ const FOUNDATION_LIST = [
         description: 'Blockchain Developer',
         icon: `team/Chen.png`,
         href: 'https://www.linkedin.com/in/chen-jiao-49aa76223',
-        credibility: '4+ years of experience in Blockchain technologies like corda, Multichain, Hyperledger, Ethereum and Blocktrail.'
+        credibility: 'Specialist in React, Ethereum smart contracts and advanced blockchain technology'
     },
 ]
 
