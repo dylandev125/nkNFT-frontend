@@ -24,7 +24,7 @@ export default function TeamCard({ item }) {
     return (
         <MotionInView variants={varFade().in}>
             <Card key={name} sx={{
-                padding: '15px', width: '290px', height: getHeight(), bgcolor: '#0000002e', boxShadow: '0 0 2px 0 rgb(145 158 171 / 20%), 0 12px 24px -4px rgb(145 158 171 / 12%)', textAlign: 'center'
+                padding: '15px', width: '290px', minHeight: getHeight(), bgcolor: '#0000002e', boxShadow: '0 0 2px 0 rgb(145 158 171 / 20%), 0 12px 24px -4px rgb(145 158 171 / 12%)', textAlign: 'center'
             }}>
                 <Box sx={{
                     display: 'flex',

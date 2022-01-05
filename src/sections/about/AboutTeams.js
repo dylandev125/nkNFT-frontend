@@ -93,14 +93,28 @@ const FOUNDATION_LIST = [
         description: 'Blockchain Developer',
         icon: `team/Chen.png`,
         href: 'https://www.linkedin.com/in/chen-jiao-49aa76223',
-        credibility: '4+ years of experience in Blockchain technologies like corda, Multichain, Hyperledger, Ethereum and Blocktrail.'
+        credibility: 'Specialist in React, Ethereum smart contracts and advanced blockchain technology'
+    },
+    {
+        name: 'Robert',
+        description: 'Art Director',
+        icon: `team/Valerii_Sendetskyi.JPG`,
+        href: '',
+        credibility: 'IP content creator / lead creative designer with more than 20 years experience in the field of Animation and gaming production.'
+    },
+    {
+        name: 'Valerie',
+        description: 'Creative Director',
+        icon: `team/Robert-Berrier-006.PNG`,
+        href: '',
+        credibility: '7 years of experience in brand visual design, 3D texturing and animation, digital interfaces, product design, illustrations with expertise in logo design and designing brand systems.'
     },
     {
         name: 'Aryama I',
         description: 'Blockchain Architect',
         icon: `team/aryama.jfif`,
         href: 'https://www.linkedin.com/in/aryama-i-40364117a/',
-        credibility: ''
+        credibility: ' '
     },
     {
         name: 'Revanth Sama',
@@ -257,7 +271,7 @@ export default function AboutTeams() {
                         display: 'grid',
                         gap: 1,
                         gridTemplateColumns: isDesktop ? 'repeat(3, 1fr)' : 'repeat(1, 1fr)',
-                        alignItems: 'center',
+                        alignItems: 'stretch',
                         justifyContent: 'center',
                         justifyItems: 'center'
                     }}
