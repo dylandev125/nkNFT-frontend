@@ -39,7 +39,7 @@ const FOUNDATION_LIST = [
         description: 'CEO',
         icon: `team/SamhithBW.png`,
         href: 'https://www.linkedin.com/in/vksamhith/',
-        credibility: 'Game Developer, 25+ RMG Games, 3Million users.  Ex - MPL, Jio, Paytm Games. Running an Indie Game Studio in India'
+        credibility: 'Game Developer, 25+ RMG Games, 3Million users. Partnered with MPL, Jio, Paytm Games. Running an Indie Game Studio in India'
     },
     {
         id: 2,
