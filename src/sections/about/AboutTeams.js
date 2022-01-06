@@ -26,7 +26,7 @@ const FOUNDATION_LIST = [
         description: 'CEO',
         icon: `team/SamhithBW.png`,
         href: 'https://www.linkedin.com/in/vksamhith/',
-        credibility: 'Game Developer, 25+ RMG Games, 3Million users.  Ex - MPL, Jio, Paytm Games. Running an Indie Game Studio in India'
+        credibility: 'Game Developer, 25+ RMG Games, 3Million users. Partnered with MPL, Jio, Paytm Games. Running an Indie Game Studio in India'
     },
     {
         id: 2,
@@ -96,17 +96,17 @@ const FOUNDATION_LIST = [
         credibility: 'Specialist in React, Ethereum smart contracts and advanced blockchain technology'
     },
     {
-        name: 'Robert',
+        name: 'Robert Berrier',
         description: 'Art Director',
-        icon: `team/Valerii_Sendetskyi.JPG`,
-        href: '',
+        icon: `team/Robert-Berrier-006.PNG`,
+        href: 'https://www.linkedin.com/in/robertberrier',
         credibility: 'IP content creator / lead creative designer with more than 20 years experience in the field of Animation and gaming production.'
     },
     {
-        name: 'Valerie',
+        name: 'Valerii Sendetskyi',
         description: 'Creative Director',
-        icon: `team/Robert-Berrier-006.PNG`,
-        href: '',
+        icon: `team/Valerii_Sendetskyi.JPG`,
+        href: 'https://www.linkedin.com/in/valurik',
         credibility: '7 years of experience in brand visual design, 3D texturing and animation, digital interfaces, product design, illustrations with expertise in logo design and designing brand systems.'
     },
     {
