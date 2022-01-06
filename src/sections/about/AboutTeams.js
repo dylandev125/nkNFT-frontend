@@ -29,22 +29,6 @@ const FOUNDATION_LIST = [
         credibility: 'Game Developer, 25+ RMG Games, 3Million users. Partnered with MPL, Jio, Paytm Games. Running an Indie Game Studio in India'
     },
     {
-        id: 2,
-        name: 'Tetsuo420',
-        description: 'Ecosystem and Strategy',
-        icon: `MechaLight_walk.png`,
-        href: '',
-        credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
-    },
-    // {
-    //     id: 3,
-    //     name: 'Buzzkill77',
-    //     description: 'Co-Founder',
-    //     icon: `SpaceDark_walk.png`,
-    //     href: '',
-    //     credibility: 'Crypto champion & investor since 2016'
-    // },
-    {
         id: 4,
         name: 'Omrum Cetin',
         description: 'CTO',
@@ -53,13 +37,28 @@ const FOUNDATION_LIST = [
         credibility: 'Software Developer in multicultural environment, multiple languages, developing algorithms which are being used worldwide'
     },
     {
-        id: 5,
-        name: 'Ssaulgoodmann',
-        description: 'Design and Lore',
-        icon: `team/Bharath_Chaganty.png`,
-        href: '',
-        credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
+        name: 'Robert Berrier',
+        description: 'Art Director',
+        icon: `team/Robert-Berrier-006.PNG`,
+        href: 'https://www.linkedin.com/in/robertberrier',
+        credibility: 'Delivering quality 3D game art with a clear production process for games, VR and simulation.'
     },
+    {
+        name: 'Valerii Sendetskyi',
+        description: 'Creative Director',
+        icon: `team/Valerii_Sendetskyi.JPG`,
+        href: 'https://www.linkedin.com/in/valurik',
+        credibility: '3d Generalist with focus on modeling and texturing - Game Art'
+    },
+
+    // {
+    //     id: 3,
+    //     name: 'Buzzkill77',
+    //     description: 'Co-Founder',
+    //     icon: `SpaceDark_walk.png`,
+    //     href: '',
+    //     credibility: 'Crypto champion & investor since 2016'
+    // },
     {
         name: 'JP Reddy',
         description: 'Community Head',
@@ -96,25 +95,27 @@ const FOUNDATION_LIST = [
         credibility: 'Specialist in React, Ethereum smart contracts and advanced blockchain technology'
     },
     {
-        name: 'Robert Berrier',
-        description: 'Art Director',
-        icon: `team/Robert-Berrier-006.PNG`,
-        href: 'https://www.linkedin.com/in/robertberrier',
-        credibility: 'IP content creator / lead creative designer with more than 20 years experience in the field of Animation and gaming production.'
+        id: 5,
+        name: 'Ssaulgoodmann',
+        description: 'Design and Lore',
+        icon: `team/Bharath_Chaganty.png`,
+        href: '',
+        credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
     },
     {
-        name: 'Valerii Sendetskyi',
-        description: 'Creative Director',
-        icon: `team/Valerii_Sendetskyi.JPG`,
-        href: 'https://www.linkedin.com/in/valurik',
-        credibility: '7 years of experience in brand visual design, 3D texturing and animation, digital interfaces, product design, illustrations with expertise in logo design and designing brand systems.'
+        id: 2,
+        name: 'Tetsuo420',
+        description: 'Ecosystem and Strategy',
+        icon: `MechaLight_walk.png`,
+        href: '',
+        credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
     },
     {
         name: 'Aryama I',
         description: 'Blockchain Architect',
         icon: `team/aryama.jfif`,
         href: 'https://www.linkedin.com/in/aryama-i-40364117a/',
-        credibility: ' '
+        credibility: 'Blockchain Developer with expertise in DeFi, SSI and private blockchains'
     },
     {
         name: 'Revanth Sama',
