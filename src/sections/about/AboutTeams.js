@@ -39,14 +39,14 @@ const FOUNDATION_LIST = [
     {
         name: 'Robert Berrier',
         description: 'Art Director',
-        icon: `team/Robert-Berrier-006.PNG`,
+        icon: `team/Robert-Berrier-006.png`,
         href: 'https://www.linkedin.com/in/robertberrier',
         credibility: 'Delivering quality 3D game art with a clear production process for games, VR and simulation.'
     },
     {
         name: 'Valerii Sendetskyi',
         description: 'Creative Director',
-        icon: `team/Valerii_Sendetskyi.JPG`,
+        icon: `team/Valerii_Sendetskyi.jpg`,
         href: 'https://www.linkedin.com/in/valurik',
         credibility: '3d Generalist with focus on modeling and texturing - Game Art'
     },
