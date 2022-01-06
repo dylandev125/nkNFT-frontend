@@ -1,3 +1,4 @@
+import React, { lazy } from 'react';
 // @mui
 import { styled } from '@mui/material/styles';
 // components
@@ -5,13 +6,6 @@ import Page from '../components/Page';
 // sections
 import {
     HomeHero,
-    HomeMinimal,
-    HomeLookingFor,
-    HomeColorPresets,
-    HomeExplore,
-    HomeRoadMap,
-    HomeCoreTeam,
-    HomeBattle,
 } from '../sections/home';
 
 // ----------------------------------------------------------------------
@@ -35,6 +29,16 @@ const ContentStyle = styled('div')(({ theme }) => ({
 }));
 
 // ----------------------------------------------------------------------
+
+
+// const HomeHero = lazy(() => import('../sections/home/HomeHero'))
+const HomeMinimal = lazy(() => import('../sections/home/HomeMinimal'))
+const HomeLookingFor = lazy(() => import('../sections/home/HomeLookingFor'))
+const HomeColorPresets = lazy(() => import('../sections/home/HomeColorPresets'))
+const HomeExplore = lazy(() => import('../sections/home/HomeExplore'))
+const HomeRoadMap = lazy(() => import('../sections/home/HomeRoadMap'))
+const HomeCoreTeam = lazy(() => import('../sections/home/HomeCoreTeam'))
+const HomeBattle = lazy(() => import('../sections/home/HomeBattle'))
 
 export default function HomePage() {
     return (

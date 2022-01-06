@@ -6,6 +6,7 @@ import { Typography, Stack } from '@mui/material';
 // components
 import { varFade } from '../../components/animate';
 import Button from '../../components/Button'
+import Image from '../../components/Image'
 import useResponsive from '../../hooks/useResponsive';
 // ----------------------------------------------------------------------
 
@@ -49,7 +50,7 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
 //   position: 'absolute',
 // });
 
-const HeroImgStyle = styled(m.img)(() => ({
+const HeroImgStyle = styled('img')(() => ({
   position: 'absolute',
   top: '0',
   // left: '50%',
@@ -100,7 +101,7 @@ export default function HomeHero() {
       {isDesktop ?
         <HeroImgStyle
           alt="hero"
-          src="main-hero.png"
+          src="main-hero.webp"
           variants={varFade().inUp}
         /> :
         <HeroImgStyle
@@ -203,7 +204,7 @@ export default function HomeHero() {
               top: '252px'
             }}>
             <m.div animate={{ y: [0, 30, 0], x: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}>
-              <img src="white-square.svg" alt="" />
+              <img src="white-square.svg" alt="" style={{ width: '100%', height: '100%' }} />
             </m.div>
           </div>
 
@@ -217,7 +218,7 @@ export default function HomeHero() {
               top: '590px'
             }}>
             <m.div animate={{ y: [0, 30, 0], x: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}>
-              <img src="green-square.svg" alt="" />
+              <img src="green-square.svg" alt="" style={{ width: '100%', height: '100%' }} />
             </m.div>
           </div>
         </>}

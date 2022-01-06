@@ -9,6 +9,7 @@ import useResponsive from '../../hooks/useResponsive';
 import RoadmapMobile from './RoadmapMobile'
 import RoadMapSVG from './RoadMapSVG'
 // import { keyframes } from '@mui/styled-engine'
+import Image from '../../components/Image';
 
 // ----------------------------------------------------------------------
 
@@ -56,7 +57,7 @@ const ContentStyle = styled('div')(() => ({
 //     transitionDelay: '.5s'
 // });
 
-const HeroImgStyle = styled(m.img)(() => ({
+const HeroImgStyle = styled('img')(() => ({
     width: '100%',
     position: 'absolute',
     top: '0',
@@ -106,7 +107,7 @@ const ImageStyle = styled('div')(() => ({
     transform: 'translateX(-50%)'
 }));
 
-const Img = styled('img')(() => ({
+const Img = styled(Image)(() => ({
     animation: `${pin} 1s linear infinite`,
 
 }));
@@ -129,12 +130,12 @@ const RoadMapItem = (item) => {
                 color: '#7c80b9',
                 ...sx
             }}>
-            <MotionInView variants={varFade().in} sx={{ transition: 'opacity .5s', transitionDelay: '.5s' }}>
+            <MotionInView variants={varFade().in} sx={{ transitionDelay: '.1s' }}>
                 <Box sx={{
                     position: 'absolute',
                     ...imgsx,
                 }}>
-                    <img src={img} alt="" width="150px" />
+                    <Image src={img} alt="" style={{ width: '150px' }} loading="lazy" />
                 </Box>
             </MotionInView>
             <Box sx={{
@@ -175,11 +176,10 @@ export default function HomeRoadMap() {
         <>
             {isDesktop ?
                 <RootStyle>
-
                     <HeroImgStyle
-                        alt="hero"
-                        src="road-map.png"
-                        variants={varFade().inUp}
+                        alt="road-map"
+                        src="road-map.webp"
+                    // variants={varFade().inUp}
                     />
                     <ContentStyle sx={{ width: '100%' }}>
                         <Container sx={{ color: 'common.white', textAlign: 'center' }}>

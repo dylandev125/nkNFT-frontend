@@ -4,6 +4,7 @@ import { Container, Typography, TextField, Box } from '@mui/material';
 // routes
 // components
 import Button from '../../components/Button'
+import Image from '../../components/Image';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(() => ({
@@ -63,7 +64,7 @@ export default function MainFooter() {
             alignItems: 'center',
             padding: "0 30px"
           }}>
-          <img src="logo/logo-new.png" alt="Nekotopia Logo" width={"171"} height={"55"} />
+          <Image src="logo/logo-new.png" alt="Nekotopia Logo" width={"171"} height={"55"} />
         </div>
 
 
@@ -98,13 +99,13 @@ export default function MainFooter() {
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
           <AnchorImageStyle href="https://www.instagram.com/nekotopiaworld/">
-            <img src="insta.svg" alt="insta-share" />
+            <Image src="insta.svg" alt="insta-share" style={{ width: '100%', height: '100%' }} />
           </AnchorImageStyle>
           <AnchorImageStyle href="https://twitter.com/nekotopiaworld">
-            <img src="twitter.svg" alt="twitter-share" />
+            <Image src="twitter.svg" alt="twitter-share" style={{ width: '100%', height: '100%' }} />
           </AnchorImageStyle>
           <AnchorImageStyle href="https://discord.com/invite/a3DypjssRZ">
-            <img src="discord.svg" alt="discord-share" />
+            <Image src="discord.svg" alt="discord-share" style={{ width: '100%', height: '100%' }} />
           </AnchorImageStyle>
         </div>
 

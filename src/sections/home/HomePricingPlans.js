@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme, styled } from '@mui/material/styles';
 import { Box, Grid, Card, Link, Stack, Button, Divider, Container, Typography } from '@mui/material';
 // _mock_
-import { _homePlans } from '../../_mock';
+// import { _homePlans } from '../../_mock';
 // components
 import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
@@ -21,7 +21,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function HomePricingPlans() {
+export default function HomePricingPlans({ _homePlans }) {
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
 

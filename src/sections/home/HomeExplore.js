@@ -6,6 +6,7 @@ import { Box, Container, Typography, Grid } from '@mui/material';
 // components
 import { varFade, MotionInView } from '../../components/animate';
 import useResponsive from '../../hooks/useResponsive';
+import Image from '../../components/Image';
 
 // ----------------------------------------------------------------------
 
@@ -198,7 +199,7 @@ const ContentStyle = styled('div')(() => ({
 //     position: 'absolute',
 // });
 
-const HeroImgStyle = styled(m.img)(() => ({
+const HeroImgStyle = styled('img')(() => ({
     position: 'absolute',
     top: '0',
     // left: '50%',
@@ -238,13 +239,12 @@ export default function HomeExplore() {
         // console.log(x + y)
         css.style.top = `${y / 10}%`
         css.style.left = `${x / 10}%`
-        css.style.transform = `rotate(${(x + y) / 10 - 80}deg)`
+        const degree = (x + y) / 10 - 80
+        css.style.transform = degree > -15 && degree < 15 && `rotate(${degree}deg)`
     };
 
     useEffect(() => {
         if (isDesktop) {
-            const css = document.getElementsByClassName('3dcat')[0]
-            css.style.transform = `rotate(0deg)`
             window.addEventListener("mousemove", handleMouseMove);
             return () => window.removeEventListener("mousemove", handleMouseMove);
         }
@@ -280,7 +280,7 @@ export default function HomeExplore() {
                             {/* <m.div animate={{ y: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}> */}
                             {/* <FigureStyle> */}
                             <AnimateStyle>
-                                <img src="3d-cat.png" alt="" width={isDesktop ? '70%' : '90%'} className='3dcat' />
+                                <Image src="3d-cat.png" alt="" style={{ width: isDesktop ? '70%' : '90%' }} className='3dcat' loading="lazy" />
                             </AnimateStyle>
                             {/* </FigureStyle> */}
                             {/* </m.div> */}

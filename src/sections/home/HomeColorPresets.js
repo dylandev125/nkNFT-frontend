@@ -9,7 +9,6 @@ import {
 import Image from '../../components/Image';
 import { MotionInView, varFade } from '../../components/animate';
 import useResponsive from '../../hooks/useResponsive';
-
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -69,15 +68,16 @@ const CaseItem = (item) => {
   const { caseClass, title, description } = item
   return (
     <CaseStyle className={caseClass}>
-      <img src="chest.png" alt="" style={{
-        width: '300px',
-        height: '300px',
-        position: 'absolute',
-        top: '-50px',
-        left: '-82px',
-        zIndex: 5,
-        pointerEvents: 'none'
-      }} />
+      <Image src="chest.png" alt=""
+        style={{
+          width: '300px',
+          height: '300px',
+          position: 'absolute',
+          top: '-50px',
+          left: '-82px',
+          zIndex: 5,
+          pointerEvents: 'none'
+        }} />
       <Typography variant="h4">{title}</Typography>
       <Typography variant="p" sx={{ mt: 3, fontSize: '13px' }}>{description}</Typography>
     </CaseStyle>
@@ -105,9 +105,13 @@ export default function HomeColorPresets() {
         {isDesktop ?
           <Box sx={{ position: 'relative' }}>
             <Image
-              disabledEffect
+              // disabledEffect
               alt="grid"
               src="island.webp"
+              style={{
+                width: '100%',
+                height: '100%'
+              }}
             />
 
             <Box
@@ -162,7 +166,7 @@ export default function HomeColorPresets() {
 
           </Box> :
           <Box sx={{ position: 'relative', pb: 7, width: '100%', margin: 'auto' }}>
-            <img src="island.webp" alt="" width="100%" />
+            <Image src="island.webp" alt="" width="100%" />
           </Box>}
       </Box>
     </RootStyle >

@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 import { useTheme } from '@mui/material/styles';
 import { Box, Stack, Card, Button, Container, Typography } from '@mui/material';
 // _mock_
-import { _carouselsMembers } from '../../_mock';
+// import { _carouselsMembers } from '../../_mock';
 // components
 import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
@@ -15,7 +15,7 @@ import { MotionInView, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
 
-export default function AboutTeam() {
+export default function AboutTeam({ _carouselsMembers }) {
   const carouselRef = useRef(null);
   const theme = useTheme();
 

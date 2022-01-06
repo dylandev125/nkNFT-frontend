@@ -279,7 +279,7 @@ export default function AboutWhat() {
                     id="panel2"
                     title="What is NEKO?"
                     description={
-                      <Typography varaint="p" >
+                      <Typography varaint="body2" >
                         NEKO is the native token for Nekotopian Metaverse.
                         <br />
                         NEKO is an ERC20/AVAX token on AVAX L1 Chain

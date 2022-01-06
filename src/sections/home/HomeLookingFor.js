@@ -83,6 +83,7 @@ export default function HomeLookingFor() {
               alt="rocket"
               src="cats.png"
               sx={{ width: { md: '500px' }, height: { md: '550px' } }}
+              loading="lazy"
             />
           </MotionInView>
         </Grid>

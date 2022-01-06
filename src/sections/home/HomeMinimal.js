@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import { Box, Typography, Stack, Grid } from '@mui/material';
 // components
 import { varFade, MotionInView } from '../../components/animate';
+import Image from '../../components/Image';
 import Carousel from './Carousel';
 import useResponsive from '../../hooks/useResponsive';
 
@@ -159,10 +160,12 @@ export default function HomeMinimal() {
               left: '50%',
               transform: 'translateX(-50%)',
               zIndex: '2'
-            }} />
+            }}
+            loading="lazy"
+          />
           <img
             alt="hero"
-            src="second-slide-hero.jpg"
+            src="second-slide-hero.webp"
             // variants={varFade().inUp}
             style={{
               position: 'absolute',

@@ -1,3 +1,4 @@
+import React, { lazy } from 'react';
 import { Outlet } from 'react-router-dom';
 // @mui
 import { Box, Stack } from '@mui/material';
@@ -7,6 +8,7 @@ import MainFooter from './MainFooter';
 import MainHeader from './MainHeader';
 
 // ----------------------------------------------------------------------
+// const MainFooter = lazy(() => import('./MainFooter'))
 
 export default function MainLayout() {
   // const { pathname } = useLocation();
