@@ -88,8 +88,6 @@ export default function AboutHero() {
           </ContentStyle>
         </Container>
       </RootStyle>
-      {/* <div style={{ backgroundColor: '#13055c' }}><DividerStyle /></div> */}
-
     </>
   );
 }

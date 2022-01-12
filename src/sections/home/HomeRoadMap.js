@@ -57,14 +57,9 @@ const ContentStyle = styled('div')(() => ({
 //     transitionDelay: '.5s'
 // });
 
-const HeroImgStyle = styled('img')(() => ({
-    width: '100%',
-    position: 'absolute',
-    top: '0',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    zIndex: '-1'
-}));
+// const HeroImgStyle = styled(Image)(() => ({
+
+// }));
 
 
 // const ImageStyle = styled(m.img)`
@@ -176,9 +171,17 @@ export default function HomeRoadMap() {
         <>
             {isDesktop ?
                 <RootStyle>
-                    <HeroImgStyle
+                    <Image
                         alt="road-map"
                         src="road-map.webp"
+                        sx={{
+                            width: '100%',
+                            position: 'absolute',
+                            top: '0',
+                            left: '50%',
+                            transform: 'translateX(-50%)',
+                            zIndex: '-1'
+                        }}
                     // variants={varFade().inUp}
                     />
                     <ContentStyle sx={{ width: '100%' }}>

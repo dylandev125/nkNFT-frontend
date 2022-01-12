@@ -69,7 +69,7 @@ const CaseItem = (item) => {
   return (
     <CaseStyle className={caseClass}>
       <Image src="chest.png" alt=""
-        style={{
+        sx={{
           width: '300px',
           height: '300px',
           position: 'absolute',

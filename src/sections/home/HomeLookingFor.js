@@ -71,18 +71,35 @@ export default function HomeLookingFor() {
           </MotionInView> */}
         </Grid>
 
-        <Grid item xs={11} md={7}>
+        <Grid item xs={11} md={12}>
           <MotionInView
             variants={varFade().inUp}
             sx={{
-              mb: { xs: 3, md: 0 },
+              mb: { xs: 3, md: 6 },
             }}
           >
+            {/* <div className="sketchfab-embed-wrapper"> */}
+            {/* <iframe
+              width="600"
+              height="400"
+              title="3D cat"
+              frameBorder="0"
+              allow="autoplay; fullscreen; xr-spatial-tracking"
+              allowFullScreen=""
+              mozallowfullscreen="true"
+              webkitallowfullscreen="true"
+              xrSpatialTracking="true"
+              executionWhileOutOfViewport="true"
+              executionWhileNotRendered="true"
+              webShare="true"
+              src="https://sketchfab.com/models/57a9e59c3f5d4580a94100f2d20ea208/embed?annotations_visible=0&autospin=-0.1&autostart=1&camera=0&double_click=0&internal=1&max_texture_size=1024&orbit_constraint_pan=1&orbit_constraint_zoom_in=40&orbit_constraint_zoom_out=60&preload=1&scrollwheel=0&sound_enable=0&transparent=0&ui_animations=0&ui_annotations=0&ui_ar=1&ui_ar_help=0&ui_color=white&ui_fadeout=0&ui_fullscreen=0&ui_help=0&ui_infos=0&ui_inspector=0&ui_settings=0&ui_stop=0&ui_theatre=0&ui_theme=light&ui_vr=0&ui_watermark=0"
+            /> */}
+            {/* </div> */}
             <Image
               disabledEffect
               alt="rocket"
-              src="cats.png"
-              sx={{ width: { md: '500px' }, height: { md: '550px' } }}
+              src="whyyou.gif"
+              sx={{ width: { md: '500px' }, height: { md: '400px' } }}
               loading="lazy"
             />
           </MotionInView>

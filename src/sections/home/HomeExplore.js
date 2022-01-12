@@ -199,14 +199,9 @@ const ContentStyle = styled('div')(() => ({
 //     position: 'absolute',
 // });
 
-const HeroImgStyle = styled('img')(() => ({
-    position: 'absolute',
-    top: '0',
-    // left: '50%',
-    zIndex: '1',
-    width: '100%',
-    height: '100%'
-}));
+// const HeroImgStyle = styled('img')(() => ({
+
+// }));
 
 
 // ----------------------------------------------------------------------
@@ -254,10 +249,18 @@ export default function HomeExplore() {
         // <MotionContainer>
         <RootStyle>
             {isDesktop &&
-                <HeroImgStyle
+                <Image
                     alt="hero"
                     src="collect-bg.webp"
                     variants={varFade().inUp}
+                    sx={{
+                        position: 'absolute',
+                        top: '0',
+                        // left: '50%',
+                        zIndex: '1',
+                        width: '100%',
+                        height: '100%'
+                    }}
                 />}
 
             <ContentStyle sx={{ width: '100%' }}>

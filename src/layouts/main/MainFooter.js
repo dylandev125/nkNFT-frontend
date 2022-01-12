@@ -64,7 +64,7 @@ export default function MainFooter() {
             alignItems: 'center',
             padding: "0 30px"
           }}>
-          <Image src="logo/logo-new.png" alt="Nekotopia Logo" width={"171"} height={"55"} />
+          <Image src="logo/logo-new.png" alt="Nekotopia Logo" sx={{ width: '171px', height: '55px' }} />
         </div>
 
 
@@ -106,6 +106,12 @@ export default function MainFooter() {
           </AnchorImageStyle>
           <AnchorImageStyle href="https://discord.com/invite/a3DypjssRZ">
             <Image src="discord.svg" alt="discord-share" style={{ width: '100%', height: '100%' }} />
+          </AnchorImageStyle>
+          <AnchorImageStyle href="https://t.me/nekotopiaworld">
+            <Image src="telegram1.png" alt="discord-share" style={{ width: '27px', height: '28px' }} />
+          </AnchorImageStyle>
+          <AnchorImageStyle href="https://medium.com/@nekotopiaworld">
+            <Image src="medium2.png" alt="discord-share" style={{ width: '30px', height: '32px' }} />
           </AnchorImageStyle>
         </div>
 

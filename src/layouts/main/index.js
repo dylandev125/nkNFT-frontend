@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 // @mui
 import { Box, Stack } from '@mui/material';

@@ -171,7 +171,7 @@ export default function AboutWhat() {
                           <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', paddingLeft: 3 }}>
                             <ul>
                               <NavSubItem id="GeneralInformation" title="General Information" />
-                              <NavSubItem id="PresaleInfo" title=" Presale Info" />
+                              {/* <NavSubItem id="PresaleInfo" title=" Presale Info" /> */}
                               <NavSubItem id="Support" title="Support" />
                             </ul>
                           </Box>
@@ -308,7 +308,7 @@ export default function AboutWhat() {
                 </MotionInView>
               </Box>
 
-              <Box id="PresaleInfo">
+              {/* <Box id="PresaleInfo">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
                   <AccordionStyle
                     variant="p"
@@ -328,7 +328,7 @@ export default function AboutWhat() {
                     }
                   />
                 </MotionInView>
-              </Box>
+              </Box> */}
 
               <Box id="Support">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
