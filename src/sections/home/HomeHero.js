@@ -42,22 +42,26 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
   },
 }));
 
-// const HeroOverlayStyle = styled(m.img)({
-//   zIndex: 9,
-//   width: '100%',
-//   height: '100%',
-//   // objectFit: 'cover',
-//   position: 'absolute',
-// });
+const HeroOverlayStyle = styled(m.img)({
+  zIndex: 9,
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  position: 'absolute',
+});
 
-const HeroImgStyle = styled('iframe')(() => ({
+const HeroImgStyle = styled('video')(() => ({
   position: 'absolute',
   top: '-60px',
-  // left: '50%',
+  left: '50%',
   zIndex: '1',
-  // transform: 'translateX(-50 %)',
+  transform: 'translateX(-50%)',
+  objectFit: 'cover',
   width: '100%',
-  height: 'auto'
+  height: '100%',
+  backgroundColor: '#000000',
+  opacity: '0.7',
+  transition: 'background 0.3s border-radius 0.3s opacity 0.3s'
 }));
 
 // const HeroBox = styled(Box)(({ theme }) => ({
@@ -89,50 +93,32 @@ const HeroImgStyle = styled('iframe')(() => ({
 export default function HomeHero() {
   const isDesktop = useResponsive('up', 'lg');
 
-  // Load the IFrame Player API code asynchronously.
-  const tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  const firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  // Replace the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
-  let player;
-  function onYouTubePlayerAPIReady() {
-    player = new window.YT.Player('ytplayer', {
-      height: '360',
-      width: '640',
-      videoId: 'APYLABC3WNA'
-    });
-  }
-
   return (
     // <MotionContainer>
     <RootStyle>
       {/* <HeroOverlayStyle
-          alt="overlay"
-        // src="https://minimal-assets-api.vercel.app/assets/overlay.svg"
-        // variants={varFade().in}
-        /> */}
+        alt="overlay"
+        src="https://minimal-assets-api.vercel.app/assets/overlay.svg"
+        variants={varFade().in}
+      /> */}
       {/* <HeroBox> */}
       {isDesktop ?
-        <div style={{ pointerEvents: 'none' }}>
-          <HeroImgStyle
-            className="elementor-background-video-embed"
-            frameBorder="0"
-            allowFullScreen="1"
-            // autoPlay="1"
-            // controls="0"
-            // mute="1"
-            // allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
-            title="YouTube video player"
-            // width="100%"
-            // height="100%"
-            src="https://youtube.com/embed/APYLABC3WNA?autoplay=1&mute=1&loop=1&playlist=APYLABC3WNA&controls=0&showinfo=0&rel=0&autohide=1&rel=0&modestbranding=0&mode=opaque&playsinline=1"
-            id="ytplayer"
-            style={{ width: '100%', height: '1400px' }}
-          />
-        </div>
+        // <div style={{ pointerEvents: 'none' }}>
+        <HeroImgStyle
+          className="elementor-background-video-embed"
+          loop autoPlay muted
+          // autoPlay="1"
+          // controls="0"
+          // mute="1"
+          // allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
+          title="YouTube video player"
+          // width="100%"
+          // height="100%"
+          src="https://website-static.sgp1.cdn.digitaloceanspaces.com/Nekotopia1_Trimed.mp4"
+          id="ytplayer"
+          style={{ width: '100%', minHeight: '100vh' }}
+        />
+        // </div>
         // <HeroImgStyle
         //   src="https://www.youtube.com/embed/XB1mv2UQHj8?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fbornmonkie.com&widgetid=1"
         //   autoplay="true"
@@ -142,10 +128,13 @@ export default function HomeHero() {
         // // variants={varFade().inUp}
         // />
         :
-        <HeroImgStyle
-          alt="hero"
+        <img
           src="hero-mob.png"
-          variants={varFade().inUp}
+          alt="hero"
+          style={{
+            width: '100%',
+            height: '750px'
+          }}
         />
       }
       {/* </HeroBox> */}

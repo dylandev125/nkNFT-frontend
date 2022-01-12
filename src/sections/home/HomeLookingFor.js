@@ -15,7 +15,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   // margin: 'auto',
   [theme.breakpoints.up('lg')]: {
     width: '50%',
-    marginTop: '-15%',
+    marginTop: '-18%',
     marginLeft: 'auto',
     marginRight: 'auto',
     // margin: 'auto',
@@ -28,9 +28,10 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function HomeLookingFor() {
   return (
+    // <div style={{ backgroundImage: 'url(shine2.png)', objectFit: 'cover', backgroundPosition: 'center' }}>
     <RootStyle>
       {/* <Container> */}
-      <Grid container direction="column" alignItems="center" justifyContent="center" spacing={{ xs: 1, md: 3 }}>
+      <Grid container direction="column" alignItems="center" justifyContent="center" spacing={{ xs: 1, md: 0 }}>
         <Grid item xs={11} md={4} sx={{ textAlign: { xs: 'center', md: 'center' } }}>
           {/* <MotionInView variants={varFade().inDown}>
             <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>
@@ -75,7 +76,7 @@ export default function HomeLookingFor() {
           <MotionInView
             variants={varFade().inUp}
             sx={{
-              mb: { xs: 3, md: 6 },
+              pb: { xs: 3, md: 6 },
             }}
           >
             {/* <div className="sketchfab-embed-wrapper"> */}
@@ -99,7 +100,7 @@ export default function HomeLookingFor() {
               disabledEffect
               alt="rocket"
               src="whyyou.gif"
-              sx={{ width: { md: '500px' }, height: { md: '400px' } }}
+              sx={{ width: { md: '700px' }, height: { md: '400px' }, transform: 'scale(1.6)' }}
               loading="lazy"
             />
           </MotionInView>
@@ -107,5 +108,6 @@ export default function HomeLookingFor() {
       </Grid>
       {/* </Container> */}
     </RootStyle >
+    // </div>
   );
 }
