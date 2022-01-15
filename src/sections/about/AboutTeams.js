@@ -90,7 +90,7 @@ const FOUNDATION_LIST = [
     {
         name: 'Chen Jiao',
         description: 'Blockchain Developer',
-        icon: `team/Chen.JPG`,
+        icon: `team/Chen.png`,
         href: 'https://www.linkedin.com/in/chen-jiao-49aa76223',
         credibility: 'Specialist in React, Ethereum smart contracts and advanced blockchain technology'
     },
