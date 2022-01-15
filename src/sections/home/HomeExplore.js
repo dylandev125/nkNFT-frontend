@@ -282,7 +282,7 @@ export default function HomeExplore() {
                         {/* <MotionInView variants={varFade().inDown}> */}
                         {/* <m.div animate={{ y: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}> */}
                         {/* <FigureStyle> */}
-                        <img src="https://website-static.sgp1.cdn.digitaloceanspaces.com/3d-black-cat.gif" alt="" style={{ width: isDesktop ? '100%' : '90%', height: '100%', transform: 'scale(1.6)', marginTop: '10%' }} className='3dcat' loading="lazy" />
+                        <img src="https://website-static.sgp1.cdn.digitaloceanspaces.com/3d-black-cat.gif" alt="" style={{ width: isDesktop ? '100%' : '90%', height: '100%', transform: 'scale(1.6)', marginTop: '20%' }} className='3dcat' loading="lazy" />
                         {/* </FigureStyle> */}
                         {/* </m.div> */}
                         {/* </MotionInView> */}

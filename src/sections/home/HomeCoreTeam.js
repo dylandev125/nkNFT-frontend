@@ -108,7 +108,7 @@ const advisors = [
         credibility: ''
     },
     {
-        name: 'Anuj Kodam',
+        name: 'Anuj K',
         description: 'Founder @ Wall.app',
         icon: `30K5Azeq_400x400.png`,
         href: 'https://www.linkedin.com/in/anuj-kumar-kodam-07ba83102',
