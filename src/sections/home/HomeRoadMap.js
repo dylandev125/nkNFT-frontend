@@ -157,7 +157,7 @@ const RoadMapItem = (item) => {
                         // marginBottom: '10px',
                         whiteSpace: 'nowrap'
                     }}>{title}</Box>
-                    {description}
+                    <Box sx={{ marginLeft: '30px' }}>{description}</Box>
                 </Box>
             </MotionInView>
         </Box >
@@ -219,7 +219,13 @@ export default function HomeRoadMap() {
                         <RoadMapItem
                             img="roadMap/road-map1.png"
                             title="Aug-Sep 2021"
-                            description="Idea assessment Team Building Project Planning Character Development Entity Structuring"
+                            description={<ul>
+                                <li>Idea assessment</li>
+                                <li>Team Building</li>
+                                <li>Project Planning</li>
+                                <li>Character Development</li>
+                                <li>Entity Structuring</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -239,7 +245,12 @@ export default function HomeRoadMap() {
                         <RoadMapItem
                             img="roadMap/road-map2.png"
                             title="Sep - Oct 2021"
-                            description="Whitepaper Website building Game Asset development"
+                            description={<ul>
+                                <li>Whitepaper</li>
+                                <li>Website</li>
+                                <li>Building Game</li>
+                                <li>Asset development</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -260,11 +271,14 @@ export default function HomeRoadMap() {
                             }}
                         />
 
-
                         <RoadMapItem
                             img="roadMap/road-map3.png"
                             title="Nov - Dec 2021"
-                            description="Website Launch Whitepaper Launch Partnerships & Marketing"
+                            description={<ul>
+                                <li>Website Launch</li>
+                                <li>Whitepaper Launch</li>
+                                <li>Partnerships & Marketing</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -289,7 +303,12 @@ export default function HomeRoadMap() {
                         <RoadMapItem
                             img="roadMap/road-map4.png"
                             title="Dec-Jan 2022"
-                            description="Seed and Private sales NFT Mint & IDO launch EA to Nekotopia Marketplace Launch"
+                            description={<ul>
+                                <li>Seed and Private sales</li>
+                                <li>NFT Mint & IDO launch</li>
+                                <li>EA to Nekotopia</li>
+                                <li>Marketplace Launch</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -310,10 +329,18 @@ export default function HomeRoadMap() {
                             }}
                         />
 
+
+
+
                         <RoadMapItem
                             img="roadMap/road-map5.png"
                             title="Jan-Feb 2022"
-                            description="MOBA(P2E) Announcement Metaverse Testnet Staking & Swap Launch Neko Experiment Launch"
+                            description={<ul>
+                                <li>MOBA(P2E) Announcement</li>
+                                <li>Metaverse Testnet</li>
+                                <li>Staking & Swap Launch</li>
+                                <li>Neko Experiment Launch</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -334,10 +361,16 @@ export default function HomeRoadMap() {
                             }}
                         />
 
+
+
                         <RoadMapItem
                             img="roadMap/road-map6.png"
                             title="Feb- March 2022"
-                            description="MOBA Dev logs Nekotopia Patchwork MOBA Early Access"
+                            description={<ul>
+                                <li>MOBA Dev logs</li>
+                                <li>Nekotopia Patchwork</li>
+                                <li>MOBA Early Access</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -362,7 +395,7 @@ export default function HomeRoadMap() {
                         <RoadMapItem
                             img="roadMap/road-map7.png"
                             title="March-April 2022"
-                            description="Alpha Release of MOBA"
+                            description={<ul><li>Alpha Release of MOBA</li></ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',

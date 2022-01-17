@@ -107,10 +107,15 @@ export default function HomeColorPresets() {
             <Image
               // disabledEffect
               alt="grid"
-              src="island.webp"
+              src="image.png"
               style={{
-                width: '100%',
-                height: '100%'
+                width: '80%',
+                display: 'flex',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                height: '100%',
+                marginBottom: '40px',
+                borderRadius: '42px'
               }}
             />
 

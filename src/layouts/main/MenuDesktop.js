@@ -192,6 +192,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
                           '&.active': {
                             color: 'common.white',
                             typography: 'subtitle2',
+                            fontWeight: 'bold'
                           },
                         }}
                       >
@@ -263,7 +264,8 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
           color: 'transparent',
           background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
           backgroundClip: 'text',
-          WebkitBackgroundClip: 'text'
+          WebkitBackgroundClip: 'text',
+          fontWeight: 'bolder'
         },
       }}
     >

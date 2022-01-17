@@ -60,7 +60,7 @@ const HeroImgStyle = styled('video')(() => ({
   width: '100%',
   height: '100%',
   backgroundColor: '#000000',
-  opacity: '0.7',
+  opacity: '0.4',
   transition: 'background 0.3s border-radius 0.3s opacity 0.3s'
 }));
 
