@@ -39,6 +39,7 @@ const HomeExplore = lazy(() => import('../sections/home/HomeExplore'))
 const HomeRoadMap = lazy(() => import('../sections/home/HomeRoadMap'))
 const HomeCoreTeam = lazy(() => import('../sections/home/HomeCoreTeam'))
 const HomeBattle = lazy(() => import('../sections/home/HomeBattle'))
+// const HomeChart = lazy(() => import('../sections/home/HomeChart'))
 
 export default function HomePage() {
     return (
@@ -49,6 +50,7 @@ export default function HomePage() {
                     <HomeMinimal />
                     <HomeLookingFor />
                     <HomeBattle />
+                    {/* <HomeChart /> */}
                     <HomeColorPresets />
                     <HomeExplore />
                     <HomeRoadMap />

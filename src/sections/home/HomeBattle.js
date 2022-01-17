@@ -239,13 +239,13 @@ export default function HomeBattle() {
                     </Grid>
                 </Grid>
                 <Parallax1>
-                    <img src="Rectangle%20916.svg" alt="" loading="lazy" />
+                    <img src="Rectangle%20916.svg" alt="" loading="lazy" width="100%" height="100%" />
                 </Parallax1>
                 <Parallax2>
-                    <img src="Rectangle%20914.svg" alt="" loading="lazy" />
+                    <img src="Rectangle%20914.svg" alt="" loading="lazy" width="100%" height="100%" />
                 </Parallax2>
                 <Parallax3>
-                    <img src="Rectangle%20915.svg" alt="" loading="lazy" />
+                    <img src="Rectangle%20915.svg" alt="" loading="lazy" width="100%" height="100%" />
                 </Parallax3>
                 {/* <Parallax4>
                                 <img src="Rectangle%20917.svg" alt="" loading="lazy" />

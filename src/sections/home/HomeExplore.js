@@ -275,20 +275,21 @@ export default function HomeExplore() {
                 <Grid container spacing={3} sx={{
                     position: 'absolute',
                     zIndex: "2",
-                    mt: 10
+                    mt: 10,
+                    marginLeft: '-122px'
                 }} direction="row" justifyContent="center" alignItems="center">
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} lg={5}>
                         {/* <Box sx={{ mt: { xs: 6 }, }}> */}
                         {/* <MotionInView variants={varFade().inDown}> */}
                         {/* <m.div animate={{ y: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}> */}
                         {/* <FigureStyle> */}
-                        <img src="https://website-static.sgp1.cdn.digitaloceanspaces.com/3d-black-cat.gif" alt="" style={{ width: isDesktop ? '100%' : '90%', height: '100%', transform: 'scale(1.6)', marginTop: '10%' }} className='3dcat' loading="lazy" />
+                        <img src="https://website-static.sgp1.cdn.digitaloceanspaces.com/3d-black-cat.gif" alt="" style={{ width: isDesktop ? '100%' : '90%', height: '100%', transform: 'scale(1.5)', marginTop: '10%' }} className='3dcat' loading="lazy" />
                         {/* </FigureStyle> */}
                         {/* </m.div> */}
                         {/* </MotionInView> */}
                         {/* </Box> */}
                     </Grid>
-                    <Grid item xs={12} md={3}>
+                    <Grid item xs={12} md={3} lg={3}>
                         <Box sx={{ padding: '0 15px 0 15px', textAlign: { xs: 'center', md: 'left' }, mt: { xs: 5 } }}>
                             <MotionInView variants={varFade().inDown}>
                                 <Typography variant="p">
