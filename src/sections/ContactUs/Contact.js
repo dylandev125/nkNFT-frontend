@@ -65,7 +65,7 @@ export default function Contact() {
                     </ImageStyle>
                 </BoxStyle>
 
-                <Stack spacing={5} sx={{ width: '500px', margin: 'auto' }}>
+                <Stack spacing={5} sx={{ width: { md: '30%', xs: '80%' }, margin: 'auto' }}>
                     {/* <MotionInView variants={varFade().inUp}>
                         <Typography variant="h3">
                             Feel free to contact us. <br />

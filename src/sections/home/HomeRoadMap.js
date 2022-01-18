@@ -305,7 +305,6 @@ export default function HomeRoadMap() {
                             title="Dec-Jan 2022"
                             description={<ul>
                                 <li>Seed and Private sales</li>
-                                <li>EA to Nekotopia</li>
                             </ul>}
                             sx={{
                                 width: '210px',
@@ -339,6 +338,7 @@ export default function HomeRoadMap() {
                                 <li>Staking & Swap Launch</li>
                                 <li>Neko Experiment Launch</li>
                                 <li>NFT Mint & IDO launch</li>
+                                <li>EA to Nekotopia</li>
                             </ul>}
                             sx={{
                                 width: '210px',
@@ -416,10 +416,10 @@ export default function HomeRoadMap() {
                         />
                     </ContentStyle>
                 </RootStyle > :
-                <Box sx={{ mt: 5, mb: 5, position: "relative" }}>
-                    <Container sx={{ color: 'common.white', textAlign: 'center' }}>
+                <Box sx={{ pt: 5, pb: 10, position: "relative" }}>
+                    <Container sx={{ color: 'common.white', textAlign: 'center', pt: 2, pb: 5, }}>
                         <m.div variants={varFade().inRight} >
-                            <Typography variant="h2" component="div">
+                            <Typography variant="h2" component="div" style={{ fontFamily: 'Akira Expanded', }}>
                                 Road Map
                             </Typography>
                         </m.div>

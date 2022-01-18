@@ -276,7 +276,7 @@ export default function HomeExplore() {
                     position: 'absolute',
                     zIndex: "2",
                     mt: 10,
-                    marginLeft: '-122px'
+                    marginLeft: { md: '-122px' }
                 }} direction="row" justifyContent="center" alignItems="center">
                     <Grid item xs={12} md={6} lg={5}>
                         {/* <Box sx={{ mt: { xs: 6 }, }}> */}
