@@ -183,7 +183,7 @@ export default function HomeMinimal() {
           </>}
 
         <BoxStyle >
-          <TypographyStyle variant="h2">
+          <TypographyStyle variant="h3" style={{ fontFamily: 'Akira Expanded', marginTop: '30px' }}>
             Enter the Nekotopia
           </TypographyStyle>
 

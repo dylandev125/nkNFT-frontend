@@ -157,7 +157,7 @@ const RoadMapItem = (item) => {
                         // marginBottom: '10px',
                         whiteSpace: 'nowrap'
                     }}>{title}</Box>
-                    <Box sx={{ marginLeft: '30px' }}>{description}</Box>
+                    <Box sx={{ marginLeft: '20px' }}>{description}</Box>
                 </Box>
             </MotionInView>
         </Box >
@@ -187,7 +187,7 @@ export default function HomeRoadMap() {
                     <ContentStyle sx={{ width: '100%' }}>
                         <Container sx={{ color: 'common.white', textAlign: 'center' }}>
                             <m.div variants={varFade().inRight} >
-                                <Typography variant="h2" component="div">
+                                <Typography variant="h3" component="div" style={{ fontFamily: 'Akira Expanded' }}>
                                     Road Map
                                 </Typography>
                             </m.div>
@@ -305,9 +305,7 @@ export default function HomeRoadMap() {
                             title="Dec-Jan 2022"
                             description={<ul>
                                 <li>Seed and Private sales</li>
-                                <li>NFT Mint & IDO launch</li>
                                 <li>EA to Nekotopia</li>
-                                <li>Marketplace Launch</li>
                             </ul>}
                             sx={{
                                 width: '210px',
@@ -340,6 +338,7 @@ export default function HomeRoadMap() {
                                 <li>Metaverse Testnet</li>
                                 <li>Staking & Swap Launch</li>
                                 <li>Neko Experiment Launch</li>
+                                <li>NFT Mint & IDO launch</li>
                             </ul>}
                             sx={{
                                 width: '210px',

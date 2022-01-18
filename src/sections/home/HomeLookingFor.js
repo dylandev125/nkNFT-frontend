@@ -32,7 +32,7 @@ export default function HomeLookingFor() {
     <RootStyle>
       {/* <Container> */}
       <Grid container direction="column" alignItems="center" justifyContent="center" spacing={{ xs: 1, md: 0 }}>
-        <Grid item xs={11} md={4} sx={{ textAlign: { xs: 'center', md: 'center' } }}>
+        <Grid item xs={11} md={6} sx={{ textAlign: { xs: 'center', md: 'center' } }}>
           {/* <MotionInView variants={varFade().inDown}>
             <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>
               Looking For a
@@ -40,7 +40,7 @@ export default function HomeLookingFor() {
           </MotionInView> */}
 
           <MotionInView variants={varFade().inDown}>
-            <Typography variant="h2" sx={{ mt: 2, mb: 5 }}>
+            <Typography variant="h3" sx={{ mt: 2, mb: 5, fontFamily: 'Akira Expanded' }}>
               Start your journey
             </Typography>
           </MotionInView>

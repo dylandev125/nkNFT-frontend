@@ -122,7 +122,7 @@ export default function HomeCoreTeam() {
     return (
         <div style={{ backgroundImage: 'linear-gradient(to top, #240e63, #241161, #23135e, #23155c, #231759)' }}>
             <BoxStyle>
-                <Typography variant="h3" sx={{ textAlign: 'center', mt: 3, pb: 5 }}>
+                <Typography variant="h3" sx={{ textAlign: 'center', mt: 3, pb: 5, fontFamily: 'Akira Expanded' }}>
                     Core Team
                 </Typography>
                 <Grid item xs={12} sm={12} alignItems={'center'} justifyItems={'center'}>
@@ -174,7 +174,7 @@ export default function HomeCoreTeam() {
                     </Button>
                 </Box> */}
 
-                <Typography variant="h3" sx={{ textAlign: 'center', pt: 5, pb: 5 }}>
+                <Typography variant="h3" sx={{ textAlign: 'center', pt: 5, pb: 5, fontFamily: 'Akira Expanded' }}>
                     Advisors
                 </Typography>
                 <Grid item xs={12} sm={6} alignItems={'center'} justifyItems={'center'} sx={{ margin: 'auto' }}>

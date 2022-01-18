@@ -27,6 +27,7 @@ const AccordionStyle = styled('p')(() => ({
   fontSize: '30px',
   lineHeight: '140%',
   color: 'transparent',
+  fontFamily: 'Akira Expanded',
   background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
   backgroundClip: 'text',
   marginBottom: '10px',
@@ -196,8 +197,8 @@ export default function AboutWhat() {
               <Box id="about">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
                   <Typography
-                    variant="h2"
-                    sx={{ mb: 3, color: 'common.white' }} >
+                    variant="h3"
+                    sx={{ mb: 3, color: 'common.white', fontFamily: 'Akira Expanded' }} >
                     About
                   </Typography>
                 </MotionInView>
@@ -231,8 +232,8 @@ export default function AboutWhat() {
               <Box id="lifeAtNeko">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '50px' }}>
                   <Typography
-                    variant="h2"
-                    sx={{ mb: 3, mt: 10, color: 'common.white' }} >
+                    variant="h3"
+                    sx={{ mb: 3, mt: 10, color: 'common.white', fontFamily: 'Akira Expanded' }} >
                     Start your life in the Nekotopia
                   </Typography>
                 </MotionInView>
@@ -250,8 +251,8 @@ export default function AboutWhat() {
               <Box id="FAQ">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '30px' }}>
                   <Typography
-                    variant="h2"
-                    sx={{ mb: 3, mt: 10, color: 'common.white' }} >
+                    variant="h3"
+                    sx={{ mb: 3, mt: 10, color: 'common.white', fontFamily: 'Akira Expanded' }} >
                     Frequently asked questions
                   </Typography>
                 </MotionInView>

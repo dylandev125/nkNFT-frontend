@@ -58,7 +58,7 @@ const PinItem = () => <MotionInView variants={varFade().inDown}>
     <Image
       disabledEffect
       alt="sidebar"
-      src={`pin.png`}
+      src={`pin3.png`}
     />
   </m.div>
 </MotionInView>
@@ -97,7 +97,7 @@ export default function HomeColorPresets() {
     <RootStyle>
       <Box sx={{ position: 'relative', textAlign: 'center' }}>
         <MotionInView variants={varFade().inUp}>
-          <Typography variant="h2" sx={{ mb: 8 }}>
+          <Typography variant="h3" sx={{ mb: 8, fontFamily: 'Akira Expanded' }}>
             Battle Map
           </Typography>
         </MotionInView>
@@ -114,7 +114,7 @@ export default function HomeColorPresets() {
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 height: '100%',
-                marginBottom: '40px',
+                marginBottom: '10%',
                 borderRadius: '42px'
               }}
             />

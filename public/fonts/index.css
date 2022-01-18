@@ -11,6 +11,12 @@
 
 @font-face {
     font-family: 'Lato';
-    font-weight: 900;
+    font-weight: 500;
     src: local('Lato'), url(./fonts/Lato-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Akira Expanded';
+  font-weight: 900;
+  src:  local('Akira'), url(./fonts/Akira.otf) format('opentype');
 }
