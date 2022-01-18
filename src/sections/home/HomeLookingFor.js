@@ -40,7 +40,7 @@ export default function HomeLookingFor() {
           </MotionInView> */}
 
           <MotionInView variants={varFade().inDown}>
-            <Typography variant="h3" sx={{ mt: 2, mb: 5, fontFamily: 'Akira Expanded' }}>
+            <Typography variant="h3" sx={{ mt: 2, mb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
               Start your journey
             </Typography>
           </MotionInView>

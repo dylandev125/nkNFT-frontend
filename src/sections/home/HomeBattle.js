@@ -135,7 +135,7 @@ export default function HomeBattle() {
                 <Grid container direction="column" alignItems="center" justifyContent="space-between" alignContent="center" spacing={{ xs: 4, md: 3 }}>
                     <Grid item xs={12} md={4} sx={{ textAlign: { xs: 'center', md: 'center' } }}>
                         <MotionInView variants={varFade().inDown}>
-                            <Typography variant="h3" sx={{ mt: 2, mb: 5, fontFamily: 'Akira Expanded' }}>
+                            <Typography variant="h3" sx={{ mt: 2, mb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                                 Go to battle in the Nekoverse arena
                             </Typography>
                         </MotionInView>

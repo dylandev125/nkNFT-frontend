@@ -28,6 +28,7 @@ const AccordionStyle = styled('p')(() => ({
   lineHeight: '140%',
   color: 'transparent',
   fontFamily: 'Akira Expanded',
+  letterSpacing: '2px',
   background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
   backgroundClip: 'text',
   marginBottom: '10px',
@@ -198,7 +199,7 @@ export default function AboutWhat() {
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
                   <Typography
                     variant="h3"
-                    sx={{ mb: 3, color: 'common.white', fontFamily: 'Akira Expanded' }} >
+                    sx={{ mb: 3, color: 'common.white', fontFamily: 'Akira Expanded', letterSpacing: '2px', }} >
                     About
                   </Typography>
                 </MotionInView>
@@ -252,7 +253,7 @@ export default function AboutWhat() {
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '30px' }}>
                   <Typography
                     variant="h3"
-                    sx={{ mb: 3, mt: 10, color: 'common.white', fontFamily: 'Akira Expanded' }} >
+                    sx={{ mb: 3, mt: 10, color: 'common.white', fontFamily: 'Akira Expanded', letterSpacing: '2px', }} >
                     Frequently asked questions
                   </Typography>
                 </MotionInView>

@@ -152,8 +152,9 @@ export default function HomeHero() {
               color: 'common.white', textShadow: '10px 5px 5px #240e6347',
               fontWeight: 'bold',
               fontSize: '32px',
-              width: '900px',
+              width: '1000px',
               fontFamily: 'Akira Expanded',
+              letterSpacing: '2px',
               // marginBottom: '15px',
               lineHeight: 1
             }}>

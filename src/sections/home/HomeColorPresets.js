@@ -97,7 +97,7 @@ export default function HomeColorPresets() {
     <RootStyle>
       <Box sx={{ position: 'relative', textAlign: 'center' }}>
         <MotionInView variants={varFade().inUp}>
-          <Typography variant="h3" sx={{ mb: 8, fontFamily: 'Akira Expanded' }}>
+          <Typography variant="h3" sx={{ mb: 8, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
             Battle Map
           </Typography>
         </MotionInView>

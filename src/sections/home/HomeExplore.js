@@ -266,7 +266,7 @@ export default function HomeExplore() {
             <ContentStyle sx={{ width: '100%' }}>
                 <Container sx={{ color: 'common.white', textAlign: 'center' }}>
                     <m.div variants={varFade().in} >
-                        <Typography variant="h3" component="div" style={{ fontFamily: 'Akira Expanded' }}>
+                        <Typography variant="h3" component="div" style={{ fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                             Explore worlds within the Nekotopia
                         </Typography>
                     </m.div>

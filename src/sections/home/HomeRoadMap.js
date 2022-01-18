@@ -187,7 +187,7 @@ export default function HomeRoadMap() {
                     <ContentStyle sx={{ width: '100%' }}>
                         <Container sx={{ color: 'common.white', textAlign: 'center' }}>
                             <m.div variants={varFade().inRight} >
-                                <Typography variant="h3" component="div" style={{ fontFamily: 'Akira Expanded' }}>
+                                <Typography variant="h3" component="div" style={{ fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                                     Road Map
                                 </Typography>
                             </m.div>

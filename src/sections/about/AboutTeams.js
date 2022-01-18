@@ -263,7 +263,7 @@ export default function AboutTeams() {
 
     return (
         <>
-            <Typography variant="h3" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded' }}>
+            <Typography variant="h3" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                 Team
             </Typography>
             <Grid item xs={12} sm={12} alignItems={'center'} justifyItems={'center'}>
