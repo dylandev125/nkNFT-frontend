@@ -21,7 +21,7 @@ const CaseStyle = styled('div')(() => ({
   position: 'absolute',
   bottom: '100%',
   left: '0',
-  backgroundColor: 'rgba(27, 24, 71, .72)',
+  backgroundColor: 'rgba(27, 24, 71, 89%)',
   boxShadow: 'inset 0 0 20px rgb(133 155 193/9%)',
   padding: '15px 30px 15px 135px',
   borderRadius: '12px',
@@ -65,15 +65,15 @@ const PinItem = () => <MotionInView variants={varFade().inDown}>
 
 
 const CaseItem = (item) => {
-  const { caseClass, title, description } = item
+  const { caseClass, title, description, image } = item
   return (
     <CaseStyle className={caseClass}>
-      <Image src="chest.png" alt=""
+      <Image src={image} alt=""
         sx={{
           width: '180px',
           height: '180px',
           position: 'absolute',
-          top: '-44px',
+          top: '-10px',
           left: '-23px',
           zIndex: 5,
           pointerEvents: 'none'
@@ -134,7 +134,7 @@ export default function HomeColorPresets() {
               }}
             >
               <PinItem />
-              <CaseItem caseClass="case1" title="Earn Bells" description="Fight creeps and destroy them to earn bells" />
+              <CaseItem caseClass="case1" title="Earn Bells" image="In-game activities.png" description="Fight creeps and destroy them to earn bells" />
             </Box>
 
             <Box sx={{
@@ -150,7 +150,7 @@ export default function HomeColorPresets() {
               }
             }}>
               <PinItem />
-              <CaseItem caseClass="case2" title="Townhall" description="Spawn point for your team. generate health" />
+              <CaseItem caseClass="case2" title="Townhall" image="Upgrade v3.png" description="Spawn point for your team. generate health" />
             </Box>
 
             <Box sx={{
@@ -166,7 +166,7 @@ export default function HomeColorPresets() {
               }
             }}>
               <PinItem />
-              <CaseItem caseClass="case3" title="Towers" description="Destroy all enemy towers with the bells earned to win the game" />
+              <CaseItem caseClass="case3" title="Towers" image="In-game activities v3.png" description="Destroy all enemy towers with the bells earned to win the game" />
             </Box>
 
           </Box> :

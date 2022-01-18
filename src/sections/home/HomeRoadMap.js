@@ -356,7 +356,7 @@ export default function HomeRoadMap() {
                             textsx={{
                                 position: 'absolute',
                                 left: '100px',
-                                top: '-23px'
+                                top: '-76px'
                             }}
                         />
 

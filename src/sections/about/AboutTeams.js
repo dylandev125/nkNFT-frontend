@@ -34,7 +34,7 @@ const FOUNDATION_LIST = [
         description: 'CTO',
         icon: `team/OmrumCetin.jpg`,
         href: 'https://www.linkedin.com/in/omrumcetin/',
-        credibility: 'Software Developer in multicultural environment, multiple languages, developing algorithms which are being used worldwide'
+        credibility: '8+ Years Unreal Engine and Software Development experience, innovative algorithm and game developer, designer. Database enthusiast'
     },
     {
         name: 'Robert Berrier',
