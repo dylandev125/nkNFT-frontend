@@ -4,6 +4,7 @@ import { Box, Typography, TextField, Stack } from '@mui/material';
 import DecorationSVG from './DecorationSVG'
 import { MotionInView, varFade } from '../../components/animate';
 import Button from '../../components/Button';
+import useResponsive from '../../hooks/useResponsive';
 
 // components
 // import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
@@ -43,13 +44,15 @@ from {
 `;
 
 const ImageStyle = styled('div')(() => ({
-    animation: `${animate} 1s linear infinite`
+    animation: `${animate} 1s linear infinite`,
+    width: '100%'
 }));
 
 
 // ----------------------------------------------------------------------
 
 export default function Contact() {
+    const isDesktop = useResponsive('up', 'lg');
 
     // const head = document.querySelector('head');
     // const script = document.createElement('script');
@@ -59,11 +62,11 @@ export default function Contact() {
         <>
             <RootStyle>
                 <Typography variant="h3" sx={{ marginBottom: '72px' }}>Feel free to contact us at <TextStyle>meow@nekotopia.co</TextStyle> or fill the below form</Typography>
-                <BoxStyle>
+                {isDesktop && <BoxStyle>
                     <ImageStyle>
                         <DecorationSVG />
                     </ImageStyle>
-                </BoxStyle>
+                </BoxStyle>}
 
                 <Stack spacing={5} sx={{ width: { md: '30%', xs: '80%' }, margin: 'auto' }}>
                     {/* <MotionInView variants={varFade().inUp}>

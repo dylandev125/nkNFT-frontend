@@ -10,7 +10,7 @@ const RootStyle = styled('div')(({ theme }) => ({
     width: '100%',
     [theme.breakpoints.up('md')]: {
         paddingTop: theme.spacing(11),
-        backgroundImage: "url(About.jpg)"
+        backgroundImage: "url(About.jpg)",
     },
 }));
 
@@ -18,7 +18,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function Rewards() {
     return (
-        <Page title="Mint">
+        <Page title="Contact us">
             <RootStyle>
                 <Hero />
                 <Contact />
