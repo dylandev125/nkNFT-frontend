@@ -151,7 +151,9 @@ export default function HomeHero() {
             <Typography sx={{
               color: 'common.white', textShadow: '10px 5px 5px #240e6347',
               fontWeight: 'bold',
-              fontSize: '48px',
+              fontSize: '32px',
+              width: '900px',
+              fontFamily: 'Akira Expanded',
               // marginBottom: '15px',
               lineHeight: 1
             }}>

@@ -165,7 +165,7 @@ export default function AboutWhat() {
                       <CardContent sx={{ padding: '15px' }}>
                         <NavItem id="about" title="About" />
                         <NavItem id="team" title="Team" />
-                        <NavItem id="lifeAtNeko" title="Start your life in the Nekotopia" />
+                        {/* <NavItem id="lifeAtNeko" title="Start your life in the Nekotopia" /> */}
                         <NavItem id="FAQ" title="Frequently asked questions" />
 
                         <Box sx={{ paddingLeft: '30px' }}>
@@ -229,7 +229,7 @@ export default function AboutWhat() {
               </Box>
 
 
-              <Box id="lifeAtNeko">
+              {/* <Box id="lifeAtNeko">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '50px' }}>
                   <Typography
                     variant="h3"
@@ -246,7 +246,7 @@ export default function AboutWhat() {
                   </Typography>
                 </MotionInView>
 
-              </Box>
+              </Box> */}
 
               <Box id="FAQ">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '30px' }}>

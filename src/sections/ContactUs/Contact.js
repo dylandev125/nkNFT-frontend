@@ -58,7 +58,7 @@ export default function Contact() {
     return (
         <>
             <RootStyle>
-                <Typography variant="h3" sx={{ marginBottom: '72px' }}>Feel free to contact us at <TextStyle>meow@nekotopia.co</TextStyle> or fill form</Typography>
+                <Typography variant="h3" sx={{ marginBottom: '72px' }}>Feel free to contact us at <TextStyle>meow@nekotopia.co</TextStyle> or fill the below form</Typography>
                 <BoxStyle>
                     <ImageStyle>
                         <DecorationSVG />
