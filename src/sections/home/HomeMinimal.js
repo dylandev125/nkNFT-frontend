@@ -191,7 +191,7 @@ export default function HomeMinimal() {
             <Grid item xs={12} lg={4} >
               <ContentStyle>
                 <MotionInView variants={varFade().inUp}>
-                  <Typography variant="h3" sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' }, color: 'common.white' }}>
+                  <Typography variant="subtitle1" sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' }, color: 'common.white', fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                     Open-ended social world
                   </Typography>
 

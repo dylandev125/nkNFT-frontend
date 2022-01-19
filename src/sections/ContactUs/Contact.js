@@ -1,4 +1,5 @@
 // @mui
+import React from 'react'
 import { useSnackbar } from 'notistack';
 import { styled, keyframes } from '@mui/material/styles';
 import { Box, Typography, TextField, Stack } from '@mui/material';
@@ -51,6 +52,7 @@ const ImageStyle = styled('div')(() => ({
 export default function Contact() {
     const isDesktop = useResponsive('up', 'lg');
     const { enqueueSnackbar } = useSnackbar();
+    const [formDetails, setFormDetails] = React.useState({ name: '', email: '', subject: '', message: '' })
 
     // const head = document.querySelector('head');
     // const script = document.createElement('script');
@@ -59,7 +61,7 @@ export default function Contact() {
     return (
         <>
             <RootStyle>
-                <Typography variant="h3" sx={{ marginBottom: '72px' }}>Feel free to contact us at <TextStyle>meow@nekotopia.co</TextStyle> or fill the below form</Typography>
+                <Typography variant="h6" sx={{ marginBottom: '72px', fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>Feel free to contact us at <TextStyle>meow@nekotopia.co</TextStyle> or fill the below form</Typography>
                 {isDesktop && <BoxStyle>
                     <ImageStyle>
                         <DecorationSVG />
@@ -76,24 +78,24 @@ export default function Contact() {
 
                     <Stack spacing={3}>
                         <MotionInView variants={varFade().inUp}>
-                            <TextField fullWidth label="Name" />
+                            <TextField fullWidth label="Name" value={formDetails.name} onChange={e => setFormDetails(prev => ({ ...prev, name: e.target.value }))} />
                         </MotionInView>
 
                         <MotionInView variants={varFade().inUp}>
-                            <TextField fullWidth label="Email" />
+                            <TextField fullWidth label="Email" value={formDetails.email} onChange={e => setFormDetails(prev => ({ ...prev, email: e.target.value }))} />
                         </MotionInView>
 
                         <MotionInView variants={varFade().inUp}>
-                            <TextField fullWidth label="Subject" />
+                            <TextField fullWidth label="Subject" value={formDetails.subject} onChange={e => setFormDetails(prev => ({ ...prev, subject: e.target.value }))} />
                         </MotionInView>
 
                         <MotionInView variants={varFade().inUp}>
-                            <TextField fullWidth label="Enter your message here." multiline rows={4} />
+                            <TextField fullWidth label="Enter your message here." multiline rows={4} value={formDetails.message} onChange={e => setFormDetails(prev => ({ ...prev, message: e.target.value }))} />
                         </MotionInView>
                     </Stack>
 
                     <MotionInView variants={varFade().inUp}>
-                        <Button size="large" variant="contained" handleClick={() => enqueueSnackbar('Request Submitted!')}>
+                        <Button size="large" variant="contained" handleClick={() => { enqueueSnackbar('Request Submitted!'); setFormDetails({ name: '', email: '', subject: '', message: '' }) }}>
                             Submit Now
                         </Button>
                     </MotionInView>

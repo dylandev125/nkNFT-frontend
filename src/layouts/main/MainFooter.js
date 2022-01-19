@@ -1,4 +1,5 @@
 // @mui
+import React from 'react'
 import { useSnackbar } from 'notistack';
 import { styled } from '@mui/material/styles';
 import { Container, Typography, TextField, Box } from '@mui/material';
@@ -48,6 +49,7 @@ const AnchorImageStyle = styled('a')(() => ({
 
 export default function MainFooter() {
   const { enqueueSnackbar } = useSnackbar();
+  const [email, setEmail] = React.useState('')
   return (
     <RootStyle>
       <img src="footer-line.svg" alt="" style={{
@@ -66,7 +68,11 @@ export default function MainFooter() {
             alignItems: 'center',
             padding: "0 30px"
           }}>
-          <Image src="logo/logo-new.png" alt="Nekotopia Logo" sx={{ width: '171px', height: '55px' }} />
+          {/* <Image src="logo/logo-new.png" alt="Nekotopia Logo" sx={{ width: '171px', height: '55px' }} /> */}
+          <Typography variant="h3" style={{
+            fontFamily: 'Akira Expanded',
+            color: '#fff'
+          }}>Nekotopia</Typography>
         </div>
 
 
@@ -94,8 +100,8 @@ export default function MainFooter() {
               mb: 4
             }}
           >
-            <TextField type="email" size="small" placeholder='Email Address' />
-            <Button handleClick={() => enqueueSnackbar('Request Submitted!')} sx={{ ml: 1, height: '40px', borderRadius: '8px' }}> Register</Button>
+            <TextField type="email" size="small" value={email} onChange={e => setEmail(e.target.value)} placeholder='Email Address' />
+            <Button handleClick={() => { enqueueSnackbar('Request Submitted!'); setEmail('') }} sx={{ ml: 1, height: '40px', borderRadius: '8px' }}> Register</Button>
           </Box>
         </div>
 
@@ -141,6 +147,6 @@ export default function MainFooter() {
         </div>
 
       </Container>
-    </RootStyle>
+    </RootStyle >
   );
 }

@@ -24,7 +24,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 const AccordionStyle = styled('p')(() => ({
   fontWeight: '500',
-  fontSize: '30px',
+  fontSize: '23px',
   lineHeight: '140%',
   color: 'transparent',
   fontFamily: 'Akira Expanded',
@@ -123,7 +123,7 @@ export default function AboutWhat() {
   const NavSubItem = (item) => {
     const { id, title } = item
     return (
-      <li>
+      <li style={{ paddingTop: '5px', paddingBottom: '5px' }}>
         <AnchorStyle href={`#${id}`}>
           <TypographyNavStyle variant='p'>
             {title}
