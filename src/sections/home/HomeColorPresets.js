@@ -58,7 +58,7 @@ const PinItem = () => <MotionInView variants={varFade().inDown}>
     <Image
       disabledEffect
       alt="sidebar"
-      src={`pin4.png`}
+      src={`pin.png`}
     />
   </m.div>
 </MotionInView>
@@ -107,7 +107,7 @@ export default function HomeColorPresets() {
             <Image
               // disabledEffect
               alt="grid"
-              src="image.png"
+              src="https://website-static.sgp1.cdn.digitaloceanspaces.com/image.png"
               style={{
                 width: '80%',
                 display: 'flex',
@@ -166,7 +166,7 @@ export default function HomeColorPresets() {
               }
             }}>
               <PinItem />
-              <CaseItem caseClass="case3" title="Towers" image="In-game activities v3.png" description="Destroy all enemy towers with the bells earned to win the game" />
+              <CaseItem caseClass="case3" title="Towers" image="roadMap/road-map7.png" description="Destroy all enemy towers with the bells earned to win the game" />
             </Box>
 
           </Box> :

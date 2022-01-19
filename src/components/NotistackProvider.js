@@ -27,10 +27,10 @@ function SnackbarStyles() {
             color: theme.palette.grey[isLight ? 0 : 800],
             backgroundColor: theme.palette.grey[isLight ? 900 : 0],
             '&.SnackbarItem-variantSuccess, &.SnackbarItem-variantError, &.SnackbarItem-variantWarning, &.SnackbarItem-variantInfo':
-              {
-                color: theme.palette.text.primary,
-                backgroundColor: theme.palette.background.paper,
-              },
+            {
+              color: theme.palette.background.paper,
+              backgroundColor: '#fff',
+            },
             [theme.breakpoints.up('md')]: {
               minWidth: 240,
             },

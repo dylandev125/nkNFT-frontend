@@ -83,7 +83,7 @@ export default function HomeLookingFor() {
             <img
               disabledEffect
               alt="rocket"
-              src="whyyou.gif"
+              src="https://website-static.sgp1.cdn.digitaloceanspaces.com/whyyou.gif"
               style={{ width: { md: '700px' }, height: { md: '400px' }, transform: 'scale(1.6)' }}
               loading="lazy"
             />

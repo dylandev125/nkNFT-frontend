@@ -1,14 +1,11 @@
 // @mui
+import { useSnackbar } from 'notistack';
 import { styled, keyframes } from '@mui/material/styles';
 import { Box, Typography, TextField, Stack } from '@mui/material';
 import DecorationSVG from './DecorationSVG'
 import { MotionInView, varFade } from '../../components/animate';
 import Button from '../../components/Button';
 import useResponsive from '../../hooks/useResponsive';
-
-// components
-// import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
-// import Button from '../../components/Button'
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(() => ({
@@ -53,6 +50,7 @@ const ImageStyle = styled('div')(() => ({
 
 export default function Contact() {
     const isDesktop = useResponsive('up', 'lg');
+    const { enqueueSnackbar } = useSnackbar();
 
     // const head = document.querySelector('head');
     // const script = document.createElement('script');
@@ -95,7 +93,7 @@ export default function Contact() {
                     </Stack>
 
                     <MotionInView variants={varFade().inUp}>
-                        <Button size="large" variant="contained" handleChange={() => { }}>
+                        <Button size="large" variant="contained" handleClick={() => enqueueSnackbar('Request Submitted!')}>
                             Submit Now
                         </Button>
                     </MotionInView>

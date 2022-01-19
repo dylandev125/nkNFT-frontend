@@ -114,7 +114,7 @@ export default function AboutWhat() {
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', padding: 1 }}>
         <img src="arrow.svg" alt="" />
         <AnchorStyle href={`#${id}`} >
-          <Typography sx={{ padding: '0px 15px 0px 15px' }}>{title}</Typography>
+          <Typography variant="p" sx={{ padding: '0px 15px 0px 15px' }}>{title}</Typography>
         </AnchorStyle>
       </Box>
     )
@@ -125,7 +125,7 @@ export default function AboutWhat() {
     return (
       <li>
         <AnchorStyle href={`#${id}`}>
-          <TypographyNavStyle >
+          <TypographyNavStyle variant='p'>
             {title}
           </TypographyNavStyle>
         </AnchorStyle>

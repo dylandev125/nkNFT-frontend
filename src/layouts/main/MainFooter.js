@@ -1,4 +1,5 @@
 // @mui
+import { useSnackbar } from 'notistack';
 import { styled } from '@mui/material/styles';
 import { Container, Typography, TextField, Box } from '@mui/material';
 // routes
@@ -46,6 +47,7 @@ const AnchorImageStyle = styled('a')(() => ({
 // ----------------------------------------------------------------------
 
 export default function MainFooter() {
+  const { enqueueSnackbar } = useSnackbar();
   return (
     <RootStyle>
       <img src="footer-line.svg" alt="" style={{
@@ -93,7 +95,7 @@ export default function MainFooter() {
             }}
           >
             <TextField type="email" size="small" placeholder='Email Address' />
-            <Button handleClick={() => { }} sx={{ ml: 1, height: '40px', borderRadius: '8px' }}> Register</Button>
+            <Button handleClick={() => enqueueSnackbar('Request Submitted!')} sx={{ ml: 1, height: '40px', borderRadius: '8px' }}> Register</Button>
           </Box>
         </div>
 
