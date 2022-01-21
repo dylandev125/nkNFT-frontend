@@ -58,7 +58,7 @@ const PinItem = () => <MotionInView variants={varFade().inDown}>
     <Image
       disabledEffect
       alt="sidebar"
-      src={`pin.png`}
+      src={`Red Pin1.png`}
     />
   </m.div>
 </MotionInView>

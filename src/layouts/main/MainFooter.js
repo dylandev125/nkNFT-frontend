@@ -66,13 +66,9 @@ export default function MainFooter() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            padding: "0 30px"
+            padding: "0 35px"
           }}>
-          {/* <Image src="logo/logo-new.png" alt="Nekotopia Logo" sx={{ width: '171px', height: '55px' }} /> */}
-          <Typography variant="h3" style={{
-            fontFamily: 'Akira Expanded',
-            color: '#fff'
-          }}>Nekotopia</Typography>
+          <img src="Orange_website.png" alt="Nekotopia Logo" width={"230"} height={"30"} />
         </div>
 
 

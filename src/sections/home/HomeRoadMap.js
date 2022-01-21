@@ -151,7 +151,9 @@ const RoadMapItem = (item) => {
                 }}>
                     <Box sx={{
                         fontWeight: 'bold',
-                        fontSize: '30px',
+                        fontSize: '15px',
+                        fontFamily: 'Akira Expanded',
+                        letterSpacing: '2px',
                         // lineHeight: '35px',
                         color: '#fff',
                         // marginBottom: '10px',

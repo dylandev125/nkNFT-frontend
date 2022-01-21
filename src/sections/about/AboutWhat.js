@@ -23,7 +23,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 const AccordionStyle = styled('p')(() => ({
-  fontWeight: '500',
+  fontWeight: '600',
   fontSize: '23px',
   lineHeight: '140%',
   color: 'transparent',

@@ -20,3 +20,31 @@
   font-weight: 900;
   src:  local('Akira'), url(./fonts/Akira.otf) format('opentype');
 }
+
+
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url('AkiraExpanded.woff2') format('woff2'),
+        url('AkiraExpanded.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url('AkiraExpanded-Outline.woff2') format('woff2'),
+        url('AkiraExpanded-Outline.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url('AkiraExpanded-Bold.woff2') format('woff2'),
+        url('AkiraExpanded-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

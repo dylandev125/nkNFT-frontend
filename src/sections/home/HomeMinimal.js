@@ -21,7 +21,7 @@ const RootStyle = styled(m.div)(({ theme }) => ({
     background: '#240e63 linear-gradient(180deg, #160E60 3.19%, rgba(22, 14, 96, 0) 100%)',
     WebkitMask: 'url(second-slide-mask.svg) center 0 no-repeat',
     overflow: 'hidden',
-    marginTop: '-20%',
+    marginTop: '-25%',
     minWidth: '100%'
   },
 }));
@@ -143,7 +143,7 @@ export default function HomeMinimal() {
     }
   ]
   return (
-    <div style={{ background: '#240e63 linear-gradient(180deg, #160E60 3.19%, rgba(22, 14, 96, 0) 100%)' }}>
+    <div>
       <RootStyle>
         {isDesktop &&
           <>

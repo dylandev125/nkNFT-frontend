@@ -114,7 +114,7 @@ export default function HomeHero() {
           title="YouTube video player"
           // width="100%"
           // height="100%"
-          src="https://website-static.sgp1.cdn.digitaloceanspaces.com/Nekotopia1_Trimed.mp4"
+          src="https://website-static.sgp1.cdn.digitaloceanspaces.com/HeroImageVideoTrimmed.mp4"
           id="ytplayer"
           style={{ width: '100%', minHeight: '100vh' }}
         />
