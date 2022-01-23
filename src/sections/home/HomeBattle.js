@@ -209,7 +209,7 @@ export default function HomeBattle() {
                                         //     height: '100% !important',
                                         //     zIndex: 1
                                         // }}
-                                        src="https://website-static.sgp1.cdn.digitaloceanspaces.com/Nekotopia_Original.mp4">
+                                        src="https://website-static.sgp1.cdn.digitaloceanspaces.com/NekotopiaTeaser.mp4">
                                         <track src="captions_en.vtt" kind="captions" srcLang="en" label="english_captions" />
                                     </video>
                                 </VideoContainer>
