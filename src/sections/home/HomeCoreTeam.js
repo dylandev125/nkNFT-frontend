@@ -45,7 +45,7 @@ const FOUNDATION_LIST = [
         id: 2,
         name: 'Tetsuo420',
         description: 'Ecosystem and Strategy',
-        icon: `MechaLight_walk.png`,
+        icon: `team/Rohan.jpg`,
         href: '',
         credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
     },
@@ -69,7 +69,7 @@ const FOUNDATION_LIST = [
         id: 5,
         name: 'Ssaulgoodmann',
         description: 'Design and Lore',
-        icon: `team/Bharath_Chaganty.png`,
+        icon: `team/Bharath.png`,
         href: '',
         credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
     },
