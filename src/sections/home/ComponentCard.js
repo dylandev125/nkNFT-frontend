@@ -24,7 +24,7 @@ ComponentCard.propTypes = {
 export default function ComponentCard({ item }) {
     // const isDesktop = useResponsive('up', 'lg');
 
-    const { name, icon, description, href, credibility } = item;
+    const { name, icon, description, href, credibility, id } = item;
     return (
         <MotionInView variants={varFade().in} sx={{ width: '280px', }}
         // style={{
@@ -33,22 +33,28 @@ export default function ComponentCard({ item }) {
         >
             {/* <a href={href} target="_blank" underline="none" rel="noreferrer" style={{ textDecoration: 'none' }}> */}
             <Paper variant="outlined" sx={{ p: 1, bgcolor: 'transparent', border: '0px solid rgba(145, 158, 171, 0.24)' }}>
-                <CardActionArea
-                    component={m.div}
-                    whileHover="hover"
-                    sx={{
-                        p: 3,
-                        borderRadius: 1,
-                        color: 'primary.main',
-                        display: 'flex',
-                        justifyContent: 'center'
-                        // backgroundImage: 'url(core-bg.png)'
-                    }}
-                >
-                    <m.div variants={varHover(1.2)} transition={varTranHover()}>
-                        <Image src={icon} alt={name} effect="black-and-white" sx={{ borderRadius: '100%', width: '130px', height: '130px' }} />
-                    </m.div>
-                </CardActionArea>
+                {id !== 'partners' ?
+                    <CardActionArea
+                        component={m.div}
+                        whileHover="hover"
+                        sx={{
+                            p: 3,
+                            borderRadius: 1,
+                            color: 'primary.main',
+                            display: 'flex',
+                            justifyContent: 'center'
+                            // backgroundImage: 'url(core-bg.png)'
+                        }}
+                    >
+                        {/* <m.div variants={varHover(1)} transition={varTranHover()}> */}
+                        <Image src={icon} alt={name} effect="black-and-white" sx={{ borderRadius: '100%', width: '140px', height: '140px' }} />
+                        {/* </m.div> */}
+                    </CardActionArea>
+                    :
+                    <Box sx={{ transform: 'scale(0.8)' }}>
+                        <img src={icon} alt={name} effect="black-and-white" style={{ transform: 'scale(0.7)', width: '100%', height: '180px', }} />
+                    </Box>
+                }
                 <Box sx={{ textAlign: 'center' }}>
                     <Typography variant="h5" sx={{ mt: 1, p: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         {name}{href !== '' && <SocialsButton sx={{ color: '#8270b6' }} links={{ 'linkedin': href }} />}

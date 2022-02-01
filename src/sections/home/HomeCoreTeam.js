@@ -116,6 +116,26 @@ const advisors = [
     }
 ]
 
+
+const partners = [
+    {
+        id: 'partners',
+        name: 'Ex-Network',
+        description: '',
+        icon: `exnt.png`,
+        href: '',
+        credibility: ''
+    },
+    {
+        id: 'partners',
+        name: 'Wall.app',
+        description: '',
+        icon: `wall.app.svg`,
+        href: '',
+        credibility: ''
+    }
+]
+
 export default function HomeCoreTeam() {
     const isDesktop = useResponsive('up', 'lg');
 
@@ -189,6 +209,26 @@ export default function HomeCoreTeam() {
                         }}
                     >
                         {advisors.map((item) => (
+                            <ComponentCard key={item.name} item={item} />
+                        ))}
+                    </Box>
+                </Grid>
+
+                <Typography variant="h3" sx={{ textAlign: 'center', pt: 5, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+                    Partners
+                </Typography>
+                <Grid item xs={12} sm={6} alignItems={'center'} justifyItems={'center'} sx={{ margin: 'auto' }}>
+                    <Box
+                        sx={{
+                            display: 'grid',
+                            gap: 1,
+                            gridTemplateColumns: isDesktop ? 'repeat(2, 1fr)' : 'repeat(1, 1fr)',
+                            alignItems: 'center',
+                            justifyContent: 'space-around',
+                            justifyItems: 'center'
+                        }}
+                    >
+                        {partners.map((item) => (
                             <ComponentCard key={item.name} item={item} />
                         ))}
                     </Box>
