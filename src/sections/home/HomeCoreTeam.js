@@ -122,7 +122,7 @@ const partners = [
         id: 'partners',
         name: 'Ex-Network',
         description: '',
-        icon: `exnt.png`,
+        icon: `ex.png`,
         href: '',
         credibility: ''
     },
