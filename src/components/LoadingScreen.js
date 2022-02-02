@@ -4,7 +4,7 @@ import { m } from 'framer-motion';
 import { alpha, styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 //
-import Logo from './Logo';
+// import Logo from './Logo';
 import ProgressBar from './ProgressBar';
 
 // ----------------------------------------------------------------------

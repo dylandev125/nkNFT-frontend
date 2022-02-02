@@ -1,7 +1,6 @@
 import { m } from 'framer-motion';
-import { useEffect } from 'react'
 // @mui
-import { styled, keyframes } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import { Box, Container, Typography, Grid } from '@mui/material';
 // components
 import { varFade, MotionInView } from '../../components/animate';
@@ -22,162 +21,10 @@ const RootStyle = styled(m.div)(({ theme }) => ({
     },
 }));
 
-const square = keyframes`
- 2% {
-    transform: translate3d(7px, -1px, 3px) rotate(3deg);
-}
-4% {
-    transform: translate3d(1px, -9px, 3px) rotate(5deg);
-}
-6% {
-    transform: translate3d(6px, -9px, 3px) rotate(5deg);
-}
-8% {
-    transform: translate3d(8px, -3px, 1px) rotate(3deg);
-}
-10% {
-    transform: translate3d(2px, -2px, 10px) rotate(5deg);
-}
-12% {
-    transform: translate3d(8px, -10px, 6px) rotate(3deg);
-}
-14% {
-    transform: translate3d(7px, -1px, 1px) rotate(5deg);
-}
-16% {
-    transform: translate3d(5px, -10px, 3px) rotate(3deg);
-}
-18% {
-    transform: translate3d(10px, -5px, 6px) rotate(2deg);
-}
-20% {
-    transform: translate3d(9px, -5px, 10px) rotate(4deg);
-}
-22% {
-    transform: translate3d(2px, -7px, 4px) rotate(2deg);
-}
-24% {
-    transform: translate3d(4px, -4px, 2px) rotate(4deg);
-}
-26% {
-    transform: translate3d(8px, -1px, 1px) rotate(1deg);
-}
-28% {
-    transform: translate3d(2px, -5px, 9px) rotate(5deg);
-}
-30% {
-    transform: translate3d(6px, -4px, 8px) rotate(1deg);
-}
-32% {
-    transform: translate3d(1px, -2px, 4px) rotate(5deg);
-}
-34% {
-    transform: translate3d(9px, -9px, 4px) rotate(5deg);
-}
-36% {
-    transform: translate3d(2px, -8px, 9px) rotate(1deg);
-}
-38% {
-    transform: translate3d(2px, -1px, 8px) rotate(1deg);
-}
-40% {
-    transform: translate3d(7px, -6px, 4px) rotate(3deg);
-}
-42% {
-    transform: translate3d(1px, -5px, 7px) rotate(1deg);
-}
-44% {
-    transform: translate3d(1px, -2px, 3px) rotate(4deg);
-}
-46% {
-    transform: translate3d(7px, -9px, 7px) rotate(4deg);
-}
-48% {
-    transform: translate3d(8px, -1px, 4px) rotate(5deg);
-}
-50% {
-    transform: translate3d(7px, -7px, 5px) rotate(4deg);
-}
-52% {
-    transform: translate3d(5px, -1px, 8px) rotate(4deg);
-}
-54% {
-    transform: translate3d(6px, -6px, 1px) rotate(3deg);
-}
-56% {
-    transform: translate3d(4px, -6px, 7px) rotate(5deg);
-}
-58% {
-    transform: translate3d(6px, -3px, 1px) rotate(2deg);
-}
-60% {
-    transform: translate3d(8px, -10px, 3px) rotate(3deg);
-}
-62% {
-    transform: translate3d(4px, -8px, 1px) rotate(3deg);
-}
-64% {
-    transform: translate3d(4px, -9px, 4px) rotate(4deg);
-}
-66% {
-    transform: translate3d(7px, -9px, 4px) rotate(4deg);
-}
-68% {
-    transform: translate3d(1px, -4px, 5px) rotate(2deg);
-}
-70% {
-    transform: translate3d(9px, -7px, 9px) rotate(4deg);
-}
-72% {
-    transform: translate3d(7px, -2px, 4px) rotate(5deg);
-}
-74% {
-    transform: translate3d(3px, -5px, 5px) rotate(5deg);
-}
-76% {
-    transform: translate3d(8px, -4px, 8px) rotate(5deg);
-}
-78% {
-    transform: translate3d(1px, -2px, 5px) rotate(5deg);
-}
-80% {
-    transform: translate3d(7px, -2px, 7px) rotate(4deg);
-}
-82% {
-    transform: translate3d(5px, -8px, 8px) rotate(5deg);
-}
-84% {
-    transform: translate3d(3px, -8px, 5px) rotate(1deg);
-}
-86% {
-    transform: translate3d(8px, -4px, 6px) rotate(2deg);
-}
-88% {
-    transform: translate3d(4px, -8px, 9px) rotate(3deg);
-}
-90% {
-    transform: translate3d(3px, -10px, 10px) rotate(4deg);
-}
-92% {
-    transform: translate3d(8px, -10px, 9px) rotate(3deg);
-}
-94% {
-    transform: translate3d(1px, -3px, 5px) rotate(2deg);
-}
-96% {
-    transform: translate3d(5px, -5px, 8px) rotate(2deg);
-}
-98% {
-    transform: translate3d(6px, -2px, 10px) rotate(3deg);
-}
-100% {
-    transform: translate3d(10px, -4px, 1px) rotate(3deg);
-}
-`;
 
-const AnimateStyle = styled('div')(() => ({
-    animation: `${square} 50s linear infinite alternate`
-}));
+// const AnimateStyle = styled('div')(() => ({
+//     animation: `${square} 50s linear infinite alternate`
+// }));
 
 
 const ContentStyle = styled('div')(() => ({

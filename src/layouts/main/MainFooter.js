@@ -7,6 +7,7 @@ import { Container, Typography, TextField, Box } from '@mui/material';
 // components
 import Button from '../../components/Button'
 import Image from '../../components/Image';
+import axios from '../../utils/axios';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(() => ({
@@ -50,6 +51,19 @@ const AnchorImageStyle = styled('a')(() => ({
 export default function MainFooter() {
   const { enqueueSnackbar } = useSnackbar();
   const [email, setEmail] = React.useState('')
+
+  const handleRegister = async () => {
+    try {
+      const payload = { "email": email }
+      await axios.post('https://website-backend-app-obzek.ondigitalocean.app/v1/register', payload);
+      setEmail('')
+      enqueueSnackbar('Request Submitted!');
+    } catch (e) {
+      setEmail('')
+      enqueueSnackbar(e.error);
+    }
+  }
+
   return (
     <RootStyle>
       <img src="footer-line.svg" alt="" style={{
@@ -97,7 +111,7 @@ export default function MainFooter() {
             }}
           >
             <TextField type="email" size="small" value={email} onChange={e => setEmail(e.target.value)} placeholder='Email Address' />
-            <Button handleClick={() => { enqueueSnackbar('Request Submitted!'); setEmail('') }} sx={{ ml: 1, height: '40px', borderRadius: '8px' }}> Register</Button>
+            <Button handleClick={() => { handleRegister() }} sx={{ ml: 1, height: '40px', borderRadius: '8px' }}> Register</Button>
           </Box>
         </div>
 

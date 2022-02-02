@@ -4,7 +4,7 @@ import { m } from 'framer-motion';
 import { Paper, Typography, CardActionArea, Box } from '@mui/material';
 // components
 import Image from '../../components/Image';
-import { MotionInView, varFade, varHover, varTranHover } from '../../components/animate';
+import { MotionInView, varFade } from '../../components/animate';
 // import useResponsive from '../../hooks/useResponsive';
 import SocialsButton from '../../components/SocialsButton';
 

@@ -3,13 +3,7 @@ import { styled } from '@mui/material/styles';
 import {
     LineChart,
     Line,
-    LabelList,
-    Label,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    Legend
+    LabelList
 } from "recharts";
 
 

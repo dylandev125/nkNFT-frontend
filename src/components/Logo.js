@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 // import { useTheme } from '@mui/material/styles';
-import { Typography } from '@mui/material';
+// import { Typography } from '@mui/material';
 
 // ----------------------------------------------------------------------
 

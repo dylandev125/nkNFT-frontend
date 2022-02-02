@@ -1,5 +1,6 @@
 // @mui
 import React from 'react'
+import axios from 'axios'
 import { useSnackbar } from 'notistack';
 import { styled, keyframes } from '@mui/material/styles';
 import { Box, Typography, TextField, Stack } from '@mui/material';
@@ -54,10 +55,18 @@ export default function Contact() {
     const { enqueueSnackbar } = useSnackbar();
     const [formDetails, setFormDetails] = React.useState({ name: '', email: '', subject: '', message: '' })
 
-    // const head = document.querySelector('head');
-    // const script = document.createElement('script');
-    // script.setAttribute('src', 'https://assets.calendly.com/assets/external/widget.js');
-    // head.appendChild(script);
+
+    const handleSubmit = async () => {
+        try {
+            await axios.post('https://website-backend-app-obzek.ondigitalocean.app/v1/contactus', formDetails);
+            setFormDetails({ name: '', email: '', subject: '', message: '' })
+            enqueueSnackbar('Request Submitted!');
+        } catch (e) {
+            setFormDetails({ name: '', email: '', subject: '', message: '' })
+            enqueueSnackbar("Please fill all details");
+        }
+    }
+
     return (
         <>
             <RootStyle>
@@ -69,13 +78,6 @@ export default function Contact() {
                 </BoxStyle>}
 
                 <Stack spacing={5} sx={{ width: { md: '30%', xs: '80%' }, margin: 'auto' }}>
-                    {/* <MotionInView variants={varFade().inUp}>
-                        <Typography variant="h3">
-                            Feel free to contact us. <br />
-                            We'll be glad to hear from you, buddy.
-                        </Typography>
-                    </MotionInView> */}
-
                     <Stack spacing={3}>
                         <MotionInView variants={varFade().inUp}>
                             <TextField fullWidth label="Name" value={formDetails.name} onChange={e => setFormDetails(prev => ({ ...prev, name: e.target.value }))} />
@@ -95,7 +97,7 @@ export default function Contact() {
                     </Stack>
 
                     <MotionInView variants={varFade().inUp}>
-                        <Button size="large" variant="contained" handleClick={() => { enqueueSnackbar('Request Submitted!'); setFormDetails({ name: '', email: '', subject: '', message: '' }) }}>
+                        <Button size="large" variant="contained" handleClick={() => { handleSubmit() }}>
                             Submit Now
                         </Button>
                     </MotionInView>

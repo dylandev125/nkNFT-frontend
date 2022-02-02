@@ -2,7 +2,7 @@
 import { styled } from '@mui/material/styles';
 import { Typography, Grid } from '@mui/material';
 // components
-import Image from '../../components/Image';
+// import Image from '../../components/Image';
 import { MotionInView, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
