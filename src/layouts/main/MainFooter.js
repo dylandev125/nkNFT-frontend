@@ -55,7 +55,7 @@ export default function MainFooter() {
   const handleRegister = async () => {
     try {
       const payload = { "email": email }
-      await axios.post('https://website-backend-app-obzek.ondigitalocean.app/v1/register', payload);
+      await axios.post('https://website-backend-app-mtk2p.ondigitalocean.app/v1/register', payload);
       setEmail('')
       enqueueSnackbar('Request Submitted!');
     } catch (e) {

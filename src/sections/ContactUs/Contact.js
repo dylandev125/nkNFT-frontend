@@ -58,7 +58,7 @@ export default function Contact() {
 
     const handleSubmit = async () => {
         try {
-            await axios.post('https://website-backend-app-obzek.ondigitalocean.app/v1/contactus', formDetails);
+            await axios.post('https://website-backend-app-mtk2p.ondigitalocean.app/v1/contactus', formDetails);
             setFormDetails({ name: '', email: '', subject: '', message: '' })
             enqueueSnackbar('Request Submitted!');
         } catch (e) {
