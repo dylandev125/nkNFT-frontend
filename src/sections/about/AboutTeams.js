@@ -300,22 +300,22 @@ export default function AboutTeams() {
                 Team
             </Typography>
 
-            <Typography variant="h4" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+            <Typography variant="h5" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                 Management
             </Typography>
             <Cards list={MANAGEMENT_LIST} />
 
-            <Typography variant="h4" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+            <Typography variant="h5" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                 Product
             </Typography>
             <Cards list={PRODUCT_LIST} />
 
-            <Typography variant="h4" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+            <Typography variant="h5" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                 Design
             </Typography>
             <Cards list={DESIGN_LIST} />
 
-            <Typography variant="h4" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+            <Typography variant="h5" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                 ENGINEERING
             </Typography>
             <Cards list={ENGINEERING_LIST} />
