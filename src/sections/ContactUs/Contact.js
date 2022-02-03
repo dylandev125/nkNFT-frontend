@@ -57,13 +57,17 @@ export default function Contact() {
 
 
     const handleSubmit = async () => {
-        try {
-            await axios.post('https://website-backend-app-mtk2p.ondigitalocean.app/v1/contactus', formDetails);
-            setFormDetails({ name: '', email: '', subject: '', message: '' })
-            enqueueSnackbar('Request Submitted!');
-        } catch (e) {
-            setFormDetails({ name: '', email: '', subject: '', message: '' })
-            enqueueSnackbar("Please fill all details");
+        if (formDetails.name && formDetails.email && formDetails.subject) {
+            try {
+                await axios.post('https://website-backend-app-mtk2p.ondigitalocean.app/v1/contactus', formDetails);
+                setFormDetails({ name: '', email: '', subject: '', message: '' })
+                enqueueSnackbar('Request Submitted!');
+            } catch (e) {
+                setFormDetails({ name: '', email: '', subject: '', message: '' })
+                enqueueSnackbar("Error submitting form!", { variant: 'error' });
+            }
+        } else {
+            enqueueSnackbar("Please fill all the details", { variant: 'error' })
         }
     }
 
