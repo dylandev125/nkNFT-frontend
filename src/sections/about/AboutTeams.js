@@ -77,10 +77,10 @@ const PRODUCT_LIST = [
         credibility: 'Worked on multidisciplinary  projects such as board games, UX design, space design, AR/VR design and made 4-5 mini games on my own  the tools which I use the most are figma,sketch,sketch up ,unity ,vuforia'
     },
     {
-        name: 'Sai Rakesh Akaremsetti',
+        name: 'Sai Rakesh A',
         description: 'Game Producer',
         icon: `team/rakesh.png`,
-        href: 'https://www.linkedin.com/in/revanth-reddy-2229351b7/',
+        href: 'https://www.linkedin.com/in/sairakeshakaremsetti/',
         credibility: 'Ex- Barclays, Ex- Microsoft, Designer and ASO for Chef Story and iron kill, Producer for Train Simulator, Mega Ramp, office runner. core team member for an upcoming travel and real estate based NFT project'
     },
 ]
@@ -167,7 +167,7 @@ const DESIGN_LIST = [
         name: 'Ashish Cornelius',
         description: 'Concept Artist',
         icon: `team/ashish.png`,
-        href: '',
+        href: 'https://www.linkedin.com/in/ashish-cornelius-225905230',
         credibility: ''
     },
     {
@@ -181,14 +181,14 @@ const DESIGN_LIST = [
         name: 'Samuel Jacob',
         description: 'Concept Artist',
         icon: `team/samuel.png`,
-        href: '',
+        href: 'https://www.linkedin.com/in/samuel-jacob-135075113/',
         credibility: ''
     },
     {
         name: 'Aparajita',
         description: '3D Artist',
         icon: `team/aprajita.png`,
-        href: '',
+        href: 'https://www.linkedin.com/in/aparajita-singh12',
         credibility: ''
     },
 ]
