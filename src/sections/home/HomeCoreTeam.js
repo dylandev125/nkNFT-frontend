@@ -45,7 +45,7 @@ const FOUNDATION_LIST = [
         id: 2,
         name: 'Tetsuo420',
         description: 'Ecosystem and Strategy',
-        icon: `MechaLight_walk.png`,
+        icon: `team/Rohan.jpg`,
         href: '',
         credibility: 'Serial entrepreneur specialising emerging industries such as Crypto & Cannabis.'
     },
@@ -63,13 +63,13 @@ const FOUNDATION_LIST = [
         description: 'CTO',
         icon: `team/OmrumCetin.jpg`,
         href: 'https://www.linkedin.com/in/omrumcetin/',
-        credibility: 'Software Developer in multicultural environment, multiple languages, developing algorithms which are being used worldwide'
+        credibility: '8+ Years Unreal Engine and Software Development experience, innovative algorithm and game developer, designer. Database enthusiast'
     },
     {
         id: 5,
         name: 'Ssaulgoodmann',
         description: 'Design and Lore',
-        icon: `team/Bharath_Chaganty.png`,
+        icon: `team/Bharath.png`,
         href: '',
         credibility: 'Delivering narrative & identity building as a service for emerging internet technologies'
     },
@@ -116,13 +116,33 @@ const advisors = [
     }
 ]
 
+
+const partners = [
+    {
+        id: 'partners',
+        name: 'Ex-Network',
+        description: '',
+        icon: `ex.png`,
+        href: '',
+        credibility: ''
+    },
+    {
+        id: 'partners',
+        name: 'Wall.app',
+        description: '',
+        icon: `wall.app.svg`,
+        href: '',
+        credibility: ''
+    }
+]
+
 export default function HomeCoreTeam() {
     const isDesktop = useResponsive('up', 'lg');
 
     return (
         <div style={{ backgroundImage: 'linear-gradient(to top, #240e63, #241161, #23135e, #23155c, #231759)' }}>
             <BoxStyle>
-                <Typography variant="h3" sx={{ textAlign: 'center', mt: 3, pb: 5 }}>
+                <Typography variant="h3" sx={{ textAlign: 'center', mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                     Core Team
                 </Typography>
                 <Grid item xs={12} sm={12} alignItems={'center'} justifyItems={'center'}>
@@ -174,7 +194,7 @@ export default function HomeCoreTeam() {
                     </Button>
                 </Box> */}
 
-                <Typography variant="h3" sx={{ textAlign: 'center', pt: 5, pb: 5 }}>
+                <Typography variant="h3" sx={{ textAlign: 'center', pt: 5, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                     Advisors
                 </Typography>
                 <Grid item xs={12} sm={6} alignItems={'center'} justifyItems={'center'} sx={{ margin: 'auto' }}>
@@ -189,6 +209,26 @@ export default function HomeCoreTeam() {
                         }}
                     >
                         {advisors.map((item) => (
+                            <ComponentCard key={item.name} item={item} />
+                        ))}
+                    </Box>
+                </Grid>
+
+                <Typography variant="h3" sx={{ textAlign: 'center', pt: 5, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+                    Partners
+                </Typography>
+                <Grid item xs={12} sm={6} alignItems={'center'} justifyItems={'center'} sx={{ margin: 'auto' }}>
+                    <Box
+                        sx={{
+                            display: 'grid',
+                            gap: 1,
+                            gridTemplateColumns: isDesktop ? 'repeat(2, 1fr)' : 'repeat(1, 1fr)',
+                            alignItems: 'center',
+                            justifyContent: 'space-around',
+                            justifyItems: 'center'
+                        }}
+                    >
+                        {partners.map((item) => (
                             <ComponentCard key={item.name} item={item} />
                         ))}
                     </Box>

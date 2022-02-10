@@ -12,6 +12,9 @@ import Iconify from '../../components/Iconify';
 
 const LinkStyle = styled(Link)(({ theme }) => ({
   ...theme.typography.subtitle2,
+  fontWeight: '400',
+  fontFamily: 'Akira Expanded',
+  letterSpacing: '2px',
   color: theme.palette.common.white,
   marginRight: theme.spacing(5),
   transition: theme.transitions.create('opacity', {
@@ -20,6 +23,8 @@ const LinkStyle = styled(Link)(({ theme }) => ({
   '&:hover': {
     opacity: 0.48,
     textDecoration: 'none',
+    fontFamily: 'Akira Expanded',
+    letterSpacing: '2px',
   },
 }));
 
@@ -192,6 +197,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
                           '&.active': {
                             color: 'common.white',
                             typography: 'subtitle2',
+                            fontWeight: '400'
                           },
                         }}
                       >
@@ -260,10 +266,13 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
         ...(isOffset && { color: 'common.white' }),
         '&.active': {
           // color: 'common.white',
+          fontFamily: 'Akira Expanded',
           color: 'transparent',
+          letterSpacing: '2px',
           background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
           backgroundClip: 'text',
-          WebkitBackgroundClip: 'text'
+          WebkitBackgroundClip: 'text',
+          fontWeight: '400'
         },
       }}
     >

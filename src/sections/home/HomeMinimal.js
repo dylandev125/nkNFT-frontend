@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import { Box, Typography, Stack, Grid } from '@mui/material';
 // components
 import { varFade, MotionInView } from '../../components/animate';
+import Image from '../../components/Image';
 import Carousel from './Carousel';
 import useResponsive from '../../hooks/useResponsive';
 
@@ -20,7 +21,7 @@ const RootStyle = styled(m.div)(({ theme }) => ({
     background: '#240e63 linear-gradient(180deg, #160E60 3.19%, rgba(22, 14, 96, 0) 100%)',
     WebkitMask: 'url(second-slide-mask.svg) center 0 no-repeat',
     overflow: 'hidden',
-    marginTop: '-202px',
+    marginTop: '-25%',
     minWidth: '100%'
   },
 }));
@@ -142,72 +143,76 @@ export default function HomeMinimal() {
     }
   ]
   return (
-    <RootStyle>
-      {isDesktop &&
-        <>
-          {/* <HeroImgStyle
+    <div>
+      <RootStyle>
+        {isDesktop &&
+          <>
+            {/* <HeroImgStyle
           alt="hero"
           src="second-slide-mask.svg"
           variants={varFade().inUp}
         /> */}
-          <img
-            alt="hero"
-            src="line-decoration.svg"
-            style={{
-              position: 'absolute',
-              top: '0',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              zIndex: '2'
-            }} />
-          <img
-            alt="hero"
-            src="second-slide-hero.jpg"
-            // variants={varFade().inUp}
-            style={{
-              position: 'absolute',
-              top: '-30px',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              zIndex: 1,
-              width: '100%',
-              minWidth: '1920px',
-              height: '100%'
-            }}
-          />
+            <img
+              alt="hero"
+              src="line-decoration.svg"
+              style={{
+                position: 'absolute',
+                top: '0',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                zIndex: '2'
+              }}
+              loading="lazy"
+            />
+            <Image
+              alt="hero"
+              src="second-slide-hero.webp"
+              // variants={varFade().inUp}
+              sx={{
+                position: 'absolute',
+                top: '-30px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                zIndex: 1,
+                width: '100%',
+                minWidth: '1920px',
+                height: '100%'
+              }}
+            />
 
-        </>}
+          </>}
 
-      <BoxStyle >
-        <TypographyStyle variant="h2">
-          Enter the Nekotopia
-        </TypographyStyle>
+        <BoxStyle >
+          <TypographyStyle variant="h3" style={{ fontFamily: 'Akira Expanded', letterSpacing: '2px', marginTop: '30px' }}>
+            Enter the Nekotopia
+          </TypographyStyle>
 
-        <GridStyle container spacing={0} direction="row" justifyContent="space-around">
-          <Grid item xs={12} lg={4} >
-            <ContentStyle>
-              <MotionInView variants={varFade().inUp}>
-                <Typography variant="h3" sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' }, color: 'common.white' }}>
-                  Open-ended social world
-                </Typography>
+          <GridStyle container spacing={0} direction="row" justifyContent="space-around">
+            <Grid item xs={12} lg={4} >
+              <ContentStyle>
+                <MotionInView variants={varFade().in}>
+                  <Typography variant="subtitle1" sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' }, color: 'common.white', fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+                    Open-ended social world
+                  </Typography>
 
+                </MotionInView>
+
+                <MotionInView variants={varFade().in}>
+                  <Typography sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' } }}>
+                    This top-down, open-ended social world is built on blockchain and maximizes the interactive and creative potential of the metaverse.
+                  </Typography>
+                </MotionInView>
+              </ContentStyle>
+            </Grid>
+
+            <Grid item xs={12} lg={6} sx={{ position: 'relative', pt: 4 }}>
+              <MotionInView variants={varFade().in}>
+                <Carousel carouselsExample={_carouselsExample} />
               </MotionInView>
-
-              <MotionInView variants={varFade().inUp}>
-                <Typography sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' } }}>
-                  This top-down, open-ended social world is built on blockchain and maximizes the interactive and creative potential of the metaverse.
-                </Typography>
-              </MotionInView>
-            </ContentStyle>
-          </Grid>
-
-          <Grid item xs={12} lg={6} sx={{ position: 'relative', pt: 4 }}>
-            <MotionInView variants={varFade().inUp}>
-              <Carousel carouselsExample={_carouselsExample} />
-            </MotionInView>
-          </Grid>
-        </GridStyle>
-      </BoxStyle>
-    </RootStyle>
+            </Grid>
+          </GridStyle>
+        </BoxStyle>
+      </RootStyle>
+    </div>
   );
 }

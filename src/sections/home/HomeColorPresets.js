@@ -9,7 +9,6 @@ import {
 import Image from '../../components/Image';
 import { MotionInView, varFade } from '../../components/animate';
 import useResponsive from '../../hooks/useResponsive';
-
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -17,14 +16,14 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 const CaseStyle = styled('div')(() => ({
-  width: '550px',
-  minHeight: '233px',
+  width: '330px',
+  minHeight: '153px',
   position: 'absolute',
   bottom: '100%',
   left: '0',
-  backgroundColor: 'rgba(27, 24, 71, .72)',
+  backgroundColor: 'rgba(27, 24, 71, 89%)',
   boxShadow: 'inset 0 0 20px rgb(133 155 193/9%)',
-  padding: '15px 45px 15px 200px',
+  padding: '15px 30px 15px 135px',
   borderRadius: '12px',
   transform: 'translate(-38px, -20px)',
   cursor: 'default',
@@ -43,7 +42,7 @@ const CaseStyle = styled('div')(() => ({
   '&:after': {
     content: '""',
     width: '100%',
-    height: '310px',
+    height: '250px',
     position: 'absolute',
     bottom: '-42px',
     left: '0',
@@ -59,25 +58,26 @@ const PinItem = () => <MotionInView variants={varFade().inDown}>
     <Image
       disabledEffect
       alt="sidebar"
-      src={`pin.png`}
+      src={`Red Pin1.png`}
     />
   </m.div>
 </MotionInView>
 
 
 const CaseItem = (item) => {
-  const { caseClass, title, description } = item
+  const { caseClass, title, description, image } = item
   return (
     <CaseStyle className={caseClass}>
-      <img src="chest.png" alt="" style={{
-        width: '300px',
-        height: '300px',
-        position: 'absolute',
-        top: '-50px',
-        left: '-82px',
-        zIndex: 5,
-        pointerEvents: 'none'
-      }} />
+      <Image src={image} alt=""
+        sx={{
+          width: '180px',
+          height: '180px',
+          position: 'absolute',
+          top: '-10px',
+          left: '-23px',
+          zIndex: 5,
+          pointerEvents: 'none'
+        }} />
       <Typography variant="h4">{title}</Typography>
       <Typography variant="p" sx={{ mt: 3, fontSize: '13px' }}>{description}</Typography>
     </CaseStyle>
@@ -97,7 +97,7 @@ export default function HomeColorPresets() {
     <RootStyle>
       <Box sx={{ position: 'relative', textAlign: 'center' }}>
         <MotionInView variants={varFade().inUp}>
-          <Typography variant="h2" sx={{ mb: 8 }}>
+          <Typography variant="h3" sx={{ mb: 8, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
             Battle Map
           </Typography>
         </MotionInView>
@@ -105,15 +105,24 @@ export default function HomeColorPresets() {
         {isDesktop ?
           <Box sx={{ position: 'relative' }}>
             <Image
-              disabledEffect
+              // disabledEffect
               alt="grid"
-              src="island.webp"
+              src="https://website-static.sgp1.cdn.digitaloceanspaces.com/image.png"
+              style={{
+                width: '80%',
+                display: 'flex',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                height: '100%',
+                marginBottom: '10%',
+                borderRadius: '42px'
+              }}
             />
 
             <Box
               sx={{
                 position: 'absolute',
-                top: '28%',
+                top: '33%',
                 left: '39%',
                 zIndex: '2',
                 cursor: 'pointer',
@@ -125,13 +134,13 @@ export default function HomeColorPresets() {
               }}
             >
               <PinItem />
-              <CaseItem caseClass="case1" title="Earn Pcash" description="Crush your opponents to earn PCASH, which you can use to trade within the metaverse!" />
+              <CaseItem caseClass="case1" title="Earn Bells" image="In-game activities.png" description="Fight creeps and destroy them to earn bells" />
             </Box>
 
             <Box sx={{
               position: 'absolute',
-              top: '27%',
-              left: '62%',
+              top: '35%',
+              left: '73%',
               zIndex: '2',
               cursor: 'pointer',
               transition: 'opacity,.5s',
@@ -141,13 +150,13 @@ export default function HomeColorPresets() {
               }
             }}>
               <PinItem />
-              <CaseItem caseClass="case2" title="Competitive Edge" description="Explore competitive edge and live operations, such as e-sports, events and tournaments, boss battles, mystery box and treasure chests, and professional team tie-ups." />
+              <CaseItem caseClass="case2" title="Townhall" image="Upgrade v3.png" description="Spawn point for your team. generate health" />
             </Box>
 
             <Box sx={{
               position: 'absolute',
               top: '50%',
-              left: '48%',
+              left: '39%',
               zIndex: '2',
               cursor: 'pointer',
               transition: 'opacity,.5s',
@@ -157,12 +166,12 @@ export default function HomeColorPresets() {
               }
             }}>
               <PinItem />
-              <CaseItem caseClass="case3" title="Gain Psi functions" description="During battle, players defeat contending Nekos or neutral NPCs and gain Psi Functions. Using Psi Functions, players can equip their Neko characters with potential new items & cosmetics that enable powerful new skills & evolutions" />
+              <CaseItem caseClass="case3" title="Towers" image="roadMap/road-map7.png" description="Destroy all enemy towers with the bells earned to win the game" />
             </Box>
 
           </Box> :
-          <Box sx={{ position: 'relative', pb: 7, width: '100%', margin: 'auto' }}>
-            <img src="island.webp" alt="" width="100%" />
+          <Box sx={{ position: 'relative', pb: 7, width: '80%', margin: 'auto' }}>
+            <Image src="image.png" alt="" width="100%" style={{ borderRadius: '42px' }} />
           </Box>}
       </Box>
     </RootStyle >

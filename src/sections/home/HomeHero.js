@@ -6,6 +6,7 @@ import { Typography, Stack } from '@mui/material';
 // components
 import { varFade } from '../../components/animate';
 import Button from '../../components/Button'
+// import Image from '../../components/Image'
 import useResponsive from '../../hooks/useResponsive';
 // ----------------------------------------------------------------------
 
@@ -17,7 +18,7 @@ const RootStyle = styled(m.div)(({ theme }) => ({
   // backgroundColor: theme.palette.grey[400],
   [theme.breakpoints.up('md')]: {
     position: 'relative',
-    minHeight: '125vh',
+    minHeight: '150vh',
     overflow: 'hidden',
   },
 }));
@@ -45,18 +46,22 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
 //   zIndex: 9,
 //   width: '100%',
 //   height: '100%',
-//   // objectFit: 'cover',
+//   objectFit: 'cover',
 //   position: 'absolute',
 // });
 
-const HeroImgStyle = styled(m.img)(() => ({
+const HeroImgStyle = styled('video')(() => ({
   position: 'absolute',
-  top: '0',
-  // left: '50%',
+  top: '-60px',
+  left: '50%',
   zIndex: '1',
-  // transform: 'translateX(-50 %)',
+  transform: 'translateX(-50%)',
+  objectFit: 'cover',
   width: '100%',
-  height: 'auto'
+  height: '100%',
+  backgroundColor: '#000000',
+  opacity: '0.3',
+  transition: 'background 0.3s border-radius 0.3s opacity 0.3s'
 }));
 
 // const HeroBox = styled(Box)(({ theme }) => ({
@@ -92,21 +97,45 @@ export default function HomeHero() {
     // <MotionContainer>
     <RootStyle>
       {/* <HeroOverlayStyle
-          alt="overlay"
-        // src="https://minimal-assets-api.vercel.app/assets/overlay.svg"
-        // variants={varFade().in}
-        /> */}
+        alt="overlay"
+        src="https://minimal-assets-api.vercel.app/assets/overlay.svg"
+        variants={varFade().in}
+      /> */}
       {/* <HeroBox> */}
       {isDesktop ?
+        // <div style={{ pointerEvents: 'none' }}>
         <HeroImgStyle
-          alt="hero"
-          src="main-hero.png"
-          variants={varFade().inUp}
-        /> :
-        <HeroImgStyle
-          alt="hero"
+          className="elementor-background-video-embed"
+          loop autoPlay muted
+          // autoPlay="1"
+          // controls="0"
+          // mute="1"
+          // allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
+          title="YouTube video player"
+          // width="100%"
+          // height="100%"
+          src="https://website-static.sgp1.cdn.digitaloceanspaces.com/HeroImageVideoTrimmed.mp4"
+          id="ytplayer"
+          style={{ width: '100%', minHeight: '100vh' }}
+        />
+        // </div>
+        // <HeroImgStyle
+        //   src="https://www.youtube.com/embed/XB1mv2UQHj8?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fbornmonkie.com&widgetid=1"
+        //   autoplay="true"
+        //   id="heroVideo"
+        //   loop="true"
+        //   muted="true"
+        // // variants={varFade().inUp}
+        // />
+        :
+        <img
           src="hero-mob.png"
-          variants={varFade().inUp}
+          alt="hero"
+          style={{
+            width: '100%',
+            objectFit: 'cover',
+            height: '100%'
+          }}
         />
       }
       {/* </HeroBox> */}
@@ -122,7 +151,10 @@ export default function HomeHero() {
             <Typography sx={{
               color: 'common.white', textShadow: '10px 5px 5px #240e6347',
               fontWeight: 'bold',
-              fontSize: '48px',
+              fontSize: '32px',
+              width: '1000px',
+              fontFamily: 'Akira Expanded',
+              letterSpacing: '2px',
               // marginBottom: '15px',
               lineHeight: 1
             }}>
@@ -203,7 +235,7 @@ export default function HomeHero() {
               top: '252px'
             }}>
             <m.div animate={{ y: [0, 30, 0], x: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}>
-              <img src="white-square.svg" alt="" />
+              <img src="white-square.svg" alt="" style={{ width: '100%', height: '100%' }} />
             </m.div>
           </div>
 
@@ -217,7 +249,7 @@ export default function HomeHero() {
               top: '590px'
             }}>
             <m.div animate={{ y: [0, 30, 0], x: [0, 30, 0] }} transition={{ duration: 5, repeat: Infinity }}>
-              <img src="green-square.svg" alt="" />
+              <img src="green-square.svg" alt="" style={{ width: '100%', height: '100%' }} />
             </m.div>
           </div>
         </>}

@@ -11,3 +11,4 @@ export { default as HomeBattle } from './HomeBattle';
 export { default as HomeExplore } from './HomeExplore';
 export { default as HomeRoadMap } from './HomeRoadMap';
 export { default as HomeCoreTeam } from './HomeCoreTeam';
+export { default as HomeChart } from './HomeChart';

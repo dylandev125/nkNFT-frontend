@@ -9,6 +9,7 @@ import useResponsive from '../../hooks/useResponsive';
 import RoadmapMobile from './RoadmapMobile'
 import RoadMapSVG from './RoadMapSVG'
 // import { keyframes } from '@mui/styled-engine'
+import Image from '../../components/Image';
 
 // ----------------------------------------------------------------------
 
@@ -56,14 +57,9 @@ const ContentStyle = styled('div')(() => ({
 //     transitionDelay: '.5s'
 // });
 
-const HeroImgStyle = styled(m.img)(() => ({
-    width: '100%',
-    position: 'absolute',
-    top: '0',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    zIndex: '-1'
-}));
+// const HeroImgStyle = styled(Image)(() => ({
+
+// }));
 
 
 // const ImageStyle = styled(m.img)`
@@ -106,7 +102,7 @@ const ImageStyle = styled('div')(() => ({
     transform: 'translateX(-50%)'
 }));
 
-const Img = styled('img')(() => ({
+const Img = styled(Image)(() => ({
     animation: `${pin} 1s linear infinite`,
 
 }));
@@ -129,12 +125,12 @@ const RoadMapItem = (item) => {
                 color: '#7c80b9',
                 ...sx
             }}>
-            <MotionInView variants={varFade().in} sx={{ transition: 'opacity .5s', transitionDelay: '.5s' }}>
+            <MotionInView variants={varFade().in} sx={{ transitionDelay: '.1s' }}>
                 <Box sx={{
                     position: 'absolute',
                     ...imgsx,
                 }}>
-                    <img src={img} alt="" width="150px" />
+                    <Image src={img} alt="" style={{ width: '150px' }} loading="lazy" />
                 </Box>
             </MotionInView>
             <Box sx={{
@@ -155,13 +151,15 @@ const RoadMapItem = (item) => {
                 }}>
                     <Box sx={{
                         fontWeight: 'bold',
-                        fontSize: '30px',
+                        fontSize: '15px',
+                        fontFamily: 'Akira Expanded',
+                        letterSpacing: '2px',
                         // lineHeight: '35px',
                         color: '#fff',
                         // marginBottom: '10px',
                         whiteSpace: 'nowrap'
                     }}>{title}</Box>
-                    {description}
+                    <Box sx={{ marginLeft: '20px' }}>{description}</Box>
                 </Box>
             </MotionInView>
         </Box >
@@ -175,16 +173,23 @@ export default function HomeRoadMap() {
         <>
             {isDesktop ?
                 <RootStyle>
-
-                    <HeroImgStyle
-                        alt="hero"
-                        src="road-map.png"
-                        variants={varFade().inUp}
+                    <Image
+                        alt="road-map"
+                        src="road-map.webp"
+                        sx={{
+                            width: '100%',
+                            position: 'absolute',
+                            top: '0',
+                            left: '50%',
+                            transform: 'translateX(-50%)',
+                            zIndex: '-1'
+                        }}
+                    // variants={varFade().inUp}
                     />
                     <ContentStyle sx={{ width: '100%' }}>
                         <Container sx={{ color: 'common.white', textAlign: 'center' }}>
                             <m.div variants={varFade().inRight} >
-                                <Typography variant="h2" component="div">
+                                <Typography variant="h3" component="div" style={{ fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                                     Road Map
                                 </Typography>
                             </m.div>
@@ -216,7 +221,13 @@ export default function HomeRoadMap() {
                         <RoadMapItem
                             img="roadMap/road-map1.png"
                             title="Aug-Sep 2021"
-                            description="Idea assessment Team Building Project Planning Character Development Entity Structuring"
+                            description={<ul>
+                                <li>Idea assessment</li>
+                                <li>Team Building</li>
+                                <li>Project Planning</li>
+                                <li>Character Development</li>
+                                <li>Entity Structuring</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -236,7 +247,12 @@ export default function HomeRoadMap() {
                         <RoadMapItem
                             img="roadMap/road-map2.png"
                             title="Sep - Oct 2021"
-                            description="Whitepaper Website building Game Asset development"
+                            description={<ul>
+                                <li>Whitepaper</li>
+                                <li>Website</li>
+                                <li>Building Game</li>
+                                <li>Asset development</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -257,11 +273,14 @@ export default function HomeRoadMap() {
                             }}
                         />
 
-
                         <RoadMapItem
                             img="roadMap/road-map3.png"
                             title="Nov - Dec 2021"
-                            description="Website Launch Whitepaper Launch Partnerships & Marketing"
+                            description={<ul>
+                                <li>Website Launch</li>
+                                <li>Whitepaper Launch</li>
+                                <li>Partnerships & Marketing</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -286,7 +305,9 @@ export default function HomeRoadMap() {
                         <RoadMapItem
                             img="roadMap/road-map4.png"
                             title="Dec-Jan 2022"
-                            description="Seed and Private sales NFT Mint & IDO launch EA to Nekotopia Marketplace Launch"
+                            description={<ul>
+                                <li>Seed and Private sales</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -307,10 +328,20 @@ export default function HomeRoadMap() {
                             }}
                         />
 
+
+
+
                         <RoadMapItem
                             img="roadMap/road-map5.png"
                             title="Jan-Feb 2022"
-                            description="MOBA(P2E) Announcement Metaverse Testnet Staking & Swap Launch Neko Experiment Launch"
+                            description={<ul>
+                                <li>MOBA(P2E) Announcement</li>
+                                <li>Metaverse Testnet</li>
+                                <li>Staking & Swap Launch</li>
+                                <li>Neko Experiment Launch</li>
+                                <li>NFT Mint & IDO launch</li>
+                                <li>EA to Nekotopia</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -327,14 +358,20 @@ export default function HomeRoadMap() {
                             textsx={{
                                 position: 'absolute',
                                 left: '100px',
-                                top: '-23px'
+                                top: '-76px'
                             }}
                         />
+
+
 
                         <RoadMapItem
                             img="roadMap/road-map6.png"
                             title="Feb- March 2022"
-                            description="MOBA Dev logs Nekotopia Patchwork MOBA Early Access"
+                            description={<ul>
+                                <li>MOBA Dev logs</li>
+                                <li>Nekotopia Patchwork</li>
+                                <li>MOBA Early Access</li>
+                            </ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -359,7 +396,7 @@ export default function HomeRoadMap() {
                         <RoadMapItem
                             img="roadMap/road-map7.png"
                             title="March-April 2022"
-                            description="Alpha Release of MOBA"
+                            description={<ul><li>Alpha Release of MOBA</li></ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -381,10 +418,10 @@ export default function HomeRoadMap() {
                         />
                     </ContentStyle>
                 </RootStyle > :
-                <Box sx={{ mt: 5, mb: 5, position: "relative" }}>
-                    <Container sx={{ color: 'common.white', textAlign: 'center' }}>
+                <Box sx={{ pt: 5, pb: 10, position: "relative" }}>
+                    <Container sx={{ color: 'common.white', textAlign: 'center', pt: 2, pb: 5, }}>
                         <m.div variants={varFade().inRight} >
-                            <Typography variant="h2" component="div">
+                            <Typography variant="h2" component="div" style={{ fontFamily: 'Akira Expanded', }}>
                                 Road Map
                             </Typography>
                         </m.div>

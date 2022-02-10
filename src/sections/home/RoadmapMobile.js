@@ -23,37 +23,65 @@ const _carouselsExample = [
     {
         id: 1,
         title: 'Aug-Sep 2021',
-        description: 'Idea assessment Team Building Project Planning Character Development Entity Structuring'
+        description: <ul>
+            <li>Idea assessment</li>
+            <li>Team Building</li>
+            <li>Project Planning</li>
+            <li>Character Development</li>
+            <li>Entity Structuring</li>
+        </ul>
     },
     {
         id: 2,
         title: 'Sep - Oct 2021',
-        description: 'Whitepaper Website building Game Asset development'
+        description: <ul>
+            <li>Whitepaper</li>
+            <li>Website</li>
+            <li>Building Game</li>
+            <li>Asset development</li>
+        </ul>
     },
     {
         id: 3,
         title: 'Nov - Dec 2021',
-        description: 'Website Launch Whitepaper Launch Partnerships & Marketing'
+        description: <ul>
+            <li>Website Launch</li>
+            <li>Whitepaper Launch</li>
+            <li>Partnerships & Marketing</li>
+        </ul>
     },
     {
         id: 4,
         title: 'Dec-Jan 2022',
-        description: 'Seed and Private sales NFT Mint & IDO launch EA to Nekotopia Marketplace Launch'
+        description: <ul>
+            <li>Seed and Private sales</li>
+        </ul>
     },
     {
         id: 5,
         title: 'Jan-Feb 2022',
-        description: 'MOBA(P2E) Announcement Metaverse Testnet Staking & Swap Launch Neko Experiment Launch'
+        description: <ul>
+            <li>MOBA(P2E) Announcement</li>
+            <li>Metaverse Testnet</li>
+            <li>Staking & Swap Launch</li>
+            <li>Neko Experiment Launch</li>
+            <li>NFT Mint & IDO launch</li>
+            <li>EA to Nekotopia</li>
+        </ul>
     },
     {
         id: 6,
         title: 'Feb- March 2022',
-        description: 'MOBA Dev logs Nekotopia Patchwork MOBA Early Access'
+        description: <ul>
+            <li>MOBA Dev logs</li>
+            <li>Nekotopia Patchwork</li>
+            <li>MOBA Early Access</li>
+        </ul>
     },
     {
         id: 7,
         title: 'March-April 2022',
-        description: 'Alpha Release of MOBA'
+        description: <ul><li>Alpha Release of MOBA</li></ul>
     }
 ]
 
@@ -116,7 +144,7 @@ function CarouselItem({ item }) {
                 <Image alt={title} src={`roadMap/road-map${id}.png`} />
             </Grid>
             <Grid item xs={6}>
-                <Typography variant='h3'>{title}</Typography>
+                <Typography variant='h4'>{title}</Typography>
                 <Typography variant='p' sx={{ fontSize: '12px' }}>{description}</Typography>
             </Grid>
         </Grid>

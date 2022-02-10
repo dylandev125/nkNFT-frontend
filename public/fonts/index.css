@@ -1,18 +1,50 @@
 @font-face {
-  font-family: 'CircularStd';
-  font-weight: 400;
-  font-style: normal;
-  src: local('CircularStd'), url('CircularStd-Book.otf') format('opentype');
+  font-family: 'Lato';
+  src: local('Lato'), url(./fonts/Lato-Regular.ttf) format('truetype');
 }
+
 @font-face {
-  font-family: 'CircularStd';
-  font-weight: 500;
-  font-style: normal;
-  src: local('CircularStd'), url('CircularStd-Medium.otf') format('opentype');
+    font-family: 'Lato';
+    font-weight: 900;
+    src: local('Lato'), url(./fonts/Lato-Bold.ttf) format('truetype');
 }
+
 @font-face {
-  font-family: 'CircularStd';
-  font-weight: 700;
-  font-style: normal;
-  src: local('CircularStd'), url('CircularStd-Bold.otf') format('opentype');
+    font-family: 'Lato';
+    font-weight: 500;
+    src: local('Lato'), url(./fonts/Lato-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Akira Expanded';
+  font-weight: 900;
+  src:  local('Akira'), url(./fonts/Akira.otf) format('opentype');
+}
+
+
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url('AkiraExpanded.woff2') format('woff2'),
+        url('AkiraExpanded.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url('AkiraExpanded-Outline.woff2') format('woff2'),
+        url('AkiraExpanded-Outline.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url('AkiraExpanded-Bold.woff2') format('woff2'),
+        url('AkiraExpanded-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }

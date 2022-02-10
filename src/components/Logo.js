@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 // import { useTheme } from '@mui/material/styles';
-// import { Box } from '@mui/material';
+// import { Typography } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -14,5 +14,11 @@ Logo.propTypes = {
 };
 
 export default function Logo({ sx }) {
-  return <RouterLink to="/"><img src="logo/logo-new.png" alt="Nekotopia Logo" sx={sx} width={"165"} height={"56"} /></RouterLink>;
+  return <RouterLink to="/" style={{ textDecoration: 'none' }}>
+    <img src="Orange_website.png" alt="Nekotopia Logo" sx={sx} width={"230"} height={"30"} />
+    {/* <Typography variant="h3" style={{
+      fontFamily: 'Akira Expanded',
+      color: '#fff'
+    }}>Nekotopia</Typography> */}
+  </RouterLink>;
 }

@@ -2,7 +2,7 @@
 import { styled } from '@mui/material/styles';
 import { Typography, Grid } from '@mui/material';
 // components
-import Image from '../../components/Image';
+// import Image from '../../components/Image';
 import { MotionInView, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
@@ -15,7 +15,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   // margin: 'auto',
   [theme.breakpoints.up('lg')]: {
     width: '50%',
-    marginTop: '-15%',
+    marginTop: '-18%',
     marginLeft: 'auto',
     marginRight: 'auto',
     // margin: 'auto',
@@ -28,10 +28,11 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function HomeLookingFor() {
   return (
+    // <div style={{ backgroundImage: 'url(shine2.png)', objectFit: 'cover', backgroundPosition: 'center' }}>
     <RootStyle>
       {/* <Container> */}
-      <Grid container direction="column" alignItems="center" justifyContent="center" spacing={{ xs: 1, md: 3 }}>
-        <Grid item xs={11} md={4} sx={{ textAlign: { xs: 'center', md: 'center' } }}>
+      <Grid container direction="column" alignItems="center" justifyContent="center" spacing={{ xs: 1, md: 0 }}>
+        <Grid item xs={11} md={6} sx={{ textAlign: { xs: 'center', md: 'center' } }}>
           {/* <MotionInView variants={varFade().inDown}>
             <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>
               Looking For a
@@ -39,7 +40,7 @@ export default function HomeLookingFor() {
           </MotionInView> */}
 
           <MotionInView variants={varFade().inDown}>
-            <Typography variant="h2" sx={{ mt: 2, mb: 5 }}>
+            <Typography variant="h3" sx={{ mt: 2, mb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
               Start your journey
             </Typography>
           </MotionInView>
@@ -71,23 +72,27 @@ export default function HomeLookingFor() {
           </MotionInView> */}
         </Grid>
 
-        <Grid item xs={11} md={7}>
+        <Grid item xs={11} md={12}>
+          {/* <div style={{ backgroundImage: 'url(fire.png)', objectFit: 'cover', backgroundPosition: 'center', mixBlendMode: 'lighten' }}> */}
           <MotionInView
             variants={varFade().inUp}
             sx={{
-              mb: { xs: 3, md: 0 },
+              pb: { xs: 3, md: 6 },
             }}
           >
-            <Image
+            <img
               disabledEffect
               alt="rocket"
-              src="cats.png"
-              sx={{ width: { md: '500px' }, height: { md: '550px' } }}
+              src="https://website-static.sgp1.cdn.digitaloceanspaces.com/whyyou.gif"
+              style={{ width: { md: '700px' }, height: { md: '400px' }, transform: 'scale(1.6)' }}
+              loading="lazy"
             />
           </MotionInView>
+          {/* </div> */}
         </Grid>
       </Grid>
       {/* </Container> */}
     </RootStyle >
+    // </div>
   );
 }

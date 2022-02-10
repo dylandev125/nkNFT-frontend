@@ -23,10 +23,12 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 const AccordionStyle = styled('p')(() => ({
-  fontWeight: '500',
-  fontSize: '30px',
+  fontWeight: '600',
+  fontSize: '23px',
   lineHeight: '140%',
   color: 'transparent',
+  fontFamily: 'Akira Expanded',
+  letterSpacing: '2px',
   background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
   backgroundClip: 'text',
   marginBottom: '10px',
@@ -112,7 +114,7 @@ export default function AboutWhat() {
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', padding: 1 }}>
         <img src="arrow.svg" alt="" />
         <AnchorStyle href={`#${id}`} >
-          <Typography sx={{ padding: '0px 15px 0px 15px' }}>{title}</Typography>
+          <Typography variant="p" sx={{ padding: '0px 15px 0px 15px' }}>{title}</Typography>
         </AnchorStyle>
       </Box>
     )
@@ -121,9 +123,9 @@ export default function AboutWhat() {
   const NavSubItem = (item) => {
     const { id, title } = item
     return (
-      <li>
+      <li style={{ paddingTop: '5px', paddingBottom: '5px' }}>
         <AnchorStyle href={`#${id}`}>
-          <TypographyNavStyle >
+          <TypographyNavStyle variant='p'>
             {title}
           </TypographyNavStyle>
         </AnchorStyle>
@@ -164,14 +166,14 @@ export default function AboutWhat() {
                       <CardContent sx={{ padding: '15px' }}>
                         <NavItem id="about" title="About" />
                         <NavItem id="team" title="Team" />
-                        <NavItem id="lifeAtNeko" title="Start your life in the Nekotopia" />
+                        {/* <NavItem id="lifeAtNeko" title="Start your life in the Nekotopia" /> */}
                         <NavItem id="FAQ" title="Frequently asked questions" />
 
                         <Box sx={{ paddingLeft: '30px' }}>
                           <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', paddingLeft: 3 }}>
                             <ul>
                               <NavSubItem id="GeneralInformation" title="General Information" />
-                              <NavSubItem id="PresaleInfo" title=" Presale Info" />
+                              {/* <NavSubItem id="PresaleInfo" title=" Presale Info" /> */}
                               <NavSubItem id="Support" title="Support" />
                             </ul>
                           </Box>
@@ -196,8 +198,8 @@ export default function AboutWhat() {
               <Box id="about">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
                   <Typography
-                    variant="h2"
-                    sx={{ mb: 3, color: 'common.white' }} >
+                    variant="h3"
+                    sx={{ mb: 3, color: 'common.white', fontFamily: 'Akira Expanded', letterSpacing: '2px', }} >
                     About
                   </Typography>
                 </MotionInView>
@@ -228,11 +230,11 @@ export default function AboutWhat() {
               </Box>
 
 
-              <Box id="lifeAtNeko">
+              {/* <Box id="lifeAtNeko">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '50px' }}>
                   <Typography
-                    variant="h2"
-                    sx={{ mb: 3, mt: 10, color: 'common.white' }} >
+                    variant="h3"
+                    sx={{ mb: 3, mt: 10, color: 'common.white', fontFamily: 'Akira Expanded' }} >
                     Start your life in the Nekotopia
                   </Typography>
                 </MotionInView>
@@ -245,13 +247,13 @@ export default function AboutWhat() {
                   </Typography>
                 </MotionInView>
 
-              </Box>
+              </Box> */}
 
               <Box id="FAQ">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '30px' }}>
                   <Typography
-                    variant="h2"
-                    sx={{ mb: 3, mt: 10, color: 'common.white' }} >
+                    variant="h3"
+                    sx={{ mb: 3, mt: 10, color: 'common.white', fontFamily: 'Akira Expanded', letterSpacing: '2px', }} >
                     Frequently asked questions
                   </Typography>
                 </MotionInView>
@@ -279,7 +281,7 @@ export default function AboutWhat() {
                     id="panel2"
                     title="What is NEKO?"
                     description={
-                      <Typography varaint="p" >
+                      <Typography varaint="body2" >
                         NEKO is the native token for Nekotopian Metaverse.
                         <br />
                         NEKO is an ERC20/AVAX token on AVAX L1 Chain
@@ -308,7 +310,7 @@ export default function AboutWhat() {
                 </MotionInView>
               </Box>
 
-              <Box id="PresaleInfo">
+              {/* <Box id="PresaleInfo">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
                   <AccordionStyle
                     variant="p"
@@ -328,7 +330,7 @@ export default function AboutWhat() {
                     }
                   />
                 </MotionInView>
-              </Box>
+              </Box> */}
 
               <Box id="Support">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
