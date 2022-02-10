@@ -12,6 +12,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   overflowX: 'hidden',
   [theme.breakpoints.up('md')]: {
     paddingTop: theme.spacing(11),
+    backgroundSize: 'cover',
     backgroundImage: "url(About.jpg)",
     backgroundRepeat: 'no-repeat'
   },
