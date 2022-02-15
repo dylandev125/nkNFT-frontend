@@ -176,7 +176,7 @@ export default function HomeHero() {
 
           <m.div variants={varFade().inRight}>
             <Button
-              href="https://docs.nekoverse.io/"
+              href="https://docs.nekotopia.co/"
               target="_blank"
               component={'a'}
               handleClick={() => {
