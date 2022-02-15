@@ -143,13 +143,6 @@ const DESIGN_LIST = [
         credibility: ''
     },
     {
-        name: 'Prakriti Sharma',
-        description: '3D Animator',
-        icon: `team/Prakriti_Sharma.jpg`,
-        href: 'https://www.linkedin.com/in/prakriti-sharma-407457141/',
-        credibility: ''
-    },
-    {
         name: 'Akhil Pulla',
         description: '3D Animator',
         icon: `team/akhil.jpg`,
