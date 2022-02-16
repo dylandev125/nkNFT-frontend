@@ -71,7 +71,7 @@ const PRODUCT_LIST = [
     },
     {
         name: 'Revanth Sama',
-        description: 'Game Producer',
+        description: 'Game Designer',
         icon: `team/Revanth_Sama.JPG`,
         href: 'https://www.linkedin.com/in/revanth-reddy-2229351b7/',
         credibility: 'Worked on multidisciplinary  projects such as board games, UX design, space design, AR/VR design and made 4-5 mini games on my own  the tools which I use the most are figma,sketch,sketch up ,unity ,vuforia'
@@ -197,7 +197,7 @@ const ENGINEERING_LIST = [
     {
         name: 'Chen Jiao',
         description: 'Blockchain Developer',
-        icon: `team/Chen.png`,
+        icon: `team/chen_jiao.jpg`,
         href: 'https://www.linkedin.com/in/chen-jiao-49aa76223',
         credibility: 'Specialist in React, Ethereum smart contracts and advanced blockchain technology'
     },
