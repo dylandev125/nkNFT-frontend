@@ -10,9 +10,7 @@ import RoadmapMobile from './RoadmapMobile'
 import RoadMapSVG from './RoadMapSVG'
 // import { keyframes } from '@mui/styled-engine'
 import Image from '../../components/Image';
-
 // ----------------------------------------------------------------------
-
 const RootStyle = styled(m.div)(() => ({
     position: 'relative',
     minHeight: '911px',
@@ -31,7 +29,6 @@ const RootStyle = styled(m.div)(() => ({
     //   alignItems: 'center',
     // },
 }));
-
 const ContentStyle = styled('div')(() => ({
     width: '100%',
     margin: '0 auto',
@@ -40,7 +37,6 @@ const ContentStyle = styled('div')(() => ({
     padding: '0 30px',
     height: '1750px'
 }));
-
 // const BoxStyle = styled(Box)({
 //     width: '210px',
 //     position: 'absolute',
@@ -56,12 +52,8 @@ const ContentStyle = styled('div')(() => ({
 //     transition: 'opacity .5s',
 //     transitionDelay: '.5s'
 // });
-
 // const HeroImgStyle = styled(Image)(() => ({
-
 // }));
-
-
 // const ImageStyle = styled(m.img)`
 //   position: absolute;
 //     top: '60px';
@@ -73,7 +65,6 @@ const ContentStyle = styled('div')(() => ({
 //         100% { strokeDashoffset: '-32px' }
 //     }
 // `;
-
 const roadMap = keyframes`
 from {
     stroke-dashoffset: 0;
@@ -82,7 +73,6 @@ from {
     stroke-dashoffset: -32px;
   }
 `;
-
 const pin = keyframes`
     0% {
     opacity: 0;
@@ -91,9 +81,6 @@ const pin = keyframes`
     opacity: 1;
   }
 `;
-
-
-
 const ImageStyle = styled('div')(() => ({
     animation: `${roadMap} 1s linear infinite`,
     position: 'absolute',
@@ -101,21 +88,16 @@ const ImageStyle = styled('div')(() => ({
     left: '50%',
     transform: 'translateX(-50%)'
 }));
-
 const Img = styled(Image)(() => ({
     animation: `${pin} 1s linear infinite`,
-
 }));
-
-
 // ----------------------------------------------------------------------
-
 const RoadMapItem = (item) => {
     const { img, title, description, sx, imgsx, pinsx, textsx } = item
     return (
         <Box
             sx={{
-                width: '150px',
+                width: '300px',
                 position: 'absolute',
                 textAlign: 'left',
                 zIndex: '2',
@@ -159,16 +141,14 @@ const RoadMapItem = (item) => {
                         // marginBottom: '10px',
                         whiteSpace: 'nowrap'
                     }}>{title}</Box>
-                    <Box sx={{ marginLeft: '20px' }}>{description}</Box>
+                    <Box sx={{ marginLeft: '20px', width: '250px' }}>{description}</Box>
                 </Box>
             </MotionInView>
         </Box >
     )
 }
-
 export default function HomeRoadMap() {
     const isDesktop = useResponsive('up', 'lg');
-
     return (
         <>
             {isDesktop ?
@@ -217,16 +197,15 @@ export default function HomeRoadMap() {
                             <RoadMapSVG />
                         </ImageStyle>
                         {/* </m.div> */}
-
                         <RoadMapItem
                             img="roadMap/road-map1.png"
-                            title="Aug-Sep 2021"
+                            title="2021 Q3"
                             description={<ul>
-                                <li>Idea assessment</li>
+                                <li>Idea Assessment</li>
                                 <li>Team Building</li>
-                                <li>Project Planning</li>
-                                <li>Character Development</li>
+                                <li>Whitepaper Building</li>
                                 <li>Entity Structuring</li>
+                                <li>Website Development</li>
                             </ul>}
                             sx={{
                                 width: '210px',
@@ -242,16 +221,15 @@ export default function HomeRoadMap() {
                             }}
                             pinsx={{ left: '261px' }}
                         />
-
-
                         <RoadMapItem
                             img="roadMap/road-map2.png"
-                            title="Sep - Oct 2021"
+                            title="2021 Q4"
                             description={<ul>
-                                <li>Whitepaper</li>
-                                <li>Website</li>
-                                <li>Building Game</li>
-                                <li>Asset development</li>
+                                <li>Website Launch</li>
+                                <li>Litepaper Launch</li>
+                                <li>Lore Building</li>
+                                <li>Game Prototyping</li>
+                                <li>Ex-Network Incubation</li>
                             </ul>}
                             sx={{
                                 width: '210px',
@@ -272,14 +250,16 @@ export default function HomeRoadMap() {
                                 top: '25px'
                             }}
                         />
-
                         <RoadMapItem
                             img="roadMap/road-map3.png"
-                            title="Nov - Dec 2021"
+                            title="2022 Q1"
                             description={<ul>
-                                <li>Website Launch</li>
-                                <li>Whitepaper Launch</li>
-                                <li>Partnerships & Marketing</li>
+                                <li>Smart Contracts Development</li>
+                                <li>Marketplace Development</li>
+                                <li>Teaser Reveal</li>
+                                <li>Community Building</li>
+                                <li>Realm Pass Mint Launch</li>
+                                <li>Private Sale</li>
                             </ul>}
                             sx={{
                                 width: '210px',
@@ -300,13 +280,15 @@ export default function HomeRoadMap() {
                                 top: '-23px'
                             }}
                         />
-
-
                         <RoadMapItem
                             img="roadMap/road-map4.png"
-                            title="Dec-Jan 2022"
+                            title="2022 Q2"
                             description={<ul>
-                                <li>Seed and Private sales</li>
+                                <li>MOBA Demo Launch ( Tutorial + Bot Match )</li>
+                                <li>Mint Launch</li>
+                                <li>Nekotopia World Testnet Launch</li>
+                                <li>Act 1 Launch (RPG)</li>
+                                <li>IDO</li>
                             </ul>}
                             sx={{
                                 width: '210px',
@@ -327,20 +309,15 @@ export default function HomeRoadMap() {
                                 top: '-23px'
                             }}
                         />
-
-
-
-
                         <RoadMapItem
                             img="roadMap/road-map5.png"
-                            title="Jan-Feb 2022"
+                            title="2022 Q3"
                             description={<ul>
-                                <li>MOBA(P2E) Announcement</li>
-                                <li>Metaverse Testnet</li>
-                                <li>Staking & Swap Launch</li>
-                                <li>Neko Experiment Launch</li>
-                                <li>NFT Mint & IDO launch</li>
-                                <li>EA to Nekotopia</li>
+                                <li>Airdrop Campaign</li>
+                                <li>Nekotopia World moved to MainNet</li>
+                                <li>MOBA (alpha) Testnet Launch</li>
+                                <li>Liquidity Pools</li>
+                                <li>P2E</li>
                             </ul>}
                             sx={{
                                 width: '210px',
@@ -358,13 +335,10 @@ export default function HomeRoadMap() {
                             textsx={{
                                 position: 'absolute',
                                 left: '100px',
-                                top: '-76px'
+                                top: '-25px'
                             }}
                         />
-
-
-
-                        <RoadMapItem
+                        {/* <RoadMapItem
                             img="roadMap/road-map6.png"
                             title="Feb- March 2022"
                             description={<ul>
@@ -390,13 +364,11 @@ export default function HomeRoadMap() {
                                 left: '171px',
                                 top: '-23px'
                             }}
-                        />
-
-
+                        /> */}
                         <RoadMapItem
                             img="roadMap/road-map7.png"
-                            title="March-April 2022"
-                            description={<ul><li>Alpha Release of MOBA</li></ul>}
+                            title="2022 Q4"
+                            description={<ul><li>Marketplace Launch</li><li>MOBA Live</li><li>Centralized Exchange Listing</li></ul>}
                             sx={{
                                 width: '210px',
                                 position: 'absolute',
@@ -412,7 +384,7 @@ export default function HomeRoadMap() {
                             pinsx={{ left: '-51px' }}
                             textsx={{
                                 position: 'absolute',
-                                left: '-323px',
+                                left: '-290px',
                                 top: '-23px'
                             }}
                         />
