@@ -5,7 +5,14 @@ import { styled } from '@mui/material/styles';
 import Page from '../components/Page';
 // sections
 import {
-    HomeHero,
+    Hero,
+    EnterNekotopia,
+    StartYourJourney,
+    NekoverseArena,
+    BattleMap,
+    ExploreNekotopia,
+    RoadMap,
+    CoreTeam
 } from '../sections/home';
 
 // ----------------------------------------------------------------------
@@ -31,30 +38,20 @@ const ContentStyle = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 
-// const HomeHero = lazy(() => import('../sections/home/HomeHero'))
-const HomeMinimal = lazy(() => import('../sections/home/HomeMinimal'))
-const HomeLookingFor = lazy(() => import('../sections/home/HomeLookingFor'))
-const HomeColorPresets = lazy(() => import('../sections/home/HomeColorPresets'))
-const HomeExplore = lazy(() => import('../sections/home/HomeExplore'))
-const HomeRoadMap = lazy(() => import('../sections/home/HomeRoadMap'))
-const HomeCoreTeam = lazy(() => import('../sections/home/HomeCoreTeam'))
-const HomeBattle = lazy(() => import('../sections/home/HomeBattle'))
-// const HomeChart = lazy(() => import('../sections/home/HomeChart'))
-
 export default function HomePage() {
     return (
         <Page title="Home">
             <RootStyle>
-                <HomeHero />
+                <Hero />
                 <ContentStyle>
-                    <HomeMinimal />
-                    <HomeLookingFor />
-                    <HomeBattle />
+                    <EnterNekotopia />
+                    <StartYourJourney />
+                    <NekoverseArena />
                     {/* <HomeChart /> */}
-                    <HomeColorPresets />
-                    <HomeExplore />
-                    <HomeRoadMap />
-                    <HomeCoreTeam />
+                    <BattleMap />
+                    <ExploreNekotopia />
+                    <RoadMap />
+                    <CoreTeam />
                 </ContentStyle>
             </RootStyle>
         </Page>

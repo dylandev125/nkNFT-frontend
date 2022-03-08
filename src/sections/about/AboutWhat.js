@@ -49,12 +49,6 @@ const AccordionTitleStyle = styled("Typography")(() => ({
   }
 }))
 
-// const CardStyle = styled("Card")(() => ({
-//   background: 'rgba(35, 20, 71, .57)',
-//   borderRadius: '12px',
-//   padding: '33px 48px 28px'
-// }))
-
 const AnchorStyle = styled("a")(() => ({
   textDecoration: 'none',
   cursor: 'pointer',
@@ -81,7 +75,6 @@ const TypographyNavStyle = styled(Typography)(() => ({
 // ----------------------------------------------------------------------
 
 export default function AboutWhat() {
-  // const theme = useTheme();
   const isDesktop = useResponsive('up', 'lg');
   const [expanded, setExpanded] = React.useState(false);
 
@@ -89,9 +82,6 @@ export default function AboutWhat() {
     setExpanded(isExpanded ? panel : false);
   };
 
-
-  // const isLight = theme.palette.mode === 'light';
-  // const shadow = `-40px 40px 80px ${alpha(isLight ? theme.palette.grey[500] : theme.palette.common.black, 0.48)}`;
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -112,7 +102,7 @@ export default function AboutWhat() {
     const { id, title } = item
     return (
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', padding: 1 }}>
-        <img src="arrow.svg" alt="" />
+        <img src="images/about/arrow.svg" alt="" />
         <AnchorStyle href={`#${id}`} >
           <Typography variant="p" sx={{ padding: '0px 15px 0px 15px' }}>{title}</Typography>
         </AnchorStyle>
@@ -166,14 +156,12 @@ export default function AboutWhat() {
                       <CardContent sx={{ padding: '15px' }}>
                         <NavItem id="about" title="About" />
                         <NavItem id="team" title="Team" />
-                        {/* <NavItem id="lifeAtNeko" title="Start your life in the Nekotopia" /> */}
                         <NavItem id="FAQ" title="Frequently asked questions" />
 
                         <Box sx={{ paddingLeft: '30px' }}>
                           <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', paddingLeft: 3 }}>
                             <ul>
                               <NavSubItem id="GeneralInformation" title="General Information" />
-                              {/* <NavSubItem id="PresaleInfo" title=" Presale Info" /> */}
                               <NavSubItem id="Support" title="Support" />
                             </ul>
                           </Box>
@@ -228,26 +216,6 @@ export default function AboutWhat() {
                   <AboutTeams />
                 </MotionInView>
               </Box>
-
-
-              {/* <Box id="lifeAtNeko">
-                <MotionInView variants={varFade().in} sx={{ paddingTop: '50px' }}>
-                  <Typography
-                    variant="h3"
-                    sx={{ mb: 3, mt: 10, color: 'common.white', fontFamily: 'Akira Expanded' }} >
-                    Start your life in the Nekotopia
-                  </Typography>
-                </MotionInView>
-
-                <MotionInView variants={varFade().in} sx={{
-                  color: 'common.white',
-                }}>
-                  <Typography sx={{ mt: 2 }}>
-                    Take a quantum leap into a new, multi-dimensional world. Mint your Neko and start exploring life in the Nekotopia, an endlessly unfolding metaverse of limitless possibilities.
-                  </Typography>
-                </MotionInView>
-
-              </Box> */}
 
               <Box id="FAQ">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '30px' }}>
@@ -309,28 +277,6 @@ export default function AboutWhat() {
                     } />
                 </MotionInView>
               </Box>
-
-              {/* <Box id="PresaleInfo">
-                <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>
-                  <AccordionStyle
-                    variant="p"
-                  >
-                    Presale info
-                  </AccordionStyle>
-                  <AccordionItem
-                    id="panel4"
-                    title="What is $PCASH?"
-                    description={
-                      <Typography variant='p' >
-                        <strong>$PCash</strong> is a synthetic token mainly serving as in-game rewards & currency to buy game related items and consumables
-                        <br /><br />
-                        <strong>$PCash</strong> Usecases<br />
-                        To buy Psi Functions ( Can be sold in secondary market for AVAX/ NEKO ) In game P2P item trading (Buying in game consumables)
-                      </Typography>
-                    }
-                  />
-                </MotionInView>
-              </Box> */}
 
               <Box id="Support">
                 <MotionInView variants={varFade().in} sx={{ paddingTop: '70px' }}>

@@ -10,7 +10,6 @@ import {
     CardContent,
 } from '@mui/material';
 // utils
-import { fCurrency } from '../../utils/formatNumber';
 import { useSelector } from '../../redux/store';
 
 // ----------------------------------------------------------------------
@@ -26,12 +25,7 @@ CheckoutSummary.propTypes = {
     enableDiscount: PropTypes.bool,
 };
 
-export default function CheckoutSummary({
-    total,
-    discount,
-    subtotal,
-    shipping,
-}) {
+export default function CheckoutSummary() {
     const { realmPasses, cartLength } = useSelector((state) => state.passes);
 
     return (
