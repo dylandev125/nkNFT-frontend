@@ -150,7 +150,7 @@ export default function Router() {
         { path: 'rewards', element: <Rewards /> },
         { path: 'mint', element: <Mint /> },
         { path: 'contact', element: <Contact /> },
-        { path: 'passes', element: <Pass /> },
+        // { path: 'passes', element: <Pass /> },
         // { path: 'faqs', element: <Faqs /> },
         // {
         //   path: 'components',
@@ -158,7 +158,6 @@ export default function Router() {
         //     { path: '/components', element: <ComponentsOverview /> },
         //     // FOUNDATIONS
         //     { path: 'color', element: <Color /> },
-        //     { path: 'typography', element: <Typography /> },
         //     { path: 'shadows', element: <Shadows /> },
         //     { path: 'grid', element: <Grid /> },
         //     { path: 'icons', element: <Icons /> },

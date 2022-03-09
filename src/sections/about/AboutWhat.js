@@ -37,7 +37,7 @@ const AccordionStyle = styled('p')(() => ({
   WebkitBackgroundClip: 'text'
 }))
 
-const AccordionTitleStyle = styled("Typography")(() => ({
+const AccordionTitleStyle = styled(Typography)(() => ({
   color: '#8270b6',
   fontSize: '20px',
   '&:hover, &:active': {

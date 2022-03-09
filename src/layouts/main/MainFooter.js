@@ -72,7 +72,7 @@ export default function MainFooter() {
             alignItems: 'center',
             padding: "0 35px"
           }}>
-          <img src="images/logo/nekotopia-white.png" alt="Nekotopia Logo" width={"250"} height={"100"} />
+          <img src="images/logo/nekotopia-white.png" alt="Nekotopia Logo" width="220px" height="50px" />
         </div>
 
 

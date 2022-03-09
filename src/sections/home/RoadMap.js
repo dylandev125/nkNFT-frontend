@@ -242,7 +242,7 @@ export default function RoadMap() {
                             description={<ul>
                                 <li>MOBA Demo Launch ( Tutorial + bot match )</li>
                                 <li>Mint Launch</li>
-                                <li>Testnet Launch - Nekotopia World Launch</li>
+                                <li>Nekotopia World Testnet Launch</li>
                                 <li>Act 1 Launch (RPG)</li>
                                 <li>IDO</li>
                             </ul>}
