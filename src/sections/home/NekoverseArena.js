@@ -131,16 +131,16 @@ export default function NekoverseArena() {
                 </Grid>
             </RootStyle>
             <Parallax1>
-                <img src="images/nekoverse-arena/Rectangle%20916.svg" alt="" loading="lazy" width="100%" height="100%" />
+                <img src="images/nekoverse-arena/Rectangle%20916.svg" alt="Nekotopia Arena" loading="lazy" width="100%" height="100%" />
             </Parallax1>
             <Parallax2>
-                <img src="images/nekoverse-arena/Rectangle%20914.svg" alt="" loading="lazy" width="100%" height="100%" />
+                <img src="images/nekoverse-arena/Rectangle%20914.svg" alt="Nekotopia Arena" loading="lazy" width="100%" height="100%" />
             </Parallax2>
             <Parallax3>
-                <img src="images/nekoverse-arena/Rectangle%20915.svg" alt="" loading="lazy" width="100%" height="100%" />
+                <img src="images/nekoverse-arena/Rectangle%20915.svg" alt="Nekotopia Arena" loading="lazy" width="100%" height="100%" />
             </Parallax3>
             <Parallax4>
-                <img src="images/nekoverse-arena/Rectangle%20917.svg" alt="" loading="lazy" width="100%" height="100%" />
+                <img src="images/nekoverse-arena/Rectangle%20917.svg" alt="Nekotopia Arena" loading="lazy" width="100%" height="100%" />
             </Parallax4>
         </div>
     );

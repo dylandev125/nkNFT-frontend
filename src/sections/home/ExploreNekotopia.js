@@ -36,7 +36,7 @@ export default function ExploreNekotopia() {
         <RootStyle>
             {isDesktop &&
                 <Image
-                    alt="hero"
+                    alt="Nekotopia Explore hero"
                     src="images/explore-nekotopia/collect-bg.webp"
                     variants={varFade().inUp}
                     sx={{

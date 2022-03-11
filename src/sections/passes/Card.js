@@ -1,8 +1,8 @@
 // @mui
-import { useState } from 'react'
+// import { useState } from 'react'
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import { Container, Typography, Avatar, Link, Box, IconButton } from '@mui/material';
+import { Typography, Box, IconButton } from '@mui/material';
 // components
 // import { MotionContainer } from '../../components/animate';
 import Iconify from '../../components/Iconify';
@@ -45,19 +45,19 @@ const CardImage = styled('div')(() => ({
     border: '1px solid #000000'
 }));
 
-const CatImage = styled('img')(() => ({
-    // position: 'absolute',
-    width: '255px',
-    height: '280px',
-    // borderRadius: '46px 46px 80px 80px',
-    // left: '0px',
-    // top: '0px',
-    // border: '1px solid #000000'
+// const CatImage = styled('img')(() => ({
+//     // position: 'absolute',
+//     width: '255px',
+//     height: '280px',
+//     // borderRadius: '46px 46px 80px 80px',
+//     // left: '0px',
+//     // top: '0px',
+//     // border: '1px solid #000000'
 
-    // left: '5px',
-    // top: '10px',
-    // background: 'url(Space Neko.png) no-repeat center',
-}));
+//     // left: '5px',
+//     // top: '10px',
+//     // background: 'url(Space Neko.png) no-repeat center',
+// }));
 
 const CatInfo = styled('div')(() => ({
     position: 'absolute',
@@ -122,7 +122,7 @@ const PriceInfo = styled('div')(() => ({
     top: '0px'
 }));
 
-const TypographyStyle = styled('Typography')(() => ({
+const TypographyStyle = styled(Typography)(() => ({
     color: 'transparent',
     background: 'linear-gradient(110.52deg, #FF7C03 13.88%, #FFD500 123.38%)',
     backgroundClip: 'text',
@@ -165,6 +165,13 @@ function Incrementer({ available, quantity, onIncrease, onDecrease }) {
         </Box >
     );
 }
+
+Card.propTypes = {
+    id: PropTypes.number,
+    passName: PropTypes.string,
+    cost: PropTypes.number,
+    quantity: PropTypes.number,
+};
 
 export default function Card({ id, passName, cost, quantity }) {
     const dispatch = useDispatch();

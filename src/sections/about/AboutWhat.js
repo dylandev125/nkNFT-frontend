@@ -102,7 +102,7 @@ export default function AboutWhat() {
     const { id, title } = item
     return (
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', padding: 1 }}>
-        <img src="images/about/arrow.svg" alt="" />
+        <img src="images/about/arrow.svg" alt="Nekotopia arrow" />
         <AnchorStyle href={`#${id}`} >
           <Typography variant="p" sx={{ padding: '0px 15px 0px 15px' }}>{title}</Typography>
         </AnchorStyle>

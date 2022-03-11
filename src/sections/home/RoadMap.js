@@ -81,7 +81,7 @@ const RoadMapItem = (item) => {
                     position: 'absolute',
                     ...imgsx,
                 }}>
-                    <Image src={img} alt="" style={{ width: '150px' }} loading="lazy" />
+                    <Image src={img} alt="Nekotopia Road Map" style={{ width: '150px' }} loading="lazy" />
                 </Box>
             </MotionInView>
             <Box sx={{
@@ -90,7 +90,7 @@ const RoadMapItem = (item) => {
                 position: 'absolute',
                 ...pinsx
             }}>
-                <Img src="images/road-map/round-pin.svg" alt="" loading="lazy" />
+                <Img src="images/road-map/round-pin.svg" alt="Nekotopia Pin" loading="lazy" />
             </Box>
             <MotionInView variants={varFade().in} sx={{ transition: 'opacity .5s', transitionDelay: '.4s' }}>
                 <Box sx={{
@@ -124,7 +124,7 @@ export default function RoadMap() {
             {isDesktop ?
                 <RootStyle>
                     <Image
-                        alt="road-map"
+                        alt="Nekotopia road-map"
                         src="images/road-map/road-map.webp"
                         sx={{
                             width: '100%',

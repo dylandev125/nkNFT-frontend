@@ -43,12 +43,12 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
     },
 }));
 
-const TypographyStyle = styled(Typography)(({ theme }) => ({
-    [theme.breakpoints.up('lg')]: {
-        textAlign: 'center'
-    },
-    textAlign: 'center',
-}));
+// const TypographyStyle = styled(Typography)(({ theme }) => ({
+//     [theme.breakpoints.up('lg')]: {
+//         textAlign: 'center'
+//     },
+//     textAlign: 'center',
+// }));
 
 const GridStyle = styled(Grid)(({ theme }) => ({
     [theme.breakpoints.up('lg')]: {
@@ -78,7 +78,7 @@ const BoxStyle = styled(Box)(({ theme }) => ({
     },
 }));
 
-const LineDecoration = styled('img')(({ theme }) => ({
+const LineDecoration = styled('img')(() => ({
     position: 'absolute',
     top: '0',
     left: '0',
@@ -125,7 +125,7 @@ export default function EnterNekotopia() {
             <RootStyle>
                 {isDesktop &&
                     <LineDecoration
-                        alt="hero"
+                        alt="Nekotopia hero"
                         src="images/enter-nekotopia/line-decoration.svg"
                         loading="lazy"
                     />
@@ -143,7 +143,6 @@ export default function EnterNekotopia() {
                                     <Typography variant="subtitle1" sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' }, color: 'common.white', fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
                                         Open-ended social world
                                     </Typography>
-
                                 </MotionInView>
 
                                 <MotionInView variants={varFade().in}>

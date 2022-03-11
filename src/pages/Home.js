@@ -4,16 +4,16 @@ import { styled } from '@mui/material/styles';
 // components
 import Page from '../components/Page';
 // sections
-import {
-    Hero,
-    EnterNekotopia,
-    StartYourJourney,
-    NekoverseArena,
-    BattleMap,
-    ExploreNekotopia,
-    RoadMap,
-    CoreTeam
-} from '../sections/home';
+// import {
+//     Hero,
+//     EnterNekotopia,
+//     StartYourJourney,
+//     NekoverseArena,
+//     BattleMap,
+//     ExploreNekotopia,
+//     RoadMap,
+//     CoreTeam
+// } from '../sections/home';
 
 // ----------------------------------------------------------------------
 
@@ -36,6 +36,15 @@ const ContentStyle = styled('div')(({ theme }) => ({
 }));
 
 // ----------------------------------------------------------------------
+
+const Hero = lazy(() => import('../sections/home/Hero'));
+const EnterNekotopia = lazy(() => import('../sections/home/EnterNekotopia'));
+const StartYourJourney = lazy(() => import('../sections/home/StartYourJourney'));
+const NekoverseArena = lazy(() => import('../sections/home/NekoverseArena'));
+const BattleMap = lazy(() => import('../sections/home/BattleMap'));
+const ExploreNekotopia = lazy(() => import('../sections/home/ExploreNekotopia'));
+const RoadMap = lazy(() => import('../sections/home/RoadMap'));
+const CoreTeam = lazy(() => import('../sections/home/CoreTeam'));
 
 
 export default function HomePage() {

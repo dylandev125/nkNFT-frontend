@@ -6,6 +6,7 @@ import TeamCard from './TeamCard';
 
 // ----------------------------------------------------------------------
 
+const fontStyle = { textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px' }
 
 // ----------------------------------------------------------------------
 
@@ -278,26 +279,26 @@ const Cards = ({ list }) => {
 export default function AboutTeams() {
     return (
         <>
-            <Typography variant="h3" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+            <Typography variant="h3" sx={fontStyle}>
                 Team
             </Typography>
 
-            <Typography variant="h5" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+            <Typography variant="h5" sx={fontStyle}>
                 Management
             </Typography>
             <Cards list={MANAGEMENT_LIST} />
 
-            <Typography variant="h5" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+            <Typography variant="h5" sx={fontStyle}>
                 Product
             </Typography>
             <Cards list={PRODUCT_LIST} />
 
-            <Typography variant="h5" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+            <Typography variant="h5" sx={fontStyle}>
                 Design
             </Typography>
             <Cards list={DESIGN_LIST} />
 
-            <Typography variant="h5" sx={{ textAlign: { xs: 'center', md: 'left' }, mt: 3, pb: 5, fontFamily: 'Akira Expanded', letterSpacing: '2px', }}>
+            <Typography variant="h5" sx={fontStyle}>
                 ENGINEERING
             </Typography>
             <Cards list={ENGINEERING_LIST} />

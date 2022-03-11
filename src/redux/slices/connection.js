@@ -52,7 +52,7 @@ export const {
 
 // ----------------------------------------------------------------------
 
-export const connect = () => {
+export function connect() {
     return async () => {
         dispatch(slice.actions.connectionRequest());
         let abi = await axios.get('/config/abi.json');
@@ -104,6 +104,6 @@ export const connect = () => {
             console.log('Install Metamask.')
             dispatch(slice.actions.connectionFailed({ error: "Install Metamask." }));
         }
-    }
+    };
 };
 

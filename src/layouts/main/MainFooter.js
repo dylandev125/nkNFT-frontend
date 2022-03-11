@@ -57,7 +57,7 @@ export default function MainFooter() {
 
   return (
     <RootStyle>
-      <img src="images/footer/footer-line.svg" alt="" style={{
+      <img src="images/footer/footer-line.svg" alt="Nekotopia Footer Line" style={{
         position: 'absolute',
         top: '0',
         left: '50%',
@@ -107,19 +107,19 @@ export default function MainFooter() {
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
           <AnchorImageStyle href="https://www.instagram.com/nekotopiaworld/">
-            <Image src="images/footer/insta.svg" alt="insta-share" style={{ width: '100%', height: '100%' }} />
+            <Image src="images/footer/insta.svg" alt="Nekotopia insta share" style={{ width: '100%', height: '100%' }} />
           </AnchorImageStyle>
           <AnchorImageStyle href="https://twitter.com/nekotopiaworld">
-            <Image src="images/footer/twitter.svg" alt="twitter-share" style={{ width: '100%', height: '100%' }} />
+            <Image src="images/footer/twitter.svg" alt="Nekotopia twitter share" style={{ width: '100%', height: '100%' }} />
           </AnchorImageStyle>
           <AnchorImageStyle href="https://discord.com/invite/a3DypjssRZ">
-            <Image src="images/footer/discord.svg" alt="discord-share" style={{ width: '100%', height: '100%' }} />
+            <Image src="images/footer/discord.svg" alt="Nekotopia discord share" style={{ width: '100%', height: '100%' }} />
           </AnchorImageStyle>
           <AnchorImageStyle href="https://t.me/nekotopiaworld">
-            <Image src="images/footer/telegram.png" alt="discord-share" style={{ width: '27px', height: '28px' }} />
+            <Image src="images/footer/telegram.png" alt="Nekotopia Telegram" style={{ width: '27px', height: '28px' }} />
           </AnchorImageStyle>
           <AnchorImageStyle href="https://medium.com/@nekotopiaworld">
-            <Image src="images/footer/medium.png" alt="discord-share" style={{ width: '30px', height: '32px' }} />
+            <Image src="images/footer/medium.png" alt="Nekotopia Medium" style={{ width: '30px', height: '32px' }} />
           </AnchorImageStyle>
         </div>
 

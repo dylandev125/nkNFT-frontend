@@ -152,14 +152,14 @@ export default function Hero() {
                         animate={{ y: [0, 30, 0], x: [0, 30, 0] }}
                         transition={{ duration: 5, repeat: Infinity }}
                     >
-                        <img src="images/hero-page/white-square.svg" alt="" width="100%" height="100%" />
+                        <img src="images/hero-page/white-square.svg" alt="Nekotopia square" width="100%" height="100%" />
                     </WhiteSquare>
 
                     <GreenSquare
                         animate={{ y: [0, 30, 0], x: [0, 30, 0] }}
                         transition={{ duration: 5, repeat: Infinity }}
                     >
-                        <img src="images/hero-page/green-square.svg" alt="" width="100%" height="100%" />
+                        <img src="images/hero-page/green-square.svg" alt="Nekotopia square" width="100%" height="100%" />
                     </GreenSquare>
                 </>
                 :

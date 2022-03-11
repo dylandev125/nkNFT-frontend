@@ -45,7 +45,7 @@ export default function LoadingScreen({ isDashboard, ...other }) {
               repeat: Infinity,
             }}
           >
-            <img src="images/logo/nekotopia-logo.png" alt="loading" width="64" height="64" />
+            <img src="images/logo/nekotopia-logo.png" alt="Nekotopia loading" width="64" height="64" />
           </m.div>
 
           <Box

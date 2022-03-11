@@ -57,7 +57,7 @@ const PinItem = () => <MotionInView variants={varFade().inDown}>
     <m.div animate={{ y: [-5, 10, -5] }} transition={{ duration: 5, repeat: Infinity }}>
         <Image
             disabledEffect
-            alt="sidebar"
+            alt="Nekotopia sidebar"
             src={`images/battle-map/red-pin.png`}
         />
     </m.div>
@@ -68,7 +68,7 @@ const CaseItem = (item) => {
     const { caseClass, title, description, image } = item
     return (
         <CaseStyle className={caseClass}>
-            <Image src={image} alt=""
+            <Image src={image} alt="Nekotopia Battle Map"
                 sx={{
                     width: '180px',
                     height: '180px',
