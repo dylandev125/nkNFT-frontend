@@ -9,6 +9,7 @@ import Button from '../../components/Button'
 import {
     connect
 } from '../../redux/slices/connection';
+// import { useEffect } from 'react';
 
 // ----------------------------------------------------------------------
 
@@ -23,8 +24,11 @@ export default function Mint() {
     const { loading, account, smartContract, web3, errorMsg } = useSelector((state) => state.connection);
     const dispatch = useDispatch();
 
-    const handleApplyDiscount = () => {
-
+    const handleMint = () => {
+        if (!account) {
+            dispatch(connect());
+            console.log(loading, account, smartContract, web3, errorMsg)
+        }
     }
 
     return (
@@ -33,8 +37,8 @@ export default function Mint() {
                 <Grid container spacing={3} sx={{ justifyContent: 'space-around' }}>
                     <Grid item xs={12} md={9}>
                         <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
-                            {realmPasses.map((item) =>
-                                <Grid item key={item}>
+                            {realmPasses.map((item, idx) =>
+                                <Grid item key={idx}>
                                     <Card {...item} />
                                 </Grid>
                             )}
@@ -46,12 +50,12 @@ export default function Mint() {
                             enableDiscount
                             discount={0}
                             subtotal={20}
-                            onApplyDiscount={handleApplyDiscount}
+                            onApplyDiscount={() => { }}
                         />
                         <Button fullWidth size="large" type="submit" variant="contained" handleClick={() => {
-                            dispatch(connect()); console.log(loading, account, smartContract, web3, errorMsg)
+                            handleMint()
                         }}>
-                            {account ? `${account.substring(0, 19)}...` : 'Mint'}
+                            {account ? `${account.substring(0, 10)}....${account.substring(account.length - 10, account.length)}` : 'Mint'}
                         </Button>
                     </Grid>
                 </Grid>

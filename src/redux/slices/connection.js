@@ -34,7 +34,12 @@ const slice = createSlice({
             state.errorMsg = action.payload.error;
         },
         updateAccount(state, action) {
-            state.account = action.payload.account;
+            if (action.payload?.account) {
+                state.account = action.payload.account
+            } else {
+                state.errorMsg = "Account not connected"
+                state.account = null
+            }
         },
     },
 });

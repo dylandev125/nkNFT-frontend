@@ -28,7 +28,7 @@ export const PATH_PAGE = {
   rewards: '/rewards',
   mint: '/mint',
   contact: '/contact',
-  // passes: '/passes',
+  passes: '/passes',
   // faqs: '/faqs',
   page404: '/404',
   page500: '/500',

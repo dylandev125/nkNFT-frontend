@@ -6,7 +6,7 @@ const RootStyle = styled('div')(() => ({
     width: '100%',
     backgroundPosition: 'center',
     backgroundImage:
-        'url(mint-bg.jpg)',
+        'url(images/backgrounds/mint-bg.jpg)',
     minHeight: 300,
     opacity: '.82',
     padding: 0,

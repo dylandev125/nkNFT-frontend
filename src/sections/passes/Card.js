@@ -37,12 +37,12 @@ const RootStyle = styled('div')(() => ({
 const CardImage = styled('div')(() => ({
     position: 'absolute',
     width: '255px',
-    height: '280px',
+    height: "90%",
     left: '0px',
     top: '0px',
-    background: 'url(passes/pass11.gif) no-repeat center',
+    background: 'url(images/passes/pass11.gif) no-repeat center',
     borderRadius: '46px 46px 80px 80px',
-    border: '1px solid #000000'
+    border: '1px solid transparent'
 }));
 
 // const CatImage = styled('img')(() => ({
@@ -63,8 +63,8 @@ const CatInfo = styled('div')(() => ({
     position: 'absolute',
     left: '10.38%',
     right: '10.38%',
-    top: '68%',
-    bottom: '20%',
+    top: '75%',
+    bottom: '10%',
     // background: 'rgba(21, 10, 70, 0.6)',
     backdropFilter: 'blur(12px)',
     /* Note: backdrop-filter has minimal browser support */
@@ -169,7 +169,7 @@ function Incrementer({ available, quantity, onIncrease, onDecrease }) {
 Card.propTypes = {
     id: PropTypes.number,
     passName: PropTypes.string,
-    cost: PropTypes.number,
+    cost: PropTypes.string,
     quantity: PropTypes.number,
 };
 
@@ -189,18 +189,18 @@ export default function Card({ id, passName, cost, quantity }) {
         <RootStyle id={id}>
             <CardImage />
             <CatInfo>
-                <TypographyStyle variant="h4" style={{ fontWeight: '700' }}>{passName}</TypographyStyle>
+                <TypographyStyle variant="subtitle1" style={{ fontWeight: '700' }}>{passName}</TypographyStyle>
             </CatInfo>
-            <InfoLayout>
+            {/* <InfoLayout>
                 <PriceLayout>
                     <PriceInfo>
-                        <TypographyStyle variant="h5" style={{ fontWeight: 700 }}>{cost} ETH</TypographyStyle>
+                        <TypographyStyle variant="body1" style={{ fontWeight: 700 }}>{cost} ETH</TypographyStyle>
                     </PriceInfo>
                     <PriceInfo>
                         <Incrementer available={2} quantity={quantity} onIncrease={() => { handleIncrement() }} onDecrease={() => { handleDecrement() }} />
                     </PriceInfo>
                 </PriceLayout>
-            </InfoLayout>
+            </InfoLayout> */}
         </RootStyle >
         // </ Link>
     );
