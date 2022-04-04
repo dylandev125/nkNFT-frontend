@@ -7,26 +7,15 @@ import {
     Divider,
     CardHeader,
     Typography,
+    TextField,
+    Autocomplete,
     CardContent,
 } from '@mui/material';
 // utils
-import { useSelector } from '../../redux/store';
 
 // ----------------------------------------------------------------------
 
-// CheckoutSummary.propTypes = {
-// total: PropTypes.number,
-// discount: PropTypes.number,
-// subtotal: PropTypes.number,
-// shipping: PropTypes.number,
-// onEdit: PropTypes.func,
-// enableEdit: PropTypes.bool,
-// onApplyDiscount: PropTypes.func,
-// enableDiscount: PropTypes.bool,
-// };
-
 export default function CheckoutSummary() {
-    const { realmPasses, cartLength } = useSelector((state) => state.passes);
 
     return (
         <Card sx={{ mb: 3 }}>
@@ -34,34 +23,25 @@ export default function CheckoutSummary() {
                 title="Order Summary"
             />
             <CardContent>
-                <Stack spacing={2}>
-                    {cartLength > 0 ?
-                        <>
-                            {realmPasses.map((item, id) => item.quantity > 0 &&
-                                <Stack key={id} direction="row" justifyContent="space-between" >
-                                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                                        {item.passName} × {item.quantity}
-                                    </Typography>
-                                    <Typography variant="subtitle2">{item.cost * item.quantity} ETH</Typography>
-                                </Stack>
-                            )}
-                            < Divider />
-                            <Stack direction="row" justifyContent="space-between">
-                                <Typography variant="subtitle1">Total</Typography>
-                                <Box sx={{ textAlign: 'right' }}>
-                                    <Typography variant="subtitle1" sx={{ color: 'error.main' }}>
-                                        {cartLength * 0.4} ETH
-                                    </Typography>
-                                </Box>
-                            </Stack>
-                        </> :
-                        <Stack direction="row" justifyContent="center" alignItems="center">
-                            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                                No Order
-                            </Typography>
-                        </Stack>
-                    }
-                </Stack>
+                <Autocomplete
+                    disableClearable
+                    id="pass-mint"
+                    options={["1", "2"]}
+                    sx={{
+                        width: 80,
+                        "&.MuiAutocomplete-endAdornment": {
+                            color: "white"
+                        },
+                        "&.Mui-focused": {
+                            color: "white"
+                        },
+                        popper: {
+                            minWidth: 80,
+                            maxWidth: 260,
+                        },
+                    }}
+                    renderInput={(params) => <TextField {...params} label="" size="small" />}
+                />
             </CardContent>
         </Card >
     );

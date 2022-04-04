@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { styled } from '@mui/material/styles';
 import { Grid } from '@mui/material';
+import { useSnackbar } from 'notistack';
 // components
 // import { MotionContainer } from '../../components/animate';
 import Card from './Card';
@@ -23,12 +25,20 @@ export default function Mint() {
     const { realmPasses } = useSelector((state) => state.passes);
     const { loading, account, smartContract, web3, errorMsg } = useSelector((state) => state.connection);
     const dispatch = useDispatch();
+    const { enqueueSnackbar } = useSnackbar();
 
-    const handleMint = () => {
+    useEffect(async () => {
         if (!account) {
-            dispatch(connect());
+            await dispatch(connect());
+            if (errorMsg) {
+                enqueueSnackbar(errorMsg, { variant: 'error' });
+            }
             console.log(loading, account, smartContract, web3, errorMsg)
         }
+    }, [account])
+
+    const handleMint = () => {
+        console.log("ujj")
     }
 
     return (
