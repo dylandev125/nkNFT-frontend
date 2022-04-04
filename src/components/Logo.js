@@ -15,7 +15,13 @@ Logo.propTypes = {
 
 export default function Logo({ sx }) {
   return <RouterLink to="/" style={{ textDecoration: 'none' }}>
-    <img src="Orange_website.png" alt="Nekotopia Logo" sx={sx} width={"230"} height={"30"} />
+    <img
+      src="images/logo/nekotopia-white.png"
+      alt="Nekotopia Logo"
+      sx={sx}
+      width="220px"
+      height="50px"
+    />
     {/* <Typography variant="h3" style={{
       fontFamily: 'Akira Expanded',
       color: '#fff'

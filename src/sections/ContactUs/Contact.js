@@ -106,16 +106,6 @@ export default function Contact() {
                         </Button>
                     </MotionInView>
                 </Stack>
-                {/* <BoxStyle>
-                    <div className="calendly-inline-widget"
-                        data-url="https://calendly.com/nekotopia?hide_landing_page_details=1&hide_gdpr_banner=1"
-                        style={{ minWidth: '320px', height: '550px', paddingBottom: '21px' }} />
-                    {/* <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />
-                    </div> */}
-                {/* </BoxStyle> */}
-                {/* <BoxStyle>
-                    <Button handleClick={(e) => { }}>Coming Soon!</Button>
-                </BoxStyle> */}
             </RootStyle>
         </>
     );

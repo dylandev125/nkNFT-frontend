@@ -1,5 +1,5 @@
 // i18n
-import './locales/i18n';
+// import './locales/i18n';
 
 // highlight
 import './utils/highlight';
@@ -11,10 +11,10 @@ import 'simplebar/src/simplebar.css';
 import 'react-image-lightbox/style.css';
 
 // map
-import 'mapbox-gl/dist/mapbox-gl.css';
+// import 'mapbox-gl/dist/mapbox-gl.css';
 
 // editor
-import 'react-quill/dist/quill.snow.css';
+// import 'react-quill/dist/quill.snow.css';
 
 // slick-carousel
 import 'slick-carousel/slick/slick.css';
@@ -36,13 +36,12 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 // redux
 import { store, persistor } from './redux/store';
 // contexts
-import { SettingsProvider } from './contexts/SettingsContext';
-import { CollapseDrawerProvider } from './contexts/CollapseDrawerContext';
+// import { SettingsProvider } from './contexts/SettingsContext';
+// import { CollapseDrawerProvider } from './contexts/CollapseDrawerContext';
 
 // Check our docs
 // https://docs-minimals.vercel.app/authentication/ts-version
 
-import { AuthProvider } from './contexts/JWTContext';
 // import { AuthProvider } from './contexts/AwsCognitoContext';
 // import { AuthProvider } from './contexts/Auth0Context';
 // import { AuthProvider } from './contexts/FirebaseContext';
@@ -55,23 +54,23 @@ import reportWebVitals from './reportWebVitals';
 // ----------------------------------------------------------------------
 
 ReactDOM.render(
-  <AuthProvider>
-    <HelmetProvider>
-      <ReduxProvider store={store}>
-        <PersistGate persistor={persistor}>
-          <LocalizationProvider dateAdapter={AdapterDateFns}>
-            <SettingsProvider>
-              <CollapseDrawerProvider>
-                <BrowserRouter>
-                  <App />
-                </BrowserRouter>
-              </CollapseDrawerProvider>
-            </SettingsProvider>
-          </LocalizationProvider>
-        </PersistGate>
-      </ReduxProvider>
-    </HelmetProvider>
-  </AuthProvider>,
+  // <AuthProvider>
+  <HelmetProvider>
+    <ReduxProvider store={store}>
+      <PersistGate persistor={persistor}>
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          {/* <SettingsProvider> */}
+          {/* <CollapseDrawerProvider> */}
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+          {/* </CollapseDrawerProvider> */}
+          {/* </SettingsProvider> */}
+        </LocalizationProvider>
+      </PersistGate>
+    </ReduxProvider>
+  </HelmetProvider>,
+  // </AuthProvider>,
   document.getElementById('root')
 );
 

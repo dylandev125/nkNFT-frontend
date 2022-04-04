@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { CssBaseline } from '@mui/material';
 import { createTheme, ThemeProvider as MUIThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 // hooks
-import useSettings from '../hooks/useSettings';
+// import useSettings from '../hooks/useSettings';
 //
 import palette from './palette';
 import typography from './typography';
@@ -19,7 +19,9 @@ ThemeProvider.propTypes = {
 };
 
 export default function ThemeProvider({ children }) {
-  const { themeMode, themeDirection } = useSettings();
+  const themeMode = "light"
+  const themeDirection = "ltr"
+  // const { themeMode, themeDirection } = useSettings();
   const isLight = themeMode === 'light';
 
   const themeOptions = useMemo(

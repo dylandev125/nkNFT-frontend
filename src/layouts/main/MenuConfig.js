@@ -23,6 +23,11 @@ const menuConfig = [
     icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
     path: PATH_PAGE.about,
   },
+  {
+    title: 'Realm Passes',
+    icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
+    path: PATH_PAGE.passes,
+  },
   // {
   //   title: 'Rewards',
   //   icon: <Iconify icon={'ic:round-grain'} {...ICON_SIZE} />,
@@ -31,7 +36,7 @@ const menuConfig = [
   {
     title: 'Litepaper',
     icon: <Iconify icon={'eva:book-open-fill'} {...ICON_SIZE} />,
-    path: 'https://docs.nekoverse.io/',
+    path: 'https://docs.nekotopia.co/',
   },
   {
     title: 'Pitch deck',

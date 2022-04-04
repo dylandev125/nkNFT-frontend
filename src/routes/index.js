@@ -150,6 +150,7 @@ export default function Router() {
         { path: 'rewards', element: <Rewards /> },
         { path: 'mint', element: <Mint /> },
         { path: 'contact', element: <Contact /> },
+        { path: 'passes', element: <Pass /> },
         // { path: 'faqs', element: <Faqs /> },
         // {
         //   path: 'components',
@@ -157,7 +158,6 @@ export default function Router() {
         //     { path: '/components', element: <ComponentsOverview /> },
         //     // FOUNDATIONS
         //     { path: 'color', element: <Color /> },
-        //     { path: 'typography', element: <Typography /> },
         //     { path: 'shadows', element: <Shadows /> },
         //     { path: 'grid', element: <Grid /> },
         //     { path: 'icons', element: <Icons /> },
@@ -254,6 +254,8 @@ const About = Loadable(lazy(() => import('../pages/About')));
 const Rewards = Loadable(lazy(() => import('../pages/Rewards')));
 const Mint = Loadable(lazy(() => import('../pages/Mint')));
 const Contact = Loadable(lazy(() => import('../pages/ContactUs')));
+const Pass = Loadable(lazy(() => import('../pages/Pass')));
+
 // const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
 const ComingSoon = Loadable(lazy(() => import('../pages/ComingSoon')));
 // const Maintenance = Loadable(lazy(() => import('../pages/Maintenance')));

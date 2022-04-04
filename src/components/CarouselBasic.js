@@ -65,7 +65,7 @@ CarouselItem.propTypes = {
 function CarouselItem({ item }) {
     const { image, title } = item;
 
-    return <Image alt={title} src={image} ratio="16/9" />;
+    return <Image alt={"Nekotopia" + title} src={image} ratio="16/9" />;
 }
 
 

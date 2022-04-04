@@ -4,8 +4,6 @@ import { useRef } from 'react';
 // @mui
 import { useTheme, styled } from '@mui/material/styles';
 import { Box, Typography, Grid } from '@mui/material';
-// _mock_
-// import { _carouselsExample } from '../../../../_mock';
 // components
 import Image from '../../components/Image';
 import { CarouselDots, CarouselArrows } from '../../components/carousel';
@@ -141,7 +139,7 @@ function CarouselItem({ item }) {
     return (
         <Grid container spacing={2} alignItems={'center'} justifyContent={'center'} key={id}>
             <Grid item xs={6}>
-                <Image alt={title} src={`roadMap/road-map${id}.png`} />
+                <Image alt={title} src={`road-map/road-map${id}.png`} />
             </Grid>
             <Grid item xs={6}>
                 <Typography variant='h4'>{title}</Typography>

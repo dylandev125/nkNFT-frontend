@@ -13,7 +13,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     paddingTop: theme.spacing(11),
     backgroundSize: 'cover',
-    backgroundImage: "url(About.jpg)",
+    backgroundImage: "url(images/backgrounds/About.jpg)",
     backgroundRepeat: 'no-repeat'
   },
 }));
