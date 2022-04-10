@@ -11,12 +11,14 @@ import {
     Autocomplete,
     CardContent,
 } from '@mui/material';
+import { dispatch, useSelector } from '../../redux/store';
+import { setMintAmount } from '../../redux/slices/passes';
 // utils
 
 // ----------------------------------------------------------------------
 
 export default function CheckoutSummary() {
-
+    const { mintAmount } = useSelector((state) => state.passes);
     return (
         <Card sx={{ mb: 3 }}>
             <CardHeader
@@ -24,6 +26,10 @@ export default function CheckoutSummary() {
             />
             <CardContent>
                 <Autocomplete
+                    onChange={(e, value) => {
+                        dispatch(setMintAmount({ value }));
+                    }}
+                    value={mintAmount}
                     disableClearable
                     id="pass-mint"
                     options={["1", "2"]}

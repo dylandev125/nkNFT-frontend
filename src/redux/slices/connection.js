@@ -1,15 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
-import Web3EthContract from "web3-eth-contract";
-import Web3 from "web3";
+// import Web3EthContract from "web3-eth-contract";
+// import Web3 from "web3";
+import { ethers } from 'ethers';
 // utils
 import axios from '../../utils/axios';
-//
 import { dispatch } from '../store';
 
 // ----------------------------------------------------------------------
-
 const initialState = {
-    loading: false,
+    loading: true,
     account: null,
     smartContract: null,
     web3: null,
@@ -21,7 +20,7 @@ const slice = createSlice({
     initialState,
     reducers: {
         connectionRequest(state) {
-            state.loading = true;
+            // state.loading = true;
         },
         connectionSuccess(state, action) {
             state.loading = false;
@@ -30,16 +29,17 @@ const slice = createSlice({
             state.web3 = action.payload.web3;
         },
         connectionFailed(state, action) {
-            state.loading = false;
+            state.loading = true;
             state.errorMsg = action.payload.error;
         },
         updateAccount(state, action) {
-            if (action.payload?.account) {
-                state.account = action.payload.account
-            } else {
-                state.errorMsg = "Account not connected"
-                state.account = null
+            if (action.payload?.value) {
+                state.account = action.payload.value
+                state.errorMsg = "New Account Detected"
             }
+        },
+        updateNetwork(state, action) {
+            state.network = action.payload.value;
         },
     },
 });
@@ -67,8 +67,10 @@ export function connect() {
         const { ethereum } = window;
         const metamaskIsInstalled = ethereum && ethereum.isMetaMask;
         if (metamaskIsInstalled) {
-            Web3EthContract.setProvider(ethereum);
-            const web3 = new Web3(ethereum);
+            // Web3EthContract.setProvider(ethereum);
+            const web3 = new ethers.providers.Web3Provider(ethereum);
+            const signer = web3.getSigner();
+
             try {
                 const accounts = await ethereum.request({
                     method: "eth_requestAccounts",
@@ -78,23 +80,25 @@ export function connect() {
                 });
                 if (networkId === CONFIG.NETWORK.ID) {
                     console.log('condition satisfied', CONFIG.NETWORK.ID, accounts, networkId)
-                    const SmartContractObj = new Web3EthContract(
-                        abi,
-                        CONFIG.CONTRACT_ADDRESS
-                    );
+                    const passContract = new ethers.Contract(CONFIG.CONTRACT_ADDRESS, abi, signer)
+                    // const SmartContractObj = new Web3EthContract(
+                    //     abi,
+                    //     CONFIG.CONTRACT_ADDRESS
+                    // );
                     dispatch(
                         slice.actions.connectionSuccess({
                             account: accounts[0],
-                            smartContract: SmartContractObj,
+                            smartContract: passContract,
                             web3,
                         })
                     );
                     // Add listeners start
                     ethereum.on("accountsChanged", (accounts) => {
-                        dispatch(slice.actions.updateAccount(accounts[0]));
+                        console.log(accounts[0])
+                        dispatch(slice.actions.updateAccount({value : accounts[0]}));
                     });
-                    ethereum.on("chainChanged", () => {
-                        window.location.reload();
+                    ethereum.on("chainChanged", (chainId) => {
+                        dispatch(slice.actions.updateNetwork({value : chainId}));
                     });
                     // Add listeners end
                 } else {

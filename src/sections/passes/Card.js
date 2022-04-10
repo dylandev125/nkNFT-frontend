@@ -185,11 +185,13 @@ export default function Card({ id, passName, cost, quantity }) {
 
     }
 
+    const leftQuantity = 2000 - quantity;
+
     return (
         <RootStyle id={id}>
             <CardImage />
             <CatInfo>
-                <TypographyStyle variant="subtitle1" style={{ fontWeight: '700' }}>{passName}</TypographyStyle>
+                <TypographyStyle variant="subtitle1" style={{ fontWeight: '700' }}>{passName} = {leftQuantity}</TypographyStyle>
             </CatInfo>
             {/* <InfoLayout>
                 <PriceLayout>
