@@ -24,7 +24,7 @@ const RootStyle = styled('div')(() => ({
 
 export default function Mint() {
     const { realmPasses, mintAmount } = useSelector((state) => state.passes);
-    const { loading, account, smartContract, web3, errorMsg, network } = useSelector((state) => state.connection);
+    const { loading, account, smartContract, isConnect, errorMsg, successMsg, network } = useSelector((state) => state.connection);
     const dispatch = useDispatch();
     const { enqueueSnackbar } = useSnackbar();
 
@@ -42,11 +42,13 @@ export default function Mint() {
     }, [loading])
 
     useEffect(() => {
-        if (network && network !== '0x4') {
-            enqueueSnackbar("Please connect to mainnet", { variant: 'error' });
+        console.log(errorMsg, successMsg)
+        if (successMsg) {
+            enqueueSnackbar(successMsg, { variant: 'success' });
         }
-        if (errorMsg) {
-            enqueueSnackbar(errorMsg, { variant: 'success' });
+
+        if(errorMsg) {
+            enqueueSnackbar(errorMsg, { variant: 'error' });
         }
 
         if(smartContract && realmPasses){
@@ -66,7 +68,7 @@ export default function Mint() {
                 dispatch(setRealmPass({ value : newPasses}));
             });
         }
-    }, [account, network])
+    }, [account, network, isConnect])
 
     const handleMint = async () => {
 

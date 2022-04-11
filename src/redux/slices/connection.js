@@ -12,7 +12,9 @@ const initialState = {
     account: null,
     smartContract: null,
     web3: null,
+    successMsg: "",
     errorMsg: "",
+    isConnect: false
 };
 
 const slice = createSlice({
@@ -23,19 +25,23 @@ const slice = createSlice({
             // state.loading = true;
         },
         connectionSuccess(state, action) {
+            state.errorMsg = '';
+            state.successMsg = '';
             state.loading = false;
             state.account = action.payload.account;
             state.smartContract = action.payload.smartContract;
             state.web3 = action.payload.web3;
         },
         connectionFailed(state, action) {
-            state.loading = true;
+            state.isConnect = !state.isConnect;
             state.errorMsg = action.payload.error;
+            state.successMsg = null
         },
         updateAccount(state, action) {
             if (action.payload?.value) {
                 state.account = action.payload.value
-                state.errorMsg = "New Account Detected"
+                state.successMsg = "New Account Detected"
+                state.errorMsg = null
             }
         },
         updateNetwork(state, action) {
@@ -70,6 +76,15 @@ export function connect() {
             // Web3EthContract.setProvider(ethereum);
             const web3 = new ethers.providers.Web3Provider(ethereum);
             const signer = web3.getSigner();
+
+            try {
+                await window.ethereum.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: [{ chainId: '0x4' }],
+                })
+            } catch (switchError) {
+                console.log('asdf');
+            }
 
             try {
                 const accounts = await ethereum.request({
@@ -107,7 +122,6 @@ export function connect() {
                 }
             } catch (err) {
                 console.log(err)
-                dispatch(slice.actions.connectionFailed({ error: "Something went wrong." }));
             }
         } else {
             console.log('Install Metamask.')
