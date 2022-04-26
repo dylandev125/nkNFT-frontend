@@ -33,12 +33,27 @@ export default function Mint() {
             await dispatch(connect());
         }
     }
-    useEffect(() =>{
+    useEffect(() => {
         console.log(realmPasses)
     }, [realmPasses]);
     useEffect(() => {
         if (loading === false) enqueueSnackbar("Successfully Connected", { variant: 'success' });
 
+        async function updateMintStatus() {
+            if (smartContract) {
+                const newPasses = [];
+                for (let i = 0; i < realmPasses.length; i += 1) {
+                    // eslint-disable-next-line no-await-in-loop
+                    const quantity = await smartContract.getRealmCounter(realmPasses[i].id);
+                    const obj = {
+                        id: realmPasses[i].id,
+                        quantity: parseInt(quantity, 10)
+                    }
+                    newPasses.push(obj);
+                }
+                dispatch(setRealmPass({ value: newPasses }));}
+        }
+        updateMintStatus();
     }, [loading])
 
     useEffect(() => {
@@ -47,40 +62,41 @@ export default function Mint() {
             enqueueSnackbar(successMsg, { variant: 'success' });
         }
 
-        if(errorMsg) {
+        if (errorMsg) {
             enqueueSnackbar(errorMsg, { variant: 'error' });
         }
 
-        if(smartContract && realmPasses){
+        if (smartContract && realmPasses) {
             smartContract.on('Mint', async () => {
-                const newPasses=[];
-                for (let i = 0 ; i < realmPasses.length ; i+=1) {
+                const newPasses = [];
+                for (let i = 0; i < realmPasses.length; i += 1) {
                     // eslint-disable-next-line no-await-in-loop
                     const quantity = await smartContract.getRealmCounter(realmPasses[i].id);
                     const obj = {
-                        id : realmPasses[i].id,
+                        id: realmPasses[i].id,
                         quantity: parseInt(quantity, 10)
                     }
                     newPasses.push(obj);
-                    // console.log("New Pass: ",newPasses.quantity)
                 }
-                console.log("New Pass: ",newPasses)
-                dispatch(setRealmPass({ value : newPasses}));
+                dispatch(setRealmPass({ value: newPasses }));
             });
         }
     }, [account, network, isConnect])
 
     const handleMint = async () => {
-
-        if(account) {
+        console.log(smartContract);
+        if (account) {
             try {
+                console.log(account)
                 //  ind = await smartContract.setMintStep(2);
-                const mintStep = await smartContract.getMintStep();
+                const mintStep = await smartContract.mintStep();
                 const step = parseInt(mintStep, 10);
                 if (step === 1) {
+                    const body = { address: account, token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZjkyMjBiNDBkYTg3NGJlYWFjNWFkM2M3ZGZmNDhmNmEiLCJlbWFpbCI6ImNoZW5AZ21haWwuY29tIiwiaWF0IjoxNjUwODg0MDQ1LCJleHAiOjE2NTA4OTEyNDV9.dwzw6O8RW-bCnX-IPLF_71ZGwfS1gPXox9kD0AvyvVk" };
 
-                    const users = await axios.get(`http://localhost:8000/v1/signature/${account}`);
-                    if (users.data.verified === true) {
+                    const users = await axios.post(`http://localhost:8000/v1/signature/verify`, body);
+                    console.log("MERKLE", users);
+                    if (users.data.verify === true) {
                         await smartContract.preMintPass(users.data.proof, mintAmount, { value: ethers.utils.parseEther("0.01") });
                         enqueueSnackbar("Successfully Minted!", { variant: 'success' });
                     }
