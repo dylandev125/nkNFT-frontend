@@ -143,7 +143,7 @@ export default function Mint() {
                             enableDiscount
                             discount={0}
                             subtotal={20}
-                            onApplyDiscount={() => { }}
+                            onApplyDiscount={() => {}}
 
                         />
                         <Button fullWidth size="large" type="submit" variant="contained" handleClick={() => {
